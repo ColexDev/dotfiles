@@ -1,2 +1,2 @@
 # Dotfiles
-Dotfiles for my personal Arch Linux install
+Dotfiles for my minimal Arch Linux install
