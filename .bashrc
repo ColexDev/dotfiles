@@ -22,7 +22,8 @@ alias remove='paru -Rns'
 alias packages='sudo paru -Qqet'
 alias orphans='sudo paru -Qdtq'
 alias cdc='cd; c'
-alias server='sshpass -p "james2265" ssh -o StrictHostKeyChecking=no pi@colex.dev'
+# add password
+alias server='sshpass -p "password" ssh -o StrictHostKeyChecking=no pi@colex.dev'
 alias send='rsync -zarvh /home/cole/index.html pi@colex.dev:/var/www/colex/ ; rsync -zarvh
 /home/cole/index.html root@colex.dev:/var/www/html/'
 alias mountssd='sudo mount UUID=3942ba84-89e6-4966-b009-1a0e1b7d5ce4 /home/cole/SSD/'
