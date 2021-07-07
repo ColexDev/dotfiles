@@ -1,26 +1,26 @@
 # See this wiki page for more info:
 # https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
 print_info() {
-#    info title
-#    info underline
+    info title
+    info underline
 
-#    info "OS" distro
+    info "OS" distro
 #    info "Host" model
     info "Kernel" kernel
     info "Uptime" uptime
     info "Packages" packages
 #    info "Shell" shell
-#    info "Resolution" resolution
+    info "Resolution" resolution
 #    info "DE" de
     info "WM" wm
 #    info "WM Theme" wm_theme
 #    info "Theme" theme
 #    info "Icons" icons
     info "Terminal" term
-#    info "Terminal Font" term_font
+    info "Terminal Font" term_font
     info "CPU" cpu
     info "GPU" gpu
-#    info "Memory" memory
+    info "Memory" memory
 
     # info "GPU Driver" gpu_driver  # Linux/macOS only
     # info "CPU Usage" cpu_usage
@@ -34,7 +34,7 @@ print_info() {
     # info "Users" users
     # info "Locale" locale  # This only works on glibc systems.
 
-#    info cols
+    info cols
 }
 
 # Title
@@ -85,7 +85,7 @@ distro_shorthand="off"
 # Example:
 # on:  'Arch Linux x86_64'
 # off: 'Arch Linux'
-os_arch="off"
+os_arch="on"
 
 
 # Uptime
@@ -101,7 +101,7 @@ os_arch="off"
 # on:   '2 days, 10 hours, 3 mins'
 # tiny: '2d 10h 3m'
 # off:  '2 days, 10 hours, 3 minutes'
-uptime_shorthand="tiny"
+uptime_shorthand="on"
 
 
 # Memory
@@ -144,7 +144,7 @@ memory_unit="mib"
 # on:   '998 (pacman), 8 (flatpak), 4 (snap)'
 # tiny: '908 (pacman, flatpak, snap)'
 # off:  '908'
-package_managers="off"
+package_managers="on"
 
 
 # Shell
@@ -195,7 +195,7 @@ speed_type="bios_limit"
 # Example:
 # on:    'i7-6500U (4) @ 3.1GHz'
 # off:   'i7-6500U (4) @ 3.100GHz'
-speed_shorthand="on"
+speed_shorthand="off"
 
 # Enable/Disable CPU brand in output.
 #
@@ -206,7 +206,7 @@ speed_shorthand="on"
 # Example:
 # on:   'Intel i7-6500U'
 # off:  'i7-6500U (4)'
-cpu_brand="off"
+cpu_brand="on"
 
 # CPU Speed
 # Hide/Show CPU speed.
@@ -232,7 +232,7 @@ cpu_speed="on"
 # logical:  'Intel i7-6500U (4) @ 3.1GHz' (All virtual cores)
 # physical: 'Intel i7-6500U (2) @ 3.1GHz' (All physical cores)
 # off:      'Intel i7-6500U @ 3.1GHz'
-cpu_cores="off"
+cpu_cores="logical"
 
 # CPU Temperature
 # Hide/Show CPU temperature.
@@ -264,7 +264,7 @@ cpu_temp="off"
 # Example:
 # on:  'AMD HD 7950'
 # off: 'HD 7950'
-gpu_brand="off"
+gpu_brand="on"
 
 # Which GPU to display
 #
@@ -833,7 +833,7 @@ image_size="auto"
 # Default: '3'
 # Values:  'num', '-num'
 # Flag:    --gap
-gap=2
+gap=3
 
 # Image offsets
 # Only works with the w3m backend.
