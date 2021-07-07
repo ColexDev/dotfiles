@@ -74,7 +74,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "st";
 
 /*
  * spaces per tab
@@ -95,42 +95,39 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	 /* 8 normal colors */
-        "#000000",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
 
-        /* 8 bright colors */
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-        "#ffffff",
-	[255] = 0,
+  /* 8 normal colors */
+  [0] = "#000000", /* black   */
+  [1] = "#e92f2f", /* red     */
+  [2] = "#0ed839", /* green   */
+  [3] = "#dddd13", /* yellow  */
+  [4] = "#3b48e3", /* blue    */
+  [5] = "#f996e2", /* magenta */
+  [6] = "#23edda", /* cyan    */
+  [7] = "#ababab", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"#000000",
-	"#ffffff",
+  /* 8 bright colors */
+  [8]  = "#343434", /* black   */
+  [9]  = "#e92f2f", /* red     */
+  [10] = "#0ed839", /* green   */
+  [11] = "#dddd13", /* yellow  */
+  [12] = "#3b48e3", /* blue    */
+  [13] = "#f996e2", /* magenta */
+  [14] = "#23edda", /* cyan    */
+  [15] = "#f9f9f9", /* white   */
+
+  /* special colors */
+  [256] = "#000000", /* background */
+  [257] = "#ffffff", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -194,14 +191,16 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ MODKEY,              XK_j,       zoom,           {.f = +1} },
+	{ MODKEY,              XK_k,        zoom,           {.f = -1} },
+	{ MODKEY,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
