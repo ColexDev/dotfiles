@@ -8,10 +8,8 @@ alias packages='sudo paru -Qqet'
 alias orphans='sudo paru -Qdtq'
 
 # Drives/Servers
-alias server='ssh pi@76.190.142.99'
 alias mountssd='sudo blkid; sleep 1; sudo mount UUID=3583DD0C22E7BC7A /home/cole/SSD/'
 alias mountflashdrive='sudo mount UUID=cc6a5c5b-4715-4fe0-b4de-0c9e6eff2958 /home/cole/flashDrive/'
-alias send='rsync -zarvh --rsync-path="sudo rsync" /home/cole/index.html pi@76.190.142.99:/var/www/colexdev'
 
 # System Maintence / Misc
 alias grep='grep --color=auto'
