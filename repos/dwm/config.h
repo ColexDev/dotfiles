@@ -101,6 +101,8 @@ static Key keys[] = {
     { MODKEY|ControlMask,           XK_l,      spawn,     SHCMD("exec xdotool mousemove_relative 15 0") },
     { MODKEY|ControlMask,           XK_h,      spawn,    SHCMD("exec xdotool mousemove_relative -- -15 0") },
     { MODKEY|ControlMask,          XK_Return, spawn,    SHCMD("exec xdotool click 1") },
+    { MODKEY|ShiftMask,          XK_slash, spawn,    SHCMD("exec pulseaudio-equalizer toggle") },
+
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
