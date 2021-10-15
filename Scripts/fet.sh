@@ -244,7 +244,7 @@ col() {
 
 print() {
 	[ "$2" ] && printf '\033[9%sm%6s\033[0m%b%s\n' \
-		"${accent:-7}" "$1" "${separator:- ~ }" "$2"
+		"${accent:-7}" "$1" "${separator:- - }" "$2"
 }
 
 # default value

@@ -28,6 +28,7 @@ alias gc='git commit -m'
 alias ls='exa --group-directories-first'
 alias la='exa -a --group-directories-first'
 alias ll='exa -a --long --group-directories-first'
+alias btm='btm -g --mem_as_value'
 alias find='fd -i'
 
 # Scripts
@@ -40,7 +41,6 @@ set -o vi
 set editing-mode vi
 set keymap vi
 bind -m vi-insert '\C-l':clear-screen
-shopt -s autocd # type in dir and it auto cd's into it
 # PS1="[\u@\h \w] > "
 PS1="\w > "
 export EDITOR='nvim'
@@ -53,20 +53,6 @@ export WM_NAME='LG3D'
 HISTSIZE= HISTFILESIZE= #
 
 # Functions
-aw() {
-    search_term=$(echo $@ | sed 's/ /+/g')
-    qutebrowser https://wiki.archlinux.org/index.php?search=${search_term}
-}
-
-ddg() {
-    search_term=$(echo $@ | sed 's/ /+/g')
-    qutebrowser https://duckduckgo.com/?q=${search_term}
-}
-
-yt() {
-    search_term=$(echo $@ | sed 's/ /+/g')
-    qutebrowser https://www.youtube.com/results?search_query=${search_term}
-}
 
 cheat() {
     curl "https://cheat.sh/$1"
