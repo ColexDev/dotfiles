@@ -2,19 +2,42 @@
 source $HOME/.config/nvim/general/settings.vim
 
 " Plugins
+
+" This is in .local/share/nvim/plugged and stores all plugin data
 call plug#begin(stdpath('data').'/plugged')
-Plug 'RRethy/nvim-base16'
+
+" Shows colors of hex values in vim
 Plug 'norcalli/nvim-colorizer.lua'
+
+" Autocompletion (also has discord RPC plugin)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Status line
 Plug 'itchyny/lightline.vim'
+
+" LSP
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Ranger integration in vim
 Plug 'francoiscabrol/ranger.vim'
+
+" File browser (ranger is used more, this is here just in case)
 Plug 'preservim/nerdtree'
+
+" Puts cursor where it was when the file was last closed
 Plug 'farmergreg/vim-lastplace'
+
+" The colorscheme I use (used this as a template and fully customized, will soon remove the plugin and just include the vim file)
 Plug 'tomasiser/vim-code-dark'
+
+" Highlights whitespace in red
 Plug 'ntpeters/vim-better-whitespace'
+
+" Allows much faster movement
+Plug 'phaazon/hop.nvim'
 " Plug 'mhinz/vim-signify'
 call plug#end()
+
 let g:rainbow_active = 1
 
 " Tab/Indent Settings
@@ -31,12 +54,12 @@ set nobackup
 set nowritebackup
 set noswapfile
 set hidden
+
 " Search
 set incsearch
 set ignorecase
 set smartcase
 
-set termguicolors
 
 " Colors
 lua require'colorizer'.setup()
@@ -55,9 +78,19 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+set termguicolors
+
+" Sets lightline colorscheme
 let g:lightline = {
       \ 'colorscheme': 'simpleblack',
       \ }
+
+" HOP Colors
+hi HopNextKey guifg=#cc0000
+hi HopNextKey1 guifg=#cc0000
+hi HopNextKey2 guifg=#cc0000
+hi HopUnmatched guifg=#505050
+
 " UI
 set wrap
 set encoding=utf-8
@@ -81,11 +114,6 @@ set whichwrap+=<,>,h,l
 set clipboard+=unnamedplus
 set wildmode=longest,list,full
 set splitbelow splitright
-
-" Enable folding
-"set foldmethod=indent
-"set foldlevel=99
-"nnoremap <leader> za
 
 " Set <leader>
 let mapleader = " "
@@ -113,11 +141,6 @@ nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
-" vnoremap J :m '>+1<CR>gv=gv
-" vnoremap K :m '<-2<CR>gv=gv
-" These do not auto indent like the ones above
-" vnoremap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
-" vnoremap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " autocmd InsertEnter * norm zz
 autocmd BufWritePre * %s/\s\+$//e
@@ -138,12 +161,6 @@ nnoremap K 10k
 nnoremap H 0
 nnoremap L $
 
-" Undo break points
-" inoremap , ,<c-g>u
-" inoremap . .<c-g>u
-" inoremap ! !<c-g>u
-" inoremap ? ?<c-g>u
-
 " Commenting blocks of code.
 augroup commenting_blocks_of_code
   autocmd!
@@ -154,17 +171,18 @@ augroup commenting_blocks_of_code
   autocmd FileType mail             let b:comment_leader = '> '
   autocmd FileType vim              let b:comment_leader = '" '
 augroup END
+" Comments a block of code
 noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^\(\s*\)/\1<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+" Uncomments a block of code
 noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>/\1/e<CR>:nohlsearch<CR>
 
-" Change all instances of a word (press '.' to change them)
+" Change all instances of a word (press '.' to change the next)
 nnoremap cn *``cgn
 nnoremap cN *``cgN
 
 " NerdTree remaps
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <leader>N :NERDTreeToggle<CR>
-
 
 " Creates an underline based on the length of the above line
 nnoremap <leader>ul mmyypVr-<Esc>`m
@@ -174,3 +192,9 @@ if (exists("*strftime"))
 	noremap <silent> <leader>date "=strftime("%F")<CR>p9h
 	noremap <silent> <leader>time "=strftime("%T")<CR>p7h
 endif
+
+" HOP
+lua require'hop'.setup {keys='asdfghjkl;'}
+map s <cmd>HopChar1<CR>
+omap s v<cmd>HopChar1<CR>
+
