@@ -27,9 +27,6 @@ Plug 'preservim/nerdtree'
 " Puts cursor where it was when the file was last closed
 Plug 'farmergreg/vim-lastplace'
 
-" The colorscheme I use (used this as a template and fully customized, will soon remove the plugin and just include the vim file)
-Plug 'tomasiser/vim-code-dark'
-
 " Highlights whitespace in red
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -60,14 +57,16 @@ set incsearch
 set ignorecase
 set smartcase
 
-
 " Colors
+
+" Sets colorscheme
+source $HOME/.config/nvim/colexdev.vim
+
+set termguicolors
 lua require'colorizer'.setup()
 syntax enable
 let g:airline_theme = "minimalist"
 highlight LineNr ctermfg=white
-colorscheme codedark
-" colorscheme codedark
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained",
@@ -78,7 +77,6 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-set termguicolors
 
 " Sets lightline colorscheme
 let g:lightline = {
