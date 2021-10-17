@@ -1,5 +1,4 @@
-" Vim Code Dark (color scheme)
-" https://github.com/tomasiser/vim-code-dark
+" Template taken from vim-code-dark
 
 scriptencoding utf-8
 
