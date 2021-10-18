@@ -18,12 +18,6 @@ Plug 'itchyny/lightline.vim'
 " LSP
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" Ranger integration in vim
-Plug 'francoiscabrol/ranger.vim'
-
-" File browser (ranger is used more, this is here just in case)
-Plug 'preservim/nerdtree'
-
 " Puts cursor where it was when the file was last closed
 Plug 'farmergreg/vim-lastplace'
 
@@ -32,8 +26,20 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " Allows much faster movement
 Plug 'phaazon/hop.nvim'
+
+" Fuzzy finder go brrrrr
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+" Ranger in nvim lessss go
+Plug 'kevinhwang91/rnvimr'
+
 " Plug 'mhinz/vim-signify'
 call plug#end()
+
+" Set <leader>
+let mapleader = " "
 
 let g:rainbow_active = 1
 
@@ -57,6 +63,33 @@ set incsearch
 set ignorecase
 set smartcase
 
+" File management
+" Telescope
+let pwd = system('pwd')
+lua << EOF
+search_current_directory = function()
+    require("telescope.builtin").find_files({
+    prompt_title = "< PWD >",
+    cwd = vim.fn.expand("%:p").gsub(vim.fn.expand("%:p"), vim.fn.expand("%:t"),""),
+    hidden = true,
+})
+end
+EOF
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fc :lua search_current_directory()<cr>
+
+
+" Ranger
+" Make Ranger to be hidden after picking a file
+let g:rnvimr_enable_picker = 1
+
+" Make Ranger replace Netrw and be the file explorer
+let g:rnvimr_enable_ex = 1
+
+nnoremap <leader>fr :RnvimrToggle<cr>
+
+
 " Colors
 
 " Sets colorscheme
@@ -65,7 +98,6 @@ source $HOME/.config/nvim/colexdev.vim
 set termguicolors
 lua require'colorizer'.setup()
 syntax enable
-let g:airline_theme = "minimalist"
 highlight LineNr ctermfg=white
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -113,8 +145,6 @@ set clipboard+=unnamedplus
 set wildmode=longest,list,full
 set splitbelow splitright
 
-" Set <leader>
-let mapleader = " "
 
 " Copy and Paste to System Clipboard
 vmap <C-c> "+y
