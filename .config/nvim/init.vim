@@ -1,7 +1,7 @@
 " Get Coc Settings
 source $HOME/.config/nvim/general/settings.vim
 
-" Plugins
+"======================== Plugins =========================
 
 " This is in .local/share/nvim/plugged and stores all plugin data
 call plug#begin(stdpath('data').'/plugged')
@@ -38,11 +38,10 @@ Plug 'kevinhwang91/rnvimr'
 " Plug 'mhinz/vim-signify'
 call plug#end()
 
-" Set <leader>
-let mapleader = " "
+"==========================================================
 
-let g:rainbow_active = 1
-
+"====================== General Sets ======================
+"
 " Tab/Indent Settings
 set tabstop=4
 set softtabstop=4
@@ -63,13 +62,35 @@ set incsearch
 set ignorecase
 set smartcase
 
-" File management
+" UI
+set wrap
+set encoding=utf-8
+set number
+set relativenumber
+set cursorline
+set scrolloff=999
+set showmatch
+
+" Other
+set mouse=a
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+set clipboard+=unnamedplus
+set wildmode=longest,list,full
+set splitbelow splitright
+
+" Set <leader>
+let mapleader = " "
+
+"==========================================================
+
+"==================== File Management =====================
+"
 " Telescope
-let pwd = system('pwd')
 lua << EOF
 search_current_directory = function()
     require("telescope.builtin").find_files({
-    prompt_title = "< PWD >",
+    prompt_title = "PWD Files",
     cwd = vim.fn.expand("%:p").gsub(vim.fn.expand("%:p"), vim.fn.expand("%:t"),""),
     hidden = true,
 })
@@ -78,7 +99,6 @@ EOF
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fc :lua search_current_directory()<cr>
-
 
 " Ranger
 " Make Ranger to be hidden after picking a file
@@ -89,11 +109,14 @@ let g:rnvimr_enable_ex = 1
 
 nnoremap <leader>fr :RnvimrToggle<cr>
 
+"==========================================================
 
-" Colors
+"========================= Colors =========================
 
 " Sets colorscheme
 source $HOME/.config/nvim/colexdev.vim
+
+let g:rainbow_active = 1
 
 set termguicolors
 lua require'colorizer'.setup()
@@ -109,7 +132,6 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-
 " Sets lightline colorscheme
 let g:lightline = {
       \ 'colorscheme': 'simpleblack',
@@ -121,31 +143,10 @@ hi HopNextKey1 guifg=#cc0000
 hi HopNextKey2 guifg=#cc0000
 hi HopUnmatched guifg=#505050
 
-" UI
-set wrap
-set encoding=utf-8
-set pumheight=10
-set ruler
-set number
-set relativenumber
-set noshowmode
-set cursorline
-set wrapmargin=2
-set scrolloff=999
-set updatetime=300
-set showmatch
-set mat=2
-set magic
+"==========================================================
 
-" Other
-set mouse=a
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-set clipboard+=unnamedplus
-set wildmode=longest,list,full
-set splitbelow splitright
-
-
+"==================== All Other Remaps ====================
+"
 " Copy and Paste to System Clipboard
 vmap <C-c> "+y
 vmap <C-x> "+c
@@ -164,15 +165,12 @@ nnoremap <ESC> :noh<ESC><ESC>
 " noremap : ,
 " noremap <CR> :
 
+" THIS IS REALLY SLOW FOR SOME REASON RN, IF THAT CAN BE FIXED I WILL USE AGAIN
 " Move lines using Ctrl+j/k
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
-
-" autocmd InsertEnter * norm zz
-autocmd BufWritePre * %s/\s\+$//e
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" nnoremap <C-j> :m .+1<CR>==
+" nnoremap <C-k> :m .-2<CR>==
+" vnoremap <C-j> :m '>+1<CR>gv=gv
+" vnoremap <C-k> :m '<-2<CR>gv=gv
 
 inoremap {<cr> {<cr>}<c-o><s-o>
 inoremap [<cr> [<cr>]<c-o><s-o>
@@ -189,28 +187,9 @@ nnoremap K 10k
 nnoremap H 0
 nnoremap L $
 
-" Commenting blocks of code.
-augroup commenting_blocks_of_code
-  autocmd!
-  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-  autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-  autocmd FileType conf,fstab       let b:comment_leader = '# '
-  autocmd FileType tex              let b:comment_leader = '% '
-  autocmd FileType mail             let b:comment_leader = '> '
-  autocmd FileType vim              let b:comment_leader = '" '
-augroup END
-" Comments a block of code
-noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^\(\s*\)/\1<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-" Uncomments a block of code
-noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>/\1/e<CR>:nohlsearch<CR>
-
 " Change all instances of a word (press '.' to change the next)
 nnoremap cn *``cgn
 nnoremap cN *``cgN
-
-" NerdTree remaps
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <leader>N :NERDTreeToggle<CR>
 
 " Creates an underline based on the length of the above line
 nnoremap <leader>ul mmyypVr-<Esc>`m
@@ -221,8 +200,26 @@ if (exists("*strftime"))
 	noremap <silent> <leader>time "=strftime("%T")<CR>p7h
 endif
 
-" HOP
+" Commenting blocks of code.
+augroup commenting_blocks_of_code
+  autocmd!
+  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+  autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+  autocmd FileType conf,fstab       let b:comment_leader = '# '
+  autocmd FileType tex              let b:comment_leader = '% '
+  autocmd FileType mail             let b:comment_leader = '> '
+  autocmd FileType vim              let b:comment_leader = '" '
+augroup END
+
+" Comments a block of code
+noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^\(\s*\)/\1<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+
+" Uncomments a block of code
+noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>/\1/e<CR>:nohlsearch<CR>
+
+" HOP remaps
 lua require'hop'.setup {keys='asdfghjkl;'}
 map s <cmd>HopChar1<CR>
 omap s v<cmd>HopChar1<CR>
 
+"==========================================================
