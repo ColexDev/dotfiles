@@ -28,6 +28,7 @@ alias rm='rm -rf'
 # easier clear commands
 alias cdc='cd; c'
 alias c='clear; fet'
+alias b='cd ..'
 
 # Runs the last command with sudo
 alias pls='sudo $(fc -ln -1)'
@@ -54,9 +55,10 @@ alias btm='btm -g --mem_as_value'
 alias find='fd -i'
 
 # Scripts
-alias 0x0='/home/cole/Scripts/./0x0.sh'
-alias ix='/home/cole/Scripts/./ix.sh'
-alias fet='/home/cole/Scripts/./fet.sh'
+alias 0x0='$HOME/Scripts/./0x0.sh'
+alias ix='$HOME/Scripts/./ix.sh'
+alias fet='$HOME/Scripts/./fet.sh'
+alias sloc='$HOME/Scripts/SLOC.sh'
 
 # Bash Settings
 
