@@ -106,6 +106,8 @@ if !exists("g:codedark_conservative")
     let g:codedark_conservative=0
 endif
 
+" This is what I have mainly changed
+"
 let s:cdGray = {'gui': '#505050', 'cterm': s:cterm04, 'cterm256': '08'}
 let s:cdViolet = {'gui': '#ad00a1', 'cterm': s:cterm04, 'cterm256': '60'}
 let s:cdBlue = {'gui': '#0080ff', 'cterm': s:cterm0D, 'cterm256': '75'}

@@ -5,10 +5,9 @@
             "filetypes": [
                 "c",
                 "cpp",
-                "objc",
-                "objcpp",
                 "py",
-                "python"
+                "python",
+                "sh"
             ],
             "rootPatterns": [
                 ".ccls",

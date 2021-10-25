@@ -1,6 +1,3 @@
-" Get Coc Settings
-source $HOME/.config/nvim/general/settings.vim
-
 "======================== Plugins =========================
 
 " This is in .local/share/nvim/plugged and stores all plugin data
@@ -35,7 +32,6 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Ranger in nvim lessss go
 Plug 'kevinhwang91/rnvimr'
 
-" Plug 'mhinz/vim-signify'
 call plug#end()
 
 "==========================================================
@@ -68,6 +64,8 @@ set encoding=utf-8
 set number
 set relativenumber
 set cursorline
+
+" Keeps the cursor centered
 set scrolloff=999
 set showmatch
 
@@ -87,6 +85,8 @@ let mapleader = " "
 "==================== File Management =====================
 "
 " Telescope
+"
+" Written by yours truly ;)
 lua << EOF
 search_current_directory = function()
     require("telescope.builtin").find_files({
@@ -111,17 +111,18 @@ nnoremap <leader>fr :RnvimrToggle<cr>
 
 "==========================================================
 
-"========================= Colors =========================
+"======================= Colors/LSP =======================
 
 " Sets colorscheme
 source $HOME/.config/nvim/colexdev.vim
 
-let g:rainbow_active = 1
-
 set termguicolors
+let g:rainbow_active = 1
 lua require'colorizer'.setup()
+
 syntax enable
 highlight LineNr ctermfg=white
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained",
@@ -160,6 +161,9 @@ nnoremap <leader>Q :q!<cr>
 
 " This unsets the last search pattern register by hitting escape
 nnoremap <ESC> :noh<ESC><ESC>
+
+" Goes to the definiton of a variable (CoC)
+nmap <silent> gd <Plug>(coc-definition)
 
 " : is the opposite of ;
 " noremap : ,
