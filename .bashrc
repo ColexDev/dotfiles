@@ -39,6 +39,7 @@ eval "$(thefuck --alias)"
 # Programs
 alias v='nvim'
 alias gc='git commit -m'
+
 # Replaces ls
 alias ls='exa --group-directories-first'
 
@@ -59,6 +60,10 @@ alias 0x0='$HOME/Scripts/./0x0.sh'
 alias ix='$HOME/Scripts/./ix.sh'
 alias fet='$HOME/Scripts/./fet.sh'
 alias sloc='$HOME/Scripts/SLOC.sh'
+
+# Website
+export IP=''
+alias send='sudo rsync -a --rsync-path="sudo rsync" ~/colexdev ${IP}:/var/www/'
 
 # Bash Settings
 
