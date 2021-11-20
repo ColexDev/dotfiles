@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # Automatically runs startx when login to tty1
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
+# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 # Package Managment
 alias packages='sudo pacman -Qqet'
@@ -27,6 +27,7 @@ alias rm='rm -rf'
 
 # easier clear commands
 alias cdc='cd; c'
+# alias c='clear; cat /home/cole/ritchie; echo ""'
 alias c='clear; fet'
 alias b='cd ..'
 
@@ -39,6 +40,10 @@ eval "$(thefuck --alias)"
 # Programs
 alias v='nvim'
 alias gc='git commit -m'
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias nb='newsboat'
 
 # Replaces ls
 alias ls='exa --group-directories-first'
@@ -62,8 +67,7 @@ alias fet='$HOME/Scripts/./fet.sh'
 alias sloc='$HOME/Scripts/SLOC.sh'
 
 # Website
-export IP=''
-alias send='sudo rsync -a --rsync-path="sudo rsync" ~/colexdev ${IP}:/var/www/'
+alias send='sudo rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/'
 
 # Bash Settings
 
@@ -98,3 +102,4 @@ cheat() {
 
 # Run at start
 fet
+# cat /home/cole/ritchie; echo ""
