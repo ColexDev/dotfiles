@@ -1,3 +1,5 @@
+source $HOME/.config/nvim/settings.vim
+
 "======================== Plugins =========================
 
 " This is in .local/share/nvim/plugged and stores all plugin data
@@ -32,6 +34,9 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Ranger in nvim lessss go
 Plug 'kevinhwang91/rnvimr'
 
+" Shows git changes in sidebar
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 "==========================================================
@@ -45,9 +50,8 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set autoindent
-
 " History
-set history=1000
+set history=10000
 set nobackup
 set nowritebackup
 set noswapfile
@@ -64,10 +68,11 @@ set encoding=utf-8
 set number
 set relativenumber
 set cursorline
+set showmatch
+set updatetime=100
 
 " Keeps the cursor centered
 set scrolloff=999
-set showmatch
 
 " Other
 set mouse=a
@@ -96,6 +101,7 @@ search_current_directory = function()
 })
 end
 EOF
+
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fc :lua search_current_directory()<cr>
@@ -138,12 +144,6 @@ let g:lightline = {
       \ 'colorscheme': 'simpleblack',
       \ }
 
-" HOP Colors
-hi HopNextKey guifg=#cc0000
-hi HopNextKey1 guifg=#cc0000
-hi HopNextKey2 guifg=#cc0000
-hi HopUnmatched guifg=#505050
-
 "==========================================================
 
 "==================== All Other Remaps ====================
@@ -161,9 +161,6 @@ nnoremap <leader>Q :q!<cr>
 
 " This unsets the last search pattern register by hitting escape
 nnoremap <ESC> :noh<ESC><ESC>
-
-" Goes to the definiton of a variable (CoC)
-nmap <silent> gd <Plug>(coc-definition)
 
 " : is the opposite of ;
 " noremap : ,
@@ -207,7 +204,7 @@ endif
 " Commenting blocks of code.
 augroup commenting_blocks_of_code
   autocmd!
-  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+  autocmd FileType c,cpp,java       let b:comment_leader = '// '
   autocmd FileType sh,ruby,python   let b:comment_leader = '# '
   autocmd FileType conf,fstab       let b:comment_leader = '# '
   autocmd FileType tex              let b:comment_leader = '% '
@@ -222,8 +219,10 @@ noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^\(\s*\)/\1<C-R>=escape(b:commen
 noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>/\1/e<CR>:nohlsearch<CR>
 
 " HOP remaps
-lua require'hop'.setup {keys='asdfghjkl;'}
-map s <cmd>HopChar1<CR>
-omap s v<cmd>HopChar1<CR>
+lua require'hop'.setup {keys='asdfghjkl'}
+map <Leader>s <cmd>HopPattern<CR>
+map s <cmd>HopWord<CR>
+omap <Leader>s v<cmd>HopPattern<CR>
+omap s v<cmd>HopWord<CR>
 
 "==========================================================

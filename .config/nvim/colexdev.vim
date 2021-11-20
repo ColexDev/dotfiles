@@ -106,6 +106,7 @@ if !exists("g:codedark_conservative")
     let g:codedark_conservative=0
 endif
 
+
 " This is what I have mainly changed
 "
 let s:cdGray = {'gui': '#505050', 'cterm': s:cterm04, 'cterm256': '08'}
@@ -139,8 +140,8 @@ call <sid>hi('CursorColumn', {}, s:cdCursorDarkDark, 'none', {})
 call <sid>hi('Directory', s:cdBlue, s:cdBack, 'none', {})
 call <sid>hi('DiffAdd', {}, s:cdDiffGreenLight, 'none', {})
 call <sid>hi('DiffChange', {}, s:cdDiffRedDark, 'none', {})
-call <sid>hi('DiffDelete', {}, s:cdDiffRedLight, 'none', {})
-call <sid>hi('DiffText', {}, s:cdDiffRedLight, 'none', {})
+call <sid>hi('DiffDelete', {}, s:cdDiffRedLightLight, 'none', {})
+call <sid>hi('DiffText', {}, s:cdDiffRedLightLight, 'none', {})
 call <sid>hi('EndOfBuffer', s:cdLineNumber, s:cdBack, 'none', {})
 call <sid>hi('ErrorMsg', s:cdRed, s:cdBack, 'none', {})
 call <sid>hi('VertSplit', s:cdSplitDark, s:cdBack, 'none', {})
@@ -554,3 +555,14 @@ call <sid>hi('yamlConstant', s:cdBlue, {}, 'none', {})
 
 " Coc Explorer:
 call <sid>hi('CocExplorerIndentLine', s:cdCursorDark, {}, 'none', {})
+
+" Vim Gitgutter (remove for loop that looks like (for type in ["Add", "Change", "Delete"]) on line 81 of highlight.vim in gitgutter folder to make these work
+highlight GitGutterAdd guifg=#00c918
+highlight GitGutterDelete guifg=#cc0000
+highlight GitGutterChange guifg=#ad00a1
+
+" Hop Colors
+hi HopNextKey guifg=#cc0000
+hi HopNextKey1 guifg=#cc0000
+hi HopNextKey2 guifg=#cc0000
+hi HopUnmatched guifg=#505050
