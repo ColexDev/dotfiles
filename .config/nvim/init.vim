@@ -2,7 +2,7 @@ source $HOME/.config/nvim/settings.vim
 
 "======================== Plugins =========================
 
-" This is in .local/share/nvim/plugged and stores all plugin data
+" This is .local/share/nvim/plugged and stores all plugin data
 call plug#begin(stdpath('data').'/plugged')
 
 " Shows colors of hex values in vim
@@ -31,16 +31,19 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-" Ranger in nvim lessss go
+" Ranger in nvim
 Plug 'kevinhwang91/rnvimr'
 
 " Shows git changes in sidebar
 Plug 'airblade/vim-gitgutter'
 
+" Lines to show indentation
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 call plug#end()
 
 "==========================================================
-
+"
 "====================== General Sets ======================
 "
 " Tab/Indent Settings
@@ -70,6 +73,7 @@ set relativenumber
 set cursorline
 set showmatch
 set updatetime=100
+set signcolumn=number
 
 " Keeps the cursor centered
 set scrolloff=999
@@ -86,7 +90,7 @@ set splitbelow splitright
 let mapleader = " "
 
 "==========================================================
-
+"
 "==================== File Management =====================
 "
 " Telescope
@@ -107,6 +111,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fc :lua search_current_directory()<cr>
 
 " Ranger
+"
 " Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
 
@@ -116,7 +121,7 @@ let g:rnvimr_enable_ex = 1
 nnoremap <leader>fr :RnvimrToggle<cr>
 
 "==========================================================
-
+"
 "======================= Colors/LSP =======================
 
 " Sets colorscheme
@@ -145,7 +150,7 @@ let g:lightline = {
       \ }
 
 "==========================================================
-
+"
 "==================== All Other Remaps ====================
 "
 " Copy and Paste to System Clipboard
@@ -224,5 +229,8 @@ map <Leader>s <cmd>HopPattern<CR>
 map s <cmd>HopWord<CR>
 omap <Leader>s v<cmd>HopPattern<CR>
 omap s v<cmd>HopWord<CR>
+
+" Sets the indent guide character
+let g:indent_blankline_char = '|'
 
 "==========================================================
