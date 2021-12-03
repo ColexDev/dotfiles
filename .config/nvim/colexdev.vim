@@ -88,7 +88,7 @@ let s:cdSplitThumb = {'gui': '#424242', 'cterm': s:cterm04, 'cterm256': '238'}
 let s:cdCursorDarkDark = {'gui': '#202020', 'cterm': s:cterm01, 'cterm256': '234'}
 let s:cdCursorDark = {'gui': '#51504F', 'cterm': s:cterm03, 'cterm256': '239'}
 let s:cdCursorLight = {'gui': '#AEAFAD', 'cterm': s:cterm04, 'cterm256': '145'}
-let s:cdSelection = {'gui': '#264F78', 'cterm': s:cterm03, 'cterm256': '24'}
+let s:cdSelection = {'gui': '#333333', 'cterm': s:cterm03, 'cterm256': '24'}
 let s:cdLineNumber = {'gui': '#5A5A5A', 'cterm': s:cterm04, 'cterm256': '15'}
 
 let s:cdDiffRedDark = {'gui': '#4B1818', 'cterm': s:cterm08, 'cterm256': '52'}
@@ -109,13 +109,13 @@ endif
 
 " This is what I have mainly changed
 "
-let s:cdGray = {'gui': '#505050', 'cterm': s:cterm04, 'cterm256': '08'}
-let s:cdViolet = {'gui': '#ad00a1', 'cterm': s:cterm04, 'cterm256': '60'}
+let s:cdGray = {'gui': '#555555', 'cterm': s:cterm04, 'cterm256': '08'}
+let s:cdViolet = {'gui': '#AC00A0', 'cterm': s:cterm04, 'cterm256': '60'}
 let s:cdBlue = {'gui': '#0080ff', 'cterm': s:cterm0D, 'cterm256': '75'}
 let s:cdDarkBlue = {'gui': '#152299', 'cterm': s:cterm0D, 'cterm256': '73'}
 let s:cdLightBlue = {'gui': '#1799AD', 'cterm': s:cterm0C, 'cterm256': '117'}
 if g:codedark_conservative | let s:cdLightBlue = s:cdFront | endif
-let s:cdGreen = {'gui': '#00c918', 'cterm': s:cterm0B, 'cterm256': '65'}
+let s:cdGreen = {'gui': '#00AF15', 'cterm': s:cterm0B, 'cterm256': '65'}
 let s:cdBlueGreen = {'gui': '#4EC9B0', 'cterm': s:cterm0F, 'cterm256': '43'}
 let s:cdLightGreen = {'gui': '#B5CEA8', 'cterm': s:cterm09, 'cterm256': '151'}
 let s:cdRed = {'gui': '#cc0000', 'cterm': s:cterm08, 'cterm256': '203'}
@@ -170,7 +170,9 @@ call <sid>hi('TabLineSel', s:cdFront, s:cdTabCurrent, 'none', {})
 call <sid>hi('Title', s:cdNone, s:cdNone, 'bold', {})
 call <sid>hi('Visual', s:cdNone, s:cdSelection, 'none', {})
 call <sid>hi('VisualNOS', s:cdNone, s:cdSelection, 'none', {})
-call <sid>hi('WarningMsg', s:cdOrange, s:cdBack, 'none', {})
+" This is same as TODO, it just for some reason makes FIXME and stuff this
+call <sid>hi('WarningMsg', s:cdFront, s:cdRed, 'none', {})
+" call <sid>hi('WarningMsg', s:cdOrange, s:cdBack, 'none', {})
 call <sid>hi('WildMenu', s:cdNone, s:cdSelection, 'none', {})
 
 " Legacy groups for official git.vim and diff.vim syntax
@@ -190,9 +192,9 @@ call <sid>hi('Float', s:cdLightGreen, {}, 'none', {})
 call <sid>hi('Identifier', s:cdFront, {}, 'none', {})
 call <sid>hi('Function', s:cdYellow, {}, 'none', {})
 
-call <sid>hi('Statement', s:cdPink, {}, 'none', {})
+call <sid>hi('Statement', s:cdBlue, {}, 'none', {})
 call <sid>hi('Conditional', s:cdPink, {}, 'none', {})
-call <sid>hi('Repeat', s:cdPink, {}, 'none', {})
+call <sid>hi('Repeat', s:cdYellow, {}, 'none', {})
 call <sid>hi('Label', s:cdPink, {}, 'none', {})
 call <sid>hi('Operator', s:cdFront, {}, 'none', {})
 call <sid>hi('Keyword', s:cdPink, {}, 'none', {})
@@ -213,7 +215,9 @@ call <sid>hi('Special', s:cdYellowOrange, {}, 'none', {})
 call <sid>hi('SpecialChar', s:cdFront, {}, 'none', {})
 call <sid>hi('Tag', s:cdFront, {}, 'none', {})
 call <sid>hi('Delimiter', s:cdFront, {}, 'none', {})
-call <sid>hi('SpecialComment', s:cdGreen, {}, 'none', {})
+" This is for Note:
+" call <sid>hi('SpecialComment', s:cdFront, s:cdRed, 'none', {})
+call <sid>hi('SpecialComment', s:cdRed, {}, 'none', {})
 call <sid>hi('Debug', s:cdFront, {}, 'none', {})
 
 call <sid>hi('Underlined', s:cdNone, {}, 'underline', {})
@@ -243,8 +247,8 @@ call <sid>hi('TSConstMacro', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('TSStringRegex', s:cdGreen, {}, 'none', {})
 call <sid>hi('TSString', s:cdGreen, {}, 'none', {})
 call <sid>hi('TSStringEscape', s:cdGreen, {}, 'none', {})
-call <sid>hi('TSCharacter', s:cdOrange, {}, 'none', {})
-call <sid>hi('TSNumber', s:cdOrange, {}, 'none', {})
+call <sid>hi('TSCharacter', s:cdLightRed, {}, 'none', {})
+call <sid>hi('TSNumber', s:cdLightRed, {}, 'none', {})
 call <sid>hi('TSBoolean', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSFloat', s:cdLightGreen, {}, 'none', {})
 call <sid>hi('TSAnnotation', s:cdYellow, {}, 'none', {})
@@ -262,14 +266,15 @@ call <sid>hi('TSProperty', s:cdFront, {}, 'none', {})
 call <sid>hi('TSConstructor', s:cdBlue, {}, 'none', {})
 " Keywords
 call <sid>hi('TSConditional', s:cdViolet, {}, 'none', {})
-call <sid>hi('TSRepeat', s:cdYellow, {}, 'none', {})
+call <sid>hi('TSRepeat', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSLabel', s:cdLightBlue, {}, 'none', {})
 call <sid>hi('TSKeyword', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSKeywordFunction', s:cdPink, {}, 'none', {})
 call <sid>hi('TSKeywordOperator', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSOperator', s:cdFront, {}, 'none', {})
 call <sid>hi('TSException', s:cdPink, {}, 'none', {})
-call <sid>hi('TSType', s:cdYellow, {}, 'none', {})
+" NOTE: Type used to be yellow, may change back to that
+call <sid>hi('TSType', s:cdGreen, {}, 'none', {})
 call <sid>hi('TSTypeBuiltin', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSStructure', s:cdLightBlue, {}, 'none', {})
 call <sid>hi('TSInclude', s:cdBlue, {}, 'none', {})
@@ -557,12 +562,12 @@ call <sid>hi('yamlConstant', s:cdBlue, {}, 'none', {})
 call <sid>hi('CocExplorerIndentLine', s:cdCursorDark, {}, 'none', {})
 
 " Vim Gitgutter (remove for loop that looks like (for type in ["Add", "Change", "Delete"]) on line 81 of highlight.vim in gitgutter folder to make these work
-highlight GitGutterAdd guifg=#00c918
+highlight GitGutterAdd guifg=#00AF15
 highlight GitGutterDelete guifg=#cc0000
-highlight GitGutterChange guifg=#ad00a1
+highlight GitGutterChange guifg=#AC00A0
 
 " Hop Colors
 hi HopNextKey guifg=#cc0000
 hi HopNextKey1 guifg=#cc0000
 hi HopNextKey2 guifg=#cc0000
-hi HopUnmatched guifg=#505050
+hi HopUnmatched guifg=#555555
