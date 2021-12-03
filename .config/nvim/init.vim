@@ -1,3 +1,4 @@
+" CoC Settings
 source $HOME/.config/nvim/settings.vim
 
 "======================== Plugins =========================
@@ -14,7 +15,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Status line
 Plug 'itchyny/lightline.vim'
 
-" LSP
+" LSP (i dont think this is lsp lol)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Puts cursor where it was when the file was last closed
@@ -40,8 +41,10 @@ Plug 'airblade/vim-gitgutter'
 " Lines to show indentation
 Plug 'lukas-reineke/indent-blankline.nvim'
 
-call plug#end()
+" Fancy Todo
+Plug 'folke/todo-comments.nvim'
 
+call plug#end()
 "==========================================================
 "
 "====================== General Sets ======================
@@ -153,6 +156,8 @@ let g:lightline = {
 "
 "==================== All Other Remaps ====================
 "
+" Todo Toggle
+nnoremap <leader>tt :TodoTelescope<CR>
 " Copy and Paste to System Clipboard
 vmap <C-c> "+y
 vmap <C-x> "+c
@@ -217,6 +222,33 @@ augroup commenting_blocks_of_code
   autocmd FileType vim              let b:comment_leader = '" '
 augroup END
 
+" Highlights Custom Keywords
+lua << EOF
+require("todo-comments").setup {
+  signs = false, -- do not show icons in the signs column
+  keywords = {
+    FIX = {color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
+    TODO = {color = "info" },
+    HACK = {color = "warning" },
+    WARN = {color = "warning", alt = { "WARNING", "XXX" } },
+    PERF = {color = "default", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+    NOTE = {color = "hint", alt = { "INFO" } },
+  },
+  highlight = {
+    before = "fg", -- "fg" or "bg" or empty
+    keyword = "bg", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
+    after = "fg", -- "fg" or "bg" or empty
+  },
+  colors = {
+    error = { "LspDiagnosticsDefaultError", "ErrorMsg", "#DC2626" },
+    warning = { "LspDiagnosticsDefaultWarning", "WarningMsg", "#FBBF24" },
+    info = { "LspDiagnosticsDefaultInformation", "#2563EB" },
+    hint = { "LspDiagnosticsDefaultHint", "#10B981" },
+    default = { "Identifier", "#7C3AED" },
+  },
+}
+EOF
+
 " Comments a block of code
 noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^\(\s*\)/\1<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 
@@ -232,5 +264,4 @@ omap s v<cmd>HopWord<CR>
 
 " Sets the indent guide character
 let g:indent_blankline_char = '|'
-
 "==========================================================
