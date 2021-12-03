@@ -46,7 +46,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[F]",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 
@@ -94,8 +94,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_0,      quit,          {0} },
 	{ 0,                            XK_Print,  spawn,     SHCMD("flameshot gui") },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,     SHCMD("slock") },
-    { MODKEY|ShiftMask,             XK_comma,       spawn,     SHCMD("pulsemixer --id sink-1 --change-volume -2") },
-    { MODKEY|ShiftMask,             XK_period,       spawn,     SHCMD("pulsemixer --id sink-1 --change-volume +2") },
+    { MODKEY|ShiftMask,             XK_comma,       spawn,     SHCMD("pulsemixer --id sink-1 --change-volume -5") },
+    { MODKEY|ShiftMask,             XK_period,       spawn,     SHCMD("pulsemixer --id sink-1 --change-volume +5") },
     { MODKEY|ControlMask,           XK_k,          spawn,      SHCMD("exec xdotool mousemove_relative -- 0 -15") },
     { MODKEY|ControlMask,           XK_j,       spawn,      SHCMD("exec xdotool mousemove_relative 0 15") },
     { MODKEY|ControlMask,           XK_l,      spawn,     SHCMD("exec xdotool mousemove_relative 15 0") },
