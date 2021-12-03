@@ -14,10 +14,12 @@ alias mountflashdrive='sudo mount UUID=cc6a5c5b-4715-4fe0-b4de-0c9e6eff2958 /hom
 
 # System Maintence / Misc
 alias grep='grep --color=auto'
-
-# Easier power controls
 alias po='poweroff'
 alias rb='reboot'
+alias ls='exa --group-directories-first'
+alias la='exa -a --group-directories-first'
+alias ll='exa -a --long --group-directories-first'
+alias killall='killall -I'
 
 # Ngl I forget what this is for
 alias sudo='sudo '
@@ -37,22 +39,18 @@ alias pls='sudo $(fc -ln -1)'
 # The fuck?
 eval "$(thefuck --alias)"
 
-# Programs
-alias v='nvim'
-alias gc='git commit -m'
+# Git
+alias gc='git commit -S -m'
 alias gs='git status'
 alias ga='git add'
 alias gp='git push'
+alias lg='lazygit'
+
+# Programs
+alias v='nvim'
+alias sv='sudoedit'
 alias nb='newsboat'
-
-# Replaces ls
-alias ls='exa --group-directories-first'
-
-# ls but directories are first
-alias la='exa -a --group-directories-first'
-
-# la but shows all perms
-alias ll='exa -a --long --group-directories-first'
+alias pdf='mupdf'
 
 # Htop alternative, shows ram in GB instead of %
 alias btm='btm -g --mem_as_value'
@@ -67,18 +65,16 @@ alias fet='$HOME/Scripts/./fet.sh'
 alias sloc='$HOME/Scripts/SLOC.sh'
 
 # Website
+export IP=''
 alias send='sudo rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/'
 
-# Bash Settings
-
-# Set up VIM inside of bash
+# Set up VIM keybinds inside of bash
 set -o vi
 set editing-mode vi
 set keymap vi
 bind -m vi-insert '\C-l':clear-screen
 
 # Bash prompt(s)
-
 PS1="\w > "
 # PS1="[\u@\h \w] > "
 
@@ -93,7 +89,6 @@ export WM_NAME='LG3D'
 
 # Unlimited history size
 HISTSIZE= HISTFILESIZE= #
-
 # Functions
 
 cheat() {
@@ -102,4 +97,4 @@ cheat() {
 
 # Run at start
 fet
-# cat /home/cole/ritchie; echo ""
+# cat /home/cole/Misc/ritchie; echo ""
