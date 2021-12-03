@@ -1954,7 +1954,7 @@ c.tabs.title.alignment = 'left'
 
 ## Default zoom level.
 ## Type: Perc
-c.zoom.default = '80%'
+c.zoom.default = '90%'
 
 ## Available zoom levels.
 ## Type: List of Perc
