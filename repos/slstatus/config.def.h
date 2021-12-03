@@ -4,7 +4,7 @@
 const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
-static const char unknown_str[] = "n/a";
+static const char unknown_str[] = "NULL";
 
 /* maximum output string length */
 #define MAXLEN 2048
@@ -66,7 +66,8 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 //	{ datetime, "%s",           "%F %T" },
-	{ ram_perc, "[RAM %s%%]   ", NULL     },
-	{ cpu_perc, "[CPU %s%%]   ", NULL     },
+    { run_command, "[VOL%4s]  ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+	{ ram_perc, "[RAM %s%%]  ", NULL     },
+	{ cpu_perc, "[CPU %s%%]  ", NULL     },
 	{ datetime, "%s",	"%a %b %d %T"  },
 };
