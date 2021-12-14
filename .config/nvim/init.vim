@@ -1,3 +1,11 @@
+"
+"  ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
+"  ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
+"  ██║   ██║██║██╔████╔██║██████╔╝██║
+"  ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║
+"██╗╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗
+"╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+"
 " CoC Settings
 source $HOME/.config/nvim/settings.vim
 
@@ -43,6 +51,12 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Fancy Todo
 Plug 'folke/todo-comments.nvim'
+
+" Finally can move lines again :pray:
+Plug 'matze/vim-move'
+
+" Auto pairs
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 "==========================================================
@@ -176,17 +190,6 @@ nnoremap <ESC> :noh<ESC><ESC>
 " noremap : ,
 " noremap <CR> :
 
-" THIS IS REALLY SLOW FOR SOME REASON RN, IF THAT CAN BE FIXED I WILL USE AGAIN
-" Move lines using Ctrl+j/k
-" nnoremap <C-j> :m .+1<CR>==
-" nnoremap <C-k> :m .-2<CR>==
-" vnoremap <C-j> :m '>+1<CR>gv=gv
-" vnoremap <C-k> :m '<-2<CR>gv=gv
-
-inoremap {<cr> {<cr>}<c-o><s-o>
-inoremap [<cr> [<cr>]<c-o><s-o>
-inoremap (<cr> (<cr>)<c-o><s-o>
-
 " Keep searching centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -264,4 +267,13 @@ omap s v<cmd>HopWord<CR>
 
 " Sets the indent guide character
 let g:indent_blankline_char = '|'
+
+let g:move_key_modifier = 'C'
+
+" Change window title to Neovim
+let &titlestring = "Neovim"
+set title
+
+" Yank to end of line
+nnoremap Y yg_
 "==========================================================

@@ -263,7 +263,9 @@ for i in $info; do
 #		host) print host "$model";;
 #		kern) print kern "$kernel";;
 		pkgs) print pkgs "$pkgs";;
-        term) print term "$term";;
+        # term) print term "$term";;
+        # term) print term "alacritty";;
+
 		user) printf '%7s@%s\n' "$USER" "$host";;
 		col) col;;
 	esac

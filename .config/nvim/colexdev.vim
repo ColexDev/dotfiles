@@ -110,7 +110,7 @@ endif
 " This is what I have mainly changed
 "
 let s:cdGray = {'gui': '#555555', 'cterm': s:cterm04, 'cterm256': '08'}
-let s:cdViolet = {'gui': '#AC00A0', 'cterm': s:cterm04, 'cterm256': '60'}
+let s:cdViolet = {'gui': '#A43CC9', 'cterm': s:cterm04, 'cterm256': '60'}
 let s:cdBlue = {'gui': '#0080ff', 'cterm': s:cterm0D, 'cterm256': '75'}
 let s:cdDarkBlue = {'gui': '#152299', 'cterm': s:cterm0D, 'cterm256': '73'}
 let s:cdLightBlue = {'gui': '#1799AD', 'cterm': s:cterm0C, 'cterm256': '117'}
@@ -119,7 +119,7 @@ let s:cdGreen = {'gui': '#00AF15', 'cterm': s:cterm0B, 'cterm256': '65'}
 let s:cdBlueGreen = {'gui': '#4EC9B0', 'cterm': s:cterm0F, 'cterm256': '43'}
 let s:cdLightGreen = {'gui': '#B5CEA8', 'cterm': s:cterm09, 'cterm256': '151'}
 let s:cdRed = {'gui': '#cc0000', 'cterm': s:cterm08, 'cterm256': '203'}
-let s:cdOrange = {'gui': '#fd8900', 'cterm': s:cterm0F, 'cterm256': '173'}
+let s:cdOrange = {'gui': '#F08B27', 'cterm': s:cterm0F, 'cterm256': '173'}
 let s:cdLightRed = {'gui': '#D16969', 'cterm': s:cterm08, 'cterm256': '167'}
 if g:codedark_conservative | let s:cdLightRed = s:cdOrange | endif
 let s:cdYellowOrange = {'gui': '#D7BA7D', 'cterm': s:cterm0A, 'cterm256': '179'}
@@ -204,7 +204,7 @@ call <sid>hi('PreProc', s:cdBlue, {}, 'none', {})
 call <sid>hi('Include', s:cdBlue, {}, 'none', {})
 call <sid>hi('Define', s:cdBlue, {}, 'none', {})
 call <sid>hi('Macro', s:cdBlue, {}, 'none', {})
-call <sid>hi('PreCondit', s:cdBlue, {}, 'none', {})
+call <sid>hi('PreCondit', s:cdFront, {}, 'none', {})
 
 call <sid>hi('Type', s:cdBlue, {}, 'none', {})
 call <sid>hi('StorageClass', s:cdBlue, {}, 'none', {})
@@ -247,8 +247,8 @@ call <sid>hi('TSConstMacro', s:cdBlueGreen, {}, 'none', {})
 call <sid>hi('TSStringRegex', s:cdGreen, {}, 'none', {})
 call <sid>hi('TSString', s:cdGreen, {}, 'none', {})
 call <sid>hi('TSStringEscape', s:cdGreen, {}, 'none', {})
-call <sid>hi('TSCharacter', s:cdLightRed, {}, 'none', {})
-call <sid>hi('TSNumber', s:cdLightRed, {}, 'none', {})
+call <sid>hi('TSCharacter', s:cdOrange, {}, 'none', {})
+call <sid>hi('TSNumber', s:cdOrange, {}, 'none', {})
 call <sid>hi('TSBoolean', s:cdBlue, {}, 'none', {})
 call <sid>hi('TSFloat', s:cdLightGreen, {}, 'none', {})
 call <sid>hi('TSAnnotation', s:cdYellow, {}, 'none', {})

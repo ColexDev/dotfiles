@@ -187,10 +187,10 @@ colors:
   normal:
     black:   '#000000'
     red:     '#cc0000'
-    green:   '#00c918'
+    green:   '#00AF15'
     yellow:  '#ffff00'
     blue:    '#0080ff'
-    magenta: '#ff0086'
+    magenta: '#A43CC9'
     cyan:    '#1799AD'
     white:   '#ffffff'
 
@@ -201,7 +201,7 @@ colors:
     green:   '#00c918'
     yellow:  '#ffff00'
     blue:    '#0080ff'
-    magenta: '#ff0086'
+    magenta: '#A43CC9'
     cyan:    '#1799AD'
     white:   '#ffffff'
 

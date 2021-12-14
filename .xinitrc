@@ -3,7 +3,6 @@ exec slstatus &
 exec alacritty &
 exec qutebrowser &
 exec pulseaudio-equalizer enable &
-exec discord &
 
 # Sets wallpaper
 exec ~/Scripts/.fehbg &

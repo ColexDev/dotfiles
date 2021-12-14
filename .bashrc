@@ -1,3 +1,11 @@
+#
+#    ██████╗  █████╗ ███████╗██╗  ██╗██████╗  ██████╗
+#    ██╔══██╗██╔══██╗██╔════╝██║  ██║██╔══██╗██╔════╝
+#    ██████╔╝███████║███████╗███████║██████╔╝██║
+#    ██╔══██╗██╔══██║╚════██║██╔══██║██╔══██╗██║
+# ██╗██████╔╝██║  ██║███████║██║  ██║██║  ██║╚██████╗
+# ╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -7,6 +15,7 @@
 # Package Managment
 alias packages='sudo pacman -Qqet'
 alias orphans='sudo pacman -Qdtq'
+alias pacman='sudo pacman'
 
 # Aliases to mount my drives
 alias mountssd='sudo blkid; sleep 1; sudo mount UUID=3583DD0C22E7BC7A /home/cole/SSD/'
@@ -19,17 +28,15 @@ alias rb='reboot'
 alias ls='exa --group-directories-first'
 alias la='exa -a --group-directories-first'
 alias ll='exa -a --long --group-directories-first'
-alias killall='killall -I'
 
 # Ngl I forget what this is for
 alias sudo='sudo '
 
-# Automatically deletes without asking and can delete directories
-alias rm='rm -rf'
+# Allows deleting directories
+alias rm='rm -r'
 
 # easier clear commands
 alias cdc='cd; c'
-# alias c='clear; cat /home/cole/ritchie; echo ""'
 alias c='clear; fet'
 alias b='cd ..'
 
@@ -63,6 +70,7 @@ alias 0x0='$HOME/Scripts/./0x0.sh'
 alias ix='$HOME/Scripts/./ix.sh'
 alias fet='$HOME/Scripts/./fet.sh'
 alias sloc='$HOME/Scripts/SLOC.sh'
+alias go='$HOME/Scripts/cd.sh'
 
 # Website
 export IP=''
@@ -97,4 +105,3 @@ cheat() {
 
 # Run at start
 fet
-# cat /home/cole/Misc/ritchie; echo ""
