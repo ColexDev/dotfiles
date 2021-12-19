@@ -10,6 +10,7 @@
                 "sh"
             ],
             "rootPatterns": [
+
                 ".ccls",
                 "compile_commands.json",
                 ".vim/",
@@ -22,5 +23,7 @@
                 }
             }
         }
-    }
+    },
+    "diagnostic.errorSign":"E",
+    "diagnostic.warningSign":"W"
 }

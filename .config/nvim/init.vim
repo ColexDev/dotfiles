@@ -21,7 +21,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Status line
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
 
 " LSP (i dont think this is lsp lol)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -44,7 +44,8 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'kevinhwang91/rnvimr'
 
 " Shows git changes in sidebar
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
+Plug 'lewis6991/gitsigns.nvim'
 
 " Lines to show indentation
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -55,8 +56,7 @@ Plug 'folke/todo-comments.nvim'
 " Finally can move lines again :pray:
 Plug 'matze/vim-move'
 
-" Auto pairs
-Plug 'jiangmiao/auto-pairs'
+Plug 'famiu/feline.nvim'
 
 call plug#end()
 "==========================================================
@@ -159,6 +159,18 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = true,
     },
 }
+
+require('feline').setup ({
+    preset = 'noicon'
+})
+require('feline.providers.lsp').diagnostics_exist(type)
+require('gitsigns').setup {
+    signs = {
+        add          = {hl = 'GitSignsAdd'   , text = '+', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
+        change       = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+        changedelete = {hl = 'GitSignsChange', text = '|', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+      },
+    }
 EOF
 
 " Sets lightline colorscheme
@@ -257,6 +269,11 @@ noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^\(\s*\)/\1<C-R>=escape(b:commen
 
 " Uncomments a block of code
 noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>/\1/e<CR>:nohlsearch<CR>
+
+" Auto pairs
+inoremap {<cr> {<cr>}<c-o><s-o>
+inoremap [<cr> [<cr>]<c-o><s-o>
+inoremap (<cr> (<cr>)<c-o><s-o>
 
 " HOP remaps
 lua require'hop'.setup {keys='asdfghjkl'}
