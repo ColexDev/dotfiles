@@ -1,3 +1,11 @@
+#
+#   ██╗  ██╗██╗███╗   ██╗██╗████████╗██████╗  ██████╗
+#   ╚██╗██╔╝██║████╗  ██║██║╚══██╔══╝██╔══██╗██╔════╝
+#    ╚███╔╝ ██║██╔██╗ ██║██║   ██║   ██████╔╝██║
+#    ██╔██╗ ██║██║╚██╗██║██║   ██║   ██╔══██╗██║
+#██╗██╔╝ ██╗██║██║ ╚████║██║   ██║   ██║  ██║╚██████╗
+#╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝
+#
 # Launches programs
 exec slstatus &
 exec alacritty &
@@ -5,7 +13,7 @@ exec qutebrowser &
 exec pulseaudio-equalizer enable &
 
 # Sets wallpaper
-exec ~/Scripts/.fehbg &
+exec ~/scripts/.fehbg &
 
 # Allows for faster output when holding down a key, very useful for vim
 exec xset r rate 225 75 &
@@ -13,9 +21,8 @@ exec xset r rate 225 75 &
 # Sets default browser
 exec xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop &
 
-# Mounts my drives if plugged in
-exec sudo mount UUID=f23b86c3-63ac-4e21-91f6-123d74cd557b /home/cole/flashDrive/ &
-exec sudo mount UUID=3583DD0C22E7BC7A /home/cole/SSD/ &
+# Mounts my external SSD if plugged in
+exec sudo mount UUID=3583DD0C22E7BC7A /home/cole/ssd/ &
 
 # This sets the screen to stay on all the time (I think)
 # exec xset -dpms &

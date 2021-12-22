@@ -18,8 +18,7 @@ alias orphans='sudo pacman -Qdtq'
 alias pacman='sudo pacman'
 
 # Aliases to mount my drives
-alias mountssd='sudo blkid; sleep 1; sudo mount UUID=3583DD0C22E7BC7A /home/cole/SSD/'
-alias mountflashdrive='sudo mount UUID=cc6a5c5b-4715-4fe0-b4de-0c9e6eff2958 /home/cole/flashDrive/'
+alias mountssd='sudo blkid; sleep 1; sudo mount UUID=3583DD0C22E7BC7A /home/cole/ssd/'
 
 # System Maintence / Misc
 alias grep='grep --color=auto'
@@ -66,11 +65,11 @@ alias btm='btm -g --mem_as_value'
 alias find='fd -i'
 
 # Scripts
-alias 0x0='$HOME/Scripts/./0x0.sh'
-alias ix='$HOME/Scripts/./ix.sh'
-alias fet='$HOME/Scripts/./fet.sh'
-alias sloc='$HOME/Scripts/SLOC.sh'
-alias go='$HOME/Scripts/cd.sh'
+alias 0x0='$HOME/scripts/./0x0.sh'
+alias ix='$HOME/scripts/./ix.sh'
+alias fet='$HOME/scripts/./fet.sh'
+alias sloc='$HOME/scripts/SLOC.sh'
+alias go='$HOME/scripts/cd.sh'
 
 # Website
 export IP=''
@@ -94,6 +93,7 @@ export VIDEO='mpv'
 export IMAGE='feh'
 export TERM=xterm-256color
 export WM_NAME='LG3D'
+export GPG_TTY=$(tty)
 
 # Unlimited history size
 HISTSIZE= HISTFILESIZE= #

@@ -20,9 +20,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 " Autocompletion (also has discord RPC plugin)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Status line
-" Plug 'itchyny/lightline.vim'
-
 " LSP (i dont think this is lsp lol)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -44,7 +41,6 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'kevinhwang91/rnvimr'
 
 " Shows git changes in sidebar
-" Plug 'airblade/vim-gitgutter'
 Plug 'lewis6991/gitsigns.nvim'
 
 " Lines to show indentation
@@ -56,6 +52,7 @@ Plug 'folke/todo-comments.nvim'
 " Finally can move lines again :pray:
 Plug 'matze/vim-move'
 
+" Status Line
 Plug 'famiu/feline.nvim'
 
 call plug#end()
@@ -152,6 +149,7 @@ syntax enable
 highlight LineNr ctermfg=white
 
 lua <<EOF
+-- Sets up treesitter
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained",
   highlight = {
@@ -160,17 +158,45 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 
+-- Sets up status line with no icons
 require('feline').setup ({
-    preset = 'noicon'
+    preset = 'noicon',
 })
 require('feline.providers.lsp').diagnostics_exist(type)
+
+-- Git change signs in numberline
 require('gitsigns').setup {
     signs = {
         add          = {hl = 'GitSignsAdd'   , text = '+', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
         change       = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-        changedelete = {hl = 'GitSignsChange', text = '|', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+        changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
       },
     }
+
+-- Highlights Custom Keywords
+require("todo-comments").setup {
+  signs = false, -- do not show icons in the signs column
+  keywords = {
+    FIX = {color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
+    TODO = {color = "info" },
+    HACK = {color = "warning" },
+    WARN = {color = "warning", alt = { "WARNING", "XXX" } },
+    PERF = {color = "default", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+    NOTE = {color = "hint", alt = { "INFO" } },
+  },
+  highlight = {
+    before = "fg", -- "fg" or "bg" or empty
+    keyword = "bg", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
+    after = "fg", -- "fg" or "bg" or empty
+  },
+  colors = {
+    error = { "LspDiagnosticsDefaultError", "ErrorMsg", "#DC2626" },
+    warning = { "LspDiagnosticsDefaultWarning", "WarningMsg", "#FBBF24" },
+    info = { "LspDiagnosticsDefaultInformation", "#2563EB" },
+    hint = { "LspDiagnosticsDefaultHint", "#10B981" },
+    default = { "Identifier", "#7C3AED" },
+  },
+}
 EOF
 
 " Sets lightline colorscheme
@@ -237,33 +263,6 @@ augroup commenting_blocks_of_code
   autocmd FileType vim              let b:comment_leader = '" '
 augroup END
 
-" Highlights Custom Keywords
-lua << EOF
-require("todo-comments").setup {
-  signs = false, -- do not show icons in the signs column
-  keywords = {
-    FIX = {color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
-    TODO = {color = "info" },
-    HACK = {color = "warning" },
-    WARN = {color = "warning", alt = { "WARNING", "XXX" } },
-    PERF = {color = "default", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-    NOTE = {color = "hint", alt = { "INFO" } },
-  },
-  highlight = {
-    before = "fg", -- "fg" or "bg" or empty
-    keyword = "bg", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
-    after = "fg", -- "fg" or "bg" or empty
-  },
-  colors = {
-    error = { "LspDiagnosticsDefaultError", "ErrorMsg", "#DC2626" },
-    warning = { "LspDiagnosticsDefaultWarning", "WarningMsg", "#FBBF24" },
-    info = { "LspDiagnosticsDefaultInformation", "#2563EB" },
-    hint = { "LspDiagnosticsDefaultHint", "#10B981" },
-    default = { "Identifier", "#7C3AED" },
-  },
-}
-EOF
-
 " Comments a block of code
 noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^\(\s*\)/\1<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 
@@ -293,4 +292,7 @@ set title
 
 " Yank to end of line
 nnoremap Y yg_
+
+" Unbinds Q (ex mode)
+nnoremap <silent> Q <nop>
 "==========================================================
