@@ -3,7 +3,7 @@ These are the dotfiles for my minimal Void Linux installation run on my main mac
 
 | Application Type     | Name            |
 |----------------------|-----------------|
-| Distro               | Void            |
+| Distro               | [Void](https://voidlinux.org/)|
 | Window Manager       | [DWM](https://github.com/ColexDev/dotfiles/tree/main/repos/dwm)|
 | Terminal Emulator    | [Alacritty](https://github.com/ColexDev/dotfiles/tree/main/.config/alacritty)|
 | Application Launcher | [dmenu](https://github.com/ColexDev/dotfiles/tree/main/repos/dmenu)|
