@@ -13,53 +13,51 @@
 # if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 # Package Managment
-alias packages='sudo pacman -Qqet'
-alias orphans='sudo pacman -Qdtq'
-alias pacman='sudo pacman'
+alias install='doas xbps-install -Su'
+alias remove='doas xbps-remove -R'
 
 # Aliases to mount my drives
-alias mountssd='sudo blkid; sleep 1; sudo mount UUID=3583DD0C22E7BC7A /home/cole/ssd/'
+alias mountssd='doas blkid; sleep 1; doas mount UUID=3583DD0C22E7BC7A /home/cole/ssd/'
 
 # System Maintence / Misc
 alias grep='grep --color=auto'
-alias po='poweroff'
-alias rb='reboot'
+alias po='doas poweroff'
+alias rb='doas reboot'
 alias ls='exa --group-directories-first'
 alias la='exa -a --group-directories-first'
 alias ll='exa -a --long --group-directories-first'
 
 # Ngl I forget what this is for
-alias sudo='sudo '
+alias doas='doas '
 
-# Allows deleting directories
+# Allows deleting/copying directories
 alias rm='rm -r'
+alias cp='cp -r'
 
 # easier clear commands
 alias cdc='cd; c'
 alias c='clear; fet'
 alias b='cd ..'
 
-# Runs the last command with sudo
-alias pls='sudo $(fc -ln -1)'
+# Runs the last command with doas
+alias pls='doas $(fc -ln -1)'
 
 # The fuck?
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)"
 
 # Git
 alias gc='git commit -S -m'
 alias gs='git status'
 alias ga='git add'
 alias gp='git push'
-alias lg='lazygit'
 
 # Programs
 alias v='nvim'
-alias sv='sudoedit'
 alias nb='newsboat'
 alias pdf='mupdf'
 
-# Htop alternative, shows ram in GB instead of %
-alias btm='btm -g --mem_as_value'
+# Htop alternative
+alias btm='btm -g'
 
 # Replaces find
 alias find='fd -i'
@@ -73,7 +71,7 @@ alias go='$HOME/scripts/cd.sh'
 
 # Website
 export IP=''
-alias send='sudo rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/'
+alias send='doas rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/'
 
 # Set up VIM keybinds inside of bash
 set -o vi
