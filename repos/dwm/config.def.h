@@ -6,8 +6,8 @@ static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {"Source Code Pro:size=11"};
-static const char dmenufont[]       = "Source Code Pro:size=11";
+static const char *fonts[]          = {"Source Code Pro:size=12"};
+static const char dmenufont[]       = "Source Code Pro:size=12";
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#ffffff";
 static const char col_gray3[]       = "#ffffff";
@@ -32,7 +32,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Alacritty",   NULL,     NULL,      1,           0,            1 },
+//	{ "Alacritty",   NULL,     NULL,      1,           0,            1 },
 	{ "qutebrowser",  NULL,       NULL,         2,           0,            0 },
 	{ NULL,   "spotify", NULL,         1 << 6,      0,            1 }, /* FIX THIS */
 	{ "KeePassXC", NULL,     NULL,          1 << 5,      0,            1 },
@@ -109,8 +109,9 @@ static Key keys[] = {
     { MODKEY|ControlMask,           XK_j,       spawn,      SHCMD("exec xdotool mousemove_relative 0 15") },
     { MODKEY|ControlMask,           XK_l,      spawn,     SHCMD("exec xdotool mousemove_relative 15 0") },
     { MODKEY|ControlMask,           XK_h,      spawn,    SHCMD("exec xdotool mousemove_relative -- -15 0") },
-    { MODKEY|ControlMask,          XK_Return, spawn,    SHCMD("exec xdotool click 1") },
-    { MODKEY|ShiftMask,          XK_slash, spawn,    SHCMD("exec pulseaudio-equalizer toggle") },
+    { MODKEY|ControlMask,           XK_Return, spawn,    SHCMD("exec xdotool click 1") },
+    { MODKEY|ShiftMask,             XK_slash, spawn,    SHCMD("exec pulseaudio-equalizer toggle") },
+    { MODKEY,                       XK_s,     spawn,    SHCMD("exec $HOME/scripts/startup.sh") },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },

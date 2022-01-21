@@ -158,6 +158,8 @@ c.zoom.default = '90%'
 ## Type: List of Perc
 # c.zoom.levels = ['25%', '33%', '50%', '67%', '75%', '90%', '100%', '110%', '125%', '150%', '175%', '200%', '250%', '300%', '400%', '500%']
 
+c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://easylist-downloads.adblockplus.org/easylistdutch.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://secure.fanboy.co.nz/fanboy-cookiemonster.txt']
+
 config.bind('1', 'hint all yank')
 config.bind('2', 'spawn mpv {url}')
 config.bind('3', 'hint links spawn mpv {hint-url}')

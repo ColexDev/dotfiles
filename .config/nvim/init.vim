@@ -38,7 +38,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " Ranger in nvim
-Plug 'kevinhwang91/rnvimr'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 " Shows git changes in sidebar
 Plug 'lewis6991/gitsigns.nvim'
@@ -67,6 +68,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set autoindent
+
 " History
 set history=10000
 set nobackup
@@ -126,13 +128,9 @@ nnoremap <leader>fc :lua search_current_directory()<cr>
 
 " Ranger
 "
-" Make Ranger to be hidden after picking a file
-let g:rnvimr_enable_picker = 1
-
-" Make Ranger replace Netrw and be the file explorer
-let g:rnvimr_enable_ex = 1
-
-nnoremap <leader>fr :RnvimrToggle<cr>
+let g:ranger_map_keys = 0
+let g:ranger_replace_netrw = 1
+nnoremap <leader>fr :RangerWorkingDirectory<cr>
 
 "==========================================================
 "

@@ -13,8 +13,10 @@
 # if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 # Package Managment
-alias install='doas xbps-install -Su'
+alias install='doas xbps-install -S'
+alias upgrade='doas xbps-install -Su'
 alias remove='doas xbps-remove -R'
+alias packages='xbps-query -l'
 
 # Aliases to mount my drives
 alias mountssd='doas blkid; sleep 1; doas mount UUID=3583DD0C22E7BC7A /home/cole/ssd/'
@@ -26,6 +28,7 @@ alias rb='doas reboot'
 alias ls='exa --group-directories-first'
 alias la='exa -a --group-directories-first'
 alias ll='exa -a --long --group-directories-first'
+alias perms='doas chmod 664'
 
 # Ngl I forget what this is for
 alias doas='doas '
@@ -42,9 +45,6 @@ alias b='cd ..'
 # Runs the last command with doas
 alias pls='doas $(fc -ln -1)'
 
-# The fuck?
-# eval "$(thefuck --alias)"
-
 # Git
 alias gc='git commit -S -m'
 alias gs='git status'
@@ -55,6 +55,8 @@ alias gp='git push'
 alias v='nvim'
 alias nb='newsboat'
 alias pdf='mupdf'
+# puts you in the last directory upon exit
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 # Htop alternative
 alias btm='btm -g'
@@ -68,6 +70,7 @@ alias ix='$HOME/scripts/./ix.sh'
 alias fet='$HOME/scripts/./fet.sh'
 alias sloc='$HOME/scripts/SLOC.sh'
 alias go='$HOME/scripts/cd.sh'
+alias doasedit='$HOME/scripts/doasedit.sh'
 
 # Website
 export IP=''
@@ -88,7 +91,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export SUDO_EDITOR='nvim'
 export VIDEO='mpv'
-export IMAGE='feh'
+export IMAGE='sxiv'
 export TERM=xterm-256color
 export WM_NAME='LG3D'
 export GPG_TTY=$(tty)
@@ -96,10 +99,6 @@ export GPG_TTY=$(tty)
 # Unlimited history size
 HISTSIZE= HISTFILESIZE= #
 # Functions
-
-cheat() {
-    curl "https://cheat.sh/$1"
-}
 
 # Run at start
 fet
