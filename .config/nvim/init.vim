@@ -95,12 +95,9 @@ set signcolumn=number
 set scrolloff=999
 
 " Other
-set mouse=a
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set clipboard+=unnamedplus
-set wildmode=longest,list,full
-set splitbelow splitright
 
 " Set <leader>
 let mapleader = " "
@@ -130,7 +127,7 @@ nnoremap <leader>fc :lua search_current_directory()<cr>
 "
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
-nnoremap <leader>fr :RangerWorkingDirectory<cr>
+nnoremap <leader>fr :RangerCurrentDirectory<cr>
 
 "==========================================================
 "

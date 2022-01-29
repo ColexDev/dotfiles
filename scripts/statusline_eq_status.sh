@@ -2,7 +2,7 @@ output=$(pulseaudio-equalizer status | grep 'Equalizer status' | awk -F'[][]' '{
 
 if [ $output = "enabled" ];
 then
-    echo on
+    echo ON
 else
-    echo off
+    echo OFF
 fi

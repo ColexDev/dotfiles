@@ -4,10 +4,7 @@
             "command": "ccls",
             "filetypes": [
                 "c",
-                "cpp",
-                "py",
-                "python",
-                "sh"
+                "cpp"
             ],
             "rootPatterns": [
 
