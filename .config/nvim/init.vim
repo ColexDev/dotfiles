@@ -14,23 +14,20 @@ source $HOME/.config/nvim/settings.vim
 " This is .local/share/nvim/plugged and stores all plugin data
 call plug#begin(stdpath('data').'/plugged')
 
-" Shows colors of hex values in vim
-Plug 'norcalli/nvim-colorizer.lua'
-
-" Autocompletion (also has discord RPC plugin)
+" Autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" LSP (i dont think this is lsp lol)
+" Treesitter, no comment needed
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Shows colors of hex values in vim
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Puts cursor where it was when the file was last closed
 Plug 'farmergreg/vim-lastplace'
 
 " Highlights whitespace in red
 Plug 'ntpeters/vim-better-whitespace'
-
-" Allows much faster movement
-Plug 'phaazon/hop.nvim'
 
 " Fuzzy finder go brrrrr
 Plug 'nvim-lua/plenary.nvim'
@@ -55,6 +52,9 @@ Plug 'matze/vim-move'
 
 " Status Line
 Plug 'famiu/feline.nvim'
+
+" Allows much faster movement
+" Plug 'phaazon/hop.nvim'
 
 call plug#end()
 "==========================================================
@@ -124,7 +124,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fc :lua search_current_directory()<cr>
 
 " Ranger
-"
+
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
 nnoremap <leader>fr :RangerCurrentDirectory<cr>
@@ -194,17 +194,13 @@ require("todo-comments").setup {
 }
 EOF
 
-" Sets lightline colorscheme
-let g:lightline = {
-      \ 'colorscheme': 'simpleblack',
-      \ }
-
 "==========================================================
 "
 "==================== All Other Remaps ====================
 "
-" Todo Toggle
+" Todo Telescope Finger
 nnoremap <leader>tt :TodoTelescope<CR>
+
 " Copy and Paste to System Clipboard
 vmap <C-c> "+y
 vmap <C-x> "+c
@@ -225,18 +221,12 @@ nnoremap <ESC> :noh<ESC><ESC>
 
 " Keep searching centered
 nnoremap n nzzzv
-nnoremap N Nzzzv
 nnoremap J mzJ`z
+nnoremap N Nzzzv
 
 " Fits other keybinds, allows faster movement
 nnoremap J 10j
 nnoremap K 10k
-nnoremap H 0
-nnoremap L $
-
-" Change all instances of a word (press '.' to change the next)
-nnoremap cn *``cgn
-nnoremap cN *``cgN
 
 " Creates an underline based on the length of the above line
 nnoremap <leader>ul mmyypVr-<Esc>`m
@@ -269,17 +259,8 @@ inoremap {<cr> {<cr>}<c-o><s-o>
 inoremap [<cr> [<cr>]<c-o><s-o>
 inoremap (<cr> (<cr>)<c-o><s-o>
 
-" HOP remaps
-lua require'hop'.setup {keys='asdfghjkl'}
-map <Leader>s <cmd>HopPattern<CR>
-map s <cmd>HopWord<CR>
-omap <Leader>s v<cmd>HopPattern<CR>
-omap s v<cmd>HopWord<CR>
-
 " Sets the indent guide character
 let g:indent_blankline_char = '|'
-
-let g:move_key_modifier = 'C'
 
 " Change window title to Neovim
 let &titlestring = "Neovim"
@@ -288,6 +269,11 @@ set title
 " Yank to end of line
 nnoremap Y yg_
 
+" Markdown in calcurse notes
+autocmd BufRead,BufNewFile /tmp/calcurse*, ~/.calcurse/notes/* set filetype=markdown
+
+" Easier root editing
+cmap w!! w !doas tee > /dev/null %
 " Unbinds Q (ex mode)
 nnoremap <silent> Q <nop>
 "==========================================================

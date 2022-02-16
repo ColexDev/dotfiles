@@ -34,6 +34,7 @@ exec xinput --set-prop "pointer:Logitech MX Master 2S" "Coordinate Transformatio
 #exec $HOME/./new.sh
 #
 
+exec scripts/startup.sh &
 
 # Launches DWM
 #exec dbus-launch dwm

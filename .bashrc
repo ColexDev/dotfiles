@@ -14,7 +14,7 @@
 
 ### Aliases ###
 
-alias resume='mv Downloads/Jake_s_Resume.pdf /home/cole/cole_roberts_resume.pdf'
+alias resume='mv Downloads/Jake_s_Resume.pdf /home/cole/misc/cole_roberts_resume.pdf'
 
 # Package Managment with xbps
 alias install='doas xbps-install -S'
@@ -22,8 +22,8 @@ alias upgrade='doas xbps-install -Su'
 alias remove='doas xbps-remove -R'
 alias packages='xbps-query -l'
 
-# Mounts my portable SSSD
-alias mountssd='doas blkid; sleep 1; doas mount UUID=3583DD0C22E7BC7A /home/cole/ssd/'
+# Mounts my portable SSD
+alias mountssd='doas blkid; sleep 1; doas mount -t ntfs-3g -o rw UUID=3583DD0C22E7BC7A /home/cole/ssd/'
 
 # Auto root power commands
 alias po='doas poweroff'
@@ -42,6 +42,12 @@ alias mkdir='mkdir -pv'
 
 # Ngl I forget what this is for
 alias doas='doas '
+
+# Search command history
+alias h='history | cut -c 8- | fzf --tac | xclip -r -selection -c'
+
+# Record screen
+alias record='ffmpeg -f x11grab -y -framerate 30 -s 1920x1080 -i :0.0+0,369 -c:v libx264 -preset superfast -crf 18 out.mp4'
 
 # Allows deleting/copying directories
 alias rm='rm -r'
@@ -73,14 +79,6 @@ alias btm='btm -g'
 # Replaces find
 alias find='fd -i'
 
-# Scripts aliases
-alias 0x0='$HOME/scripts/./0x0.sh'
-alias ix='$HOME/scripts/./ix.sh'
-alias fet='$HOME/scripts/./fet.sh'
-alias sloc='$HOME/scripts/SLOC.sh'
-alias go='$HOME/scripts/cd.sh'
-alias doasedit='$HOME/scripts/doasedit.sh'
-
 # Website
 export IP=''
 alias send='doas rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/'
@@ -104,6 +102,8 @@ export IMAGE='sxiv'
 export TERM=xterm-256color
 export WM_NAME='LG3D'
 export GPG_TTY=$(tty)
+export PATH=$HOME/.local/bin:$PATH
+export HISTCONTROL=ignoreboth:erasedups
 
 # Unlimited history size
 HISTSIZE= HISTFILESIZE= #

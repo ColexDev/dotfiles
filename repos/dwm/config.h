@@ -20,11 +20,11 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7"};
+static const char *tags[] = { ">_", "www", ":)", ":(", "{}"};
 
 static const char ptagf[] = "[%s %s]";	/* format of a tag label */
 static const char etagf[] = "[%s]";	/* format of an empty tag */
-static const int lcaselbl = 0;		/* 1 means make tag label lowercase */	
+static const int lcaselbl = 0;		/* 1 means make tag label lowercase */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -34,13 +34,9 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 //	{ "Alacritty",   NULL,     NULL,      1,           0,            1 },
 	{ "qutebrowser",  NULL,       NULL,         2,           0,            0 },
-	{ NULL,   "spotify", NULL,         1 << 6,      0,            1 }, /* FIX THIS */
-	{ "KeePassXC", NULL,     NULL,          1 << 5,      0,            1 },
-	{ "mpv",      "gl",      NULL,          1 << 6,      0,            0 },
-	{ "Notion",     NULL,      NULL,          1 << 5,      0,            0 },
+	{ "KeePassXC", NULL,     NULL,          1 << 4,      0,            1 },
+	{ "mpv",      "gl",      NULL,          1 << 4,    0,            0 },
 	{ "Chromium",     NULL,      NULL,          1 << 3,      0,            0 },
-	{ "lightcord",  NULL,      NULL,          1 << 2,      0,            1 },
-	{ "discord",  NULL,      NULL,          1 << 2,      0,            1 },
 };
 
 /* layout(s) */
@@ -112,6 +108,8 @@ static Key keys[] = {
     { MODKEY|ControlMask,           XK_Return, spawn,    SHCMD("exec xdotool click 1") },
     { MODKEY|ShiftMask,             XK_slash, spawn,    SHCMD("exec pulseaudio-equalizer toggle") },
     { MODKEY,                       XK_s,     spawn,    SHCMD("exec $HOME/scripts/startup.sh") },
+    { MODKEY,                       XK_c,     spawn,    SHCMD("exec $HOME/scripts/dmenu_0x0.sh") },
+    { MODKEY,                       XK_x,     spawn,    SHCMD("exec k") },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
@@ -122,10 +120,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	// TAGKEYS(                        XK_6,                      5)
+	// TAGKEYS(                        XK_7,                      6)
+	// TAGKEYS(                        XK_8,                      7)
+	// TAGKEYS(                        XK_9,                      8)
 
 };
 
