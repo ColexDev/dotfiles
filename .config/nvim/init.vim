@@ -224,10 +224,6 @@ nnoremap n nzzzv
 nnoremap J mzJ`z
 nnoremap N Nzzzv
 
-" Fits other keybinds, allows faster movement
-nnoremap J 10j
-nnoremap K 10k
-
 " Creates an underline based on the length of the above line
 nnoremap <leader>ul mmyypVr-<Esc>`m
 
@@ -265,9 +261,6 @@ let g:indent_blankline_char = '|'
 " Change window title to Neovim
 let &titlestring = "Neovim"
 set title
-
-" Yank to end of line
-nnoremap Y yg_
 
 " Markdown in calcurse notes
 autocmd BufRead,BufNewFile /tmp/calcurse*, ~/.calcurse/notes/* set filetype=markdown
