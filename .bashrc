@@ -12,6 +12,9 @@
 # Automatically runs startx when login to tty1
 # if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
+# Imports file that holds my ip for my server
+. .ip
+
 ### Aliases ###
 
 alias resume='mv Downloads/Jake_s_Resume.pdf /home/cole/misc/cole_roberts_resume.pdf'
@@ -25,7 +28,9 @@ alias packages='xbps-query -l'
 # Mounts my portable SSD
 alias mountssd='doas blkid; sleep 1; doas mount -t ntfs-3g -o rw UUID=3583DD0C22E7BC7A /home/cole/ssd/'
 
-# Auto root power commands
+alias mpv='mpv --save-position-on-quit'
+
+# root power commands
 alias po='doas poweroff'
 alias rb='doas reboot'
 
@@ -40,8 +45,8 @@ alias perms='doas chmod 664'
 # Auto creates parent directories
 alias mkdir='mkdir -pv'
 
-# Ngl I forget what this is for
-alias doas='doas '
+# Ngl I forget what this is for (may not be needed anymore)
+# alias doas='doas '
 
 # Search command history
 alias h='history | cut -c 8- | fzf --tac | xclip -r -selection -c'
@@ -66,10 +71,6 @@ alias gs='git status'
 alias ga='git add'
 alias gp='git push'
 
-# Easier typing for nvim
-alias v='nvim'
-alias vim='nvim'
-
 # puts you in the last directory upon exit
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
@@ -79,8 +80,9 @@ alias btm='btm -g'
 # Replaces find
 alias find='fd -i'
 
+alias yt='ytfzf --thumb-viewer=chafa -t'
+
 # Website
-export IP=''
 alias send='doas rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/'
 
 # Set up VIM keybinds inside of bash
@@ -102,7 +104,7 @@ export IMAGE='sxiv'
 export TERM=xterm-256color
 export WM_NAME='LG3D'
 export GPG_TTY=$(tty)
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/scripts:$PATH
 export HISTCONTROL=ignoreboth:erasedups
 
 # Unlimited history size

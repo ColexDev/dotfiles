@@ -70,5 +70,5 @@ static const struct arg args[] = {
     { run_command, "[VOL %s%]  ", "pulsemixer --get-volume | awk -F' ' '{ print $1 }'" },
 	{ ram_perc, "[RAM %s%%]  ", NULL     },
 	{ cpu_perc, "[CPU %s%%]  ", NULL     },
-	{ datetime, "%s",	"%a %b %d %T"  },
+	{ datetime, "%s",	"%a %F %R"  },
 };

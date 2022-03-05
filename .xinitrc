@@ -32,7 +32,8 @@ exec xinput --set-prop "pointer:Logitech MX Master 2S" "Coordinate Transformatio
 # Sets up my dual monitor setup
 # exec xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-0 --off --output DP-1 --off --output DP-2 --mode 1920x1080 --pos 1920x0 --rate 75 --rotate right --output DP-3 --off --output DP-4 --rate 144 --primary --mode 1920x1080 --pos 0x369 --rotate normal --output DP-5 --off
 #exec $HOME/./new.sh
-#
+
+sleep 2
 
 exec scripts/startup.sh &
 
