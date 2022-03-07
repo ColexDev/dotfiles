@@ -13,7 +13,7 @@ These are the dotfiles for my minimal Void Linux installation run on my main mac
 | Browser              | [Qutebrowser](https://github.com/ColexDev/dotfiles/tree/main/.config/qutebrowser)|
 | Color Scheme         | [ColexDev](https://github.com/ColexDev/dotfiles/blob/main/.config/nvim/colexdev.vim)|
 | Font                 | [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)|
-| Image Viewing        | [sxiv](https://github.com/muennich/sxiv)|
+| Image Viewing        | [nsxiv](https://github.com/nsxiv/nsxiv)|
 | Video Viewing        | [mpv](https://github.com/mpv-player/mpv)|
 | Password Management  | [KeepassXC](https://keepassxc.org/)|
 | ls alt               | [exa](https://github.com/ogham/exa)|
