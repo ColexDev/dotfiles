@@ -45,9 +45,6 @@ alias perms='doas chmod 664'
 # Auto creates parent directories
 alias mkdir='mkdir -pv'
 
-# Ngl I forget what this is for (may not be needed anymore)
-# alias doas='doas '
-
 # Search command history
 alias h='history | cut -c 8- | fzf --tac | xclip -r -selection -c'
 

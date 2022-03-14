@@ -53,9 +53,6 @@ Plug 'matze/vim-move'
 " Status Line
 Plug 'famiu/feline.nvim'
 
-" Allows much faster movement
-" Plug 'phaazon/hop.nvim'
-
 call plug#end()
 "==========================================================
 "
