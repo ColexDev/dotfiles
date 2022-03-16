@@ -23,7 +23,7 @@ alias resume='mv Downloads/Jake_s_Resume.pdf /home/cole/misc/cole_roberts_resume
 alias install='doas xbps-install -S'
 alias upgrade='doas xbps-install -Su'
 alias remove='doas xbps-remove -R'
-alias packages='xbps-query -l'
+alias packages='xpkg -m'
 
 # Mounts my portable SSD
 alias mountssd='doas blkid; sleep 1; doas mount -t ntfs-3g -o rw UUID=3583DD0C22E7BC7A /home/cole/ssd/'
@@ -66,7 +66,7 @@ alias pls='doas $(fc -ln -1)'
 alias gc='git commit -S -m'
 alias gs='git status'
 alias ga='git add'
-alias gp='git push'
+alias gp='git push; git push codeberg'
 
 # puts you in the last directory upon exit
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
