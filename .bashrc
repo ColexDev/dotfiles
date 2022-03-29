@@ -22,12 +22,13 @@ alias resume='mv Downloads/Jake_s_Resume.pdf /home/cole/misc/cole_roberts_resume
 # Package Managment with xbps
 alias install='doas xbps-install -S'
 alias upgrade='doas xbps-install -Su'
-alias remove='doas xbps-remove -R'
+alias remove='doas xbps-remove -Rf'
 alias packages='xpkg -m'
 
 # Mounts my portable SSD
 alias mountssd='doas blkid; sleep 1; doas mount -t ntfs-3g -o rw UUID=3583DD0C22E7BC7A /home/cole/ssd/'
 
+# Saved my place in my videos :)
 alias mpv='mpv --save-position-on-quit'
 
 # root power commands
