@@ -21,7 +21,6 @@ avahi-glib-libs
 avahi-libs
 base-system
 bat
-bc
 binutils
 binutils-doc
 bottom
@@ -35,7 +34,6 @@ cantarell-fonts
 ccls
 cdrtools
 celt
-chafa
 chromium
 cronie
 cross-arm-none-eabi
@@ -43,7 +41,6 @@ cross-arm-none-eabi-binutils
 cross-arm-none-eabi-gcc
 cross-arm-none-eabi-libstdc++
 cross-arm-none-eabi-newlib
-cryptsetup
 curl
 dbus
 dbus-x11
@@ -117,10 +114,10 @@ glib-networking
 glibc-devel
 glslang
 gmime3
+gnome-terminal
 gnupg
 gnupg2
 gnutls
-go
 google-fonts-ttf
 graphene
 graphite
@@ -183,6 +180,7 @@ libXrender
 libXrender-devel
 libXt
 libXtst
+libXtst-devel
 libXv
 libXvMC
 libXxf86misc
@@ -327,9 +325,6 @@ libvamp-plugin-sdk
 libvde2
 libvdpau
 libvidstab
-libvirt
-libvirt-glib
-libvirt-python3
 libvisual
 libvorbis
 libvpx6
@@ -452,7 +447,6 @@ python3-sip-PyQt5
 python3-six
 python3-urllib3
 python3-yaml
-qemu
 qt5
 qt5-concurrent
 qt5-core
@@ -489,6 +483,7 @@ shaderc
 shared-mime-info
 smproxy
 snappy
+socat
 spdx-licenses-list
 speexdsp
 spice
@@ -515,9 +510,6 @@ v4l-utils
 valgrind
 vde2
 virglrenderer
-virt-manager
-virt-manager-tools
-virt-viewer
 void-docs-browse
 void-repo-multilib
 void-repo-multilib-nonfree
@@ -548,6 +540,7 @@ xconsole
 xcursorgen
 xdg-utils
 xdotool
+xdotool-devel
 xdpyinfo
 xen-libs
 xev
