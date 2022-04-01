@@ -261,7 +261,7 @@ for i in $info; do
 		cpu) print cpu "$cpu";;
 		mem) print mem "$mem";;
 #		host) print host "$model";;
-#		kern) print kern "$kernel";;
+		kern) print kern "$kernel";;
 		pkgs) print pkgs "$pkgs";;
         # term) print term "$term";;
         # term) print term "alacritty";;

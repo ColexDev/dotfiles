@@ -53,6 +53,9 @@ Plug 'matze/vim-move'
 " Status Line
 Plug 'famiu/feline.nvim'
 
+" Wiki :)
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 "==========================================================
 "
@@ -99,6 +102,10 @@ set clipboard+=unnamedplus
 " Set <leader>
 let mapleader = " "
 
+set nocompatible
+filetype plugin on
+syntax on
+
 "==========================================================
 "
 "==================== File Management =====================
@@ -138,6 +145,7 @@ let g:rainbow_active = 1
 lua require'colorizer'.setup()
 
 syntax enable
+
 highlight LineNr ctermfg=white
 
 lua <<EOF
@@ -205,7 +213,7 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
 " Fast Saving and Quitting
-nnoremap <leader>w :w!<cr>
+nnoremap <leader>s :w!<cr>
 nnoremap <leader>q :wq!<cr>
 nnoremap <leader>Q :q!<cr>
 
