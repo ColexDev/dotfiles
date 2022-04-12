@@ -9,7 +9,7 @@
 # Launches programs
 exec slstatus &
 exec alacritty &
-exec qutebrowser &
+exec firefox &
 
 # Sets wallpaper
 # exec ~/scripts/.fehbg &
