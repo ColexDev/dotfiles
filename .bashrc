@@ -26,7 +26,8 @@ alias remove='doas xbps-remove -Rf'
 alias packages='xpkg -m'
 
 # Mounts my portable SSD
-alias mountssd='doas blkid; sleep 1; doas mount -t ntfs-3g -o rw UUID=3583DD0C22E7BC7A /home/cole/ssd/'
+alias mountssd='mkdir $HOME/ssd; doas blkid; sleep 1; doas mount -t ntfs-3g -o rw UUID=3583DD0C22E7BC7A /home/cole/ssd/'
+alias umountssd='doas umount $HOME/ssd; sleep 1; doas rm -rf $HOME/ssd'
 
 # Saved my place in my videos :)
 alias mpv='mpv --save-position-on-quit'
@@ -47,7 +48,7 @@ alias perms='doas chmod 664'
 alias mkdir='mkdir -pv'
 
 # Search command history
-alias h='history | cut -c 8- | fzf --tac | xclip -r -selection -c'
+alias h='history | cut -c 8- | fzf --tac | xclip -selection clipboard'
 
 # Record screen
 alias record='ffmpeg -f x11grab -y -framerate 30 -s 1920x1080 -i :0.0+0,369 -c:v libx264 -preset superfast -crf 18 out.mp4'
@@ -58,7 +59,7 @@ alias cp='cp -r'
 
 # easier clear commands
 alias cdc='cd; c'
-alias c='clear; fet'
+alias c='clear; fet; echo -e "\"It is a shame for a man to grow old without seeing\n the beauty and strength of which his body is capable.\"\n    -Socrates\n"'
 
 # Runs the last command with doas
 alias pls='doas $(fc -ln -1)'
@@ -68,6 +69,7 @@ alias gc='git commit -S -m'
 alias gs='git status'
 alias ga='git add'
 alias gp='git push; git push codeberg'
+alias gl='git log --stat' # -# is another flag to show how many you want (-6 will give last 6 commits)
 
 # puts you in the last directory upon exit
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
@@ -80,8 +82,7 @@ alias find='fd -i'
 
 alias yt='ytfzf --thumb-viewer=chafa -t'
 
-# Website
-alias send='doas rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/'
+alias copypw='keepassxc-cli clip -b $HOME/Passwords.kdbx'
 
 # Set up VIM keybinds inside of bash
 set -o vi
@@ -132,3 +133,4 @@ b () {
 
 # Run at start
 fet
+echo -e "\"It is a shame for a man to grow old without seeing\n the beauty and strength of which his body is capable.\"\n    -Socrates\n"

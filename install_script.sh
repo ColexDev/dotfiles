@@ -1,11 +1,11 @@
 #!/bin/bash
 echo Welcome $USER
-echo Sit back and relax while your system is being setup. You only need to answer two things to get everything setup.
+echo Sit back and relax while your system is being setup.
 # git clone https://github.com/ColexDev/dotfiles
 # cd dotfiles
 sudo xbps-install -Syf opendoas
 
-# WE DON'T DO WANT BLOAT
+# WE DON'T WANT BLOAT
 echo Time to remove the BLOAT :pray:
 doas xbps-remove -Rfy sudo
 

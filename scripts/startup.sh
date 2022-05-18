@@ -4,5 +4,3 @@ xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-0 --off --output
 doas ntpdate ntp.ubuntu.com
 
 pulseaudio-equalizer enable
-
-# doas macchanger -r enp5s0
