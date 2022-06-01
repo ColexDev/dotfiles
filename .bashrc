@@ -13,7 +13,7 @@
 # if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 # Imports file that holds my ip for my server
-. .ip
+. $HOME/.ip
 
 ### Aliases ###
 
@@ -54,12 +54,13 @@ alias h='history | cut -c 8- | fzf --tac | xclip -selection clipboard'
 alias record='ffmpeg -f x11grab -y -framerate 30 -s 1920x1080 -i :0.0+0,369 -c:v libx264 -preset superfast -crf 18 out.mp4'
 
 # Allows deleting/copying directories
-alias rm='rm -r'
+alias rm='rm -ir'
 alias cp='cp -r'
 
 # easier clear commands
 alias cdc='cd; c'
-alias c='clear; fet; echo -e "\"It is a shame for a man to grow old without seeing\n the beauty and strength of which his body is capable.\"\n    -Socrates\n"'
+# alias c='clear; fet; echo -e "\"It is a shame for a man to grow old without seeing\n the beauty and strength of which his body is capable.\"\n    -Socrates\n"'
+alias c='clear; fet; echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"'
 
 # Runs the last command with doas
 alias pls='doas $(fc -ln -1)'
@@ -133,4 +134,5 @@ b () {
 
 # Run at start
 fet
-echo -e "\"It is a shame for a man to grow old without seeing\n the beauty and strength of which his body is capable.\"\n    -Socrates\n"
+# echo -e "\"It is a shame for a man to grow old without seeing\n the beauty and strength of which his body is capable.\"\n    -Socrates\n"
+echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"

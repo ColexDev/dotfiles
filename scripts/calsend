@@ -1,2 +1,0 @@
-calcurse -r7 -t > /home/cole/dev/colexdev/cal.txt
-doas rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/

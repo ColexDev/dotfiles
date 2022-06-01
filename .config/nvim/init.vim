@@ -17,7 +17,7 @@ call plug#begin(stdpath('data').'/plugged')
 " Autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Treesitter, no comment needed
+" Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Shows colors of hex values in vim
@@ -44,7 +44,7 @@ Plug 'lewis6991/gitsigns.nvim'
 " Lines to show indentation
 Plug 'lukas-reineke/indent-blankline.nvim'
 
-" Fancy Todo
+" Todo comments
 Plug 'folke/todo-comments.nvim'
 
 " Finally can move lines again :pray:
@@ -89,7 +89,7 @@ set relativenumber
 set cursorline
 set showmatch
 set updatetime=100
-set signcolumn=number
+" set signcolumn=number
 
 " Keeps the cursor centered
 set scrolloff=999
@@ -148,10 +148,11 @@ syntax enable
 
 highlight LineNr ctermfg=white
 
-lua <<EOF
+lua << EOF
 -- Sets up treesitter
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
+    ensure_installed = "all",
+    ignore_install = { "phpdoc" },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = true,
@@ -263,8 +264,8 @@ inoremap (<cr> (<cr>)<c-o><s-o>
 " Sets the indent guide character
 let g:indent_blankline_char = '|'
 
-" Change window title to Neovim
-let &titlestring = "Neovim"
+" Change window title to Neovim - filename
+let &titlestring = "Neovim - %t"
 set title
 
 " Markdown in calcurse notes

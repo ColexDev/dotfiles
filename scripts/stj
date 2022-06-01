@@ -1,0 +1,1 @@
+doas rsync -a ~/dev/competition_code sigai@sigai-desktop:/home/sigai

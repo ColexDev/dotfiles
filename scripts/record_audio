@@ -1,0 +1,61 @@
+#!/bin/sh
+############################################################
+# Help                                                     #
+############################################################
+Help() {
+   # Display Help
+   echo "Screen recorder that decouples content aquisition and compression for minimal CPU usage"
+   echo "By default, it will compress efficiently after recording, but using the -s flag allows you cap the size of the file in MB"
+   echo "Syntax: record-audio [-a] [-s {number}]"
+   echo "options:"
+   echo "a     include audio (default false)"
+   echo "h     Print this Help."
+   echo "s {Target Size in MB}    Use two-pass compression to reach target size (default 7.9MB)"
+   echo
+}
+TWOPASS=
+AUDIOSTRING=""
+while getopts as:h option; do
+   case "${option}" in
+   h)
+      Help
+      exit
+      ;;
+   s)
+      SIZE=${OPTARG}
+      #if [ -z "${OPTARG+x}" ]; then
+      # echo "Missing argument for -s"
+      # echo "Syntax: record-audio [-a|h|s {number}]"
+      # exit
+      #fi
+      TWOPASS="t"
+      ;;
+   a) AUDIOSTRING="-thread_queue_size 4096 -f alsa -ac 2 -i default" ;;
+   ?)
+      echo "Error"
+      echo "Syntax: record-audio [-a] [-s {number}]"
+      exit
+      ;;
+   esac
+done
+cd $HOME/Videos
+eval "ffmpeg -f x11grab -y -thread_queue_size 4096 -framerate 30 -s 1920x1080 -i :0.0+0,0 \
+ ${AUDIOSTRING} -c:v libx264rgb -crf 0 -preset ultrafast -threads 0 -acodec aac -color_range 2 output.mp4"
+TEMP=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 output.mp4)
+#LEN=$(expr $TEMP + 1)
+if [ ! -z "$TWOPASS" ]; then
+   echo "Size : ${SIZE}"
+   echo "Length : ${TEMP}"
+   TARGET="$(echo "${SIZE}.0*7.95/$TEMP"| bc  -l | cut -c-8)"
+   echo "Target Bitrate: ${TARGET}"
+   eval "ffmpeg -y -i output.mp4 -c:v libx264 -b:v ${TARGET}M  -pass 1 -preset slow -an -f null /dev/null"
+   eval "ffmpeg -i output.mp4 -c:v libx264 -b:v ${TARGET}M -pass 2 -c:a aac -b:a 128k -preset slow output-small.mp4"
+else
+   ffmpeg -i output.mp4 -c:v libx264 -crf 20 -preset slow output-small.mp4
+fi
+
+datetime=$(date +%d-%b-%H_%M)
+mv "output-small.mp4" "${datetime}.mp4"
+rm output.mp4
+rm ffmpeg2pass*
+cd ~
