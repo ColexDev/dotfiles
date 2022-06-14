@@ -10,11 +10,9 @@
 # Starts my equalizer
 pulseaudio-equalizer enable &
 
-
 # Launches programs
 exec slstatus &
 exec alacritty &
-exec qutebrowser &
 
 # Allows for faster output when holding down a key, very useful for vim
 exec xset r rate 225 75 &
@@ -31,8 +29,5 @@ xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-0 --off --output
 # I am too lazy to setup ntpd
 doas hwclock --systohc
 
-# doas macchanger -r enp5s0
-
 # Launches DWM
 exec dwm
-

@@ -89,6 +89,9 @@ set relativenumber
 set cursorline
 set showmatch
 set updatetime=100
+" Alternative to having vertical line
+" match ErrorMsg '\%>80v.\+'
+set cc=80
 " set signcolumn=number
 
 " Keeps the cursor centered
@@ -276,3 +279,6 @@ cmap w!! w !doas tee > /dev/null %
 " Unbinds Q (ex mode)
 nnoremap <silent> Q <nop>
 "==========================================================
+"
+"
+let g:vimwiki_list = [{'path': '~/.vimwiki/'}]

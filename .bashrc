@@ -1,3 +1,4 @@
+# It is not death that a man should fear, but he should fear never beginning to live" -Marcus Aurelius
 #
 #    ██████╗  █████╗ ███████╗██╗  ██╗██████╗  ██████╗
 #    ██╔══██╗██╔══██╗██╔════╝██║  ██║██╔══██╗██╔════╝
@@ -51,7 +52,7 @@ alias mkdir='mkdir -pv'
 alias h='history | cut -c 8- | fzf --tac | xclip -selection clipboard'
 
 # Record screen
-alias record='ffmpeg -f x11grab -y -framerate 30 -s 1920x1080 -i :0.0+0,369 -c:v libx264 -preset superfast -crf 18 out.mp4'
+alias record='ffmpeg -f x11grab -y -framerate 30 -s 1920x1080 -i :0.0+0,369 -c:v libx264 -preset fast -crf 18 out.mp4'
 
 # Allows deleting/copying directories
 alias rm='rm -ir'
@@ -59,8 +60,8 @@ alias cp='cp -r'
 
 # easier clear commands
 alias cdc='cd; c'
-# alias c='clear; fet; echo -e "\"It is a shame for a man to grow old without seeing\n the beauty and strength of which his body is capable.\"\n    -Socrates\n"'
-alias c='clear; fet; echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"'
+# alias c='clear; fet; echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"'
+alias c='clear'
 
 # Runs the last command with doas
 alias pls='doas $(fc -ln -1)'
@@ -83,7 +84,7 @@ alias find='fd -i'
 
 alias yt='ytfzf --thumb-viewer=chafa -t'
 
-alias copypw='keepassxc-cli clip -b $HOME/Passwords.kdbx'
+alias copypw='keepassxc-cli clip -b $HOME/misc/Passwords.kdbx 0'
 
 # Set up VIM keybinds inside of bash
 set -o vi
@@ -92,8 +93,14 @@ set keymap vi
 bind -m vi-insert '\C-l':clear-screen
 
 # Bash prompt(s)
-PS1="\w > "
+# Git branch in prompt.
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+# PS1="\w > "
 # PS1="[\u@\h \w] > "
+# PS1='\w -> '
+PS1="\w\$(parse_git_branch) -> "
 
 # Exports
 export EDITOR='nvim'
@@ -104,7 +111,7 @@ export IMAGE='sxiv'
 export TERM=xterm-256color
 export WM_NAME='LG3D'
 export GPG_TTY=$(tty)
-export PATH=$HOME/scripts:$PATH
+export PATH=$HOME/.scripts:$PATH
 export HISTCONTROL=ignoreboth:erasedups
 
 # Unlimited history size
@@ -133,6 +140,5 @@ b () {
 }
 
 # Run at start
-fet
-# echo -e "\"It is a shame for a man to grow old without seeing\n the beauty and strength of which his body is capable.\"\n    -Socrates\n"
-echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"
+# fet
+# echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"
