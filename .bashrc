@@ -48,6 +48,10 @@ alias perms='doas chmod 664'
 # Auto creates parent directories
 alias mkdir='mkdir -pv'
 
+
+
+alias screenkey='screenkey -s small -p bottom -g 600x1625'
+
 # Search command history
 alias h='history | cut -c 8- | fzf --tac | xclip -selection clipboard'
 
@@ -59,9 +63,9 @@ alias rm='rm -ir'
 alias cp='cp -r'
 
 # easier clear commands
-alias cdc='cd; c'
+# alias cdc='cd; c'
 # alias c='clear; fet; echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"'
-alias c='clear'
+alias c='clear; ls'
 
 # Runs the last command with doas
 alias pls='doas $(fc -ln -1)'
@@ -100,7 +104,10 @@ parse_git_branch() {
 # PS1="\w > "
 # PS1="[\u@\h \w] > "
 # PS1='\w -> '
-PS1="\w\$(parse_git_branch) -> "
+# PS1="\w\$(parse_git_branch) ➜ '"
+# PS1="-> "
+# PS1='\w  '
+PS1='\w ➜ '
 
 # Exports
 export EDITOR='nvim'
@@ -137,8 +144,23 @@ b () {
   if ! cd "$d"; then
     echo "Couldn't go up $limit dirs.";
   fi
+  ls
+}
+
+cdl() {
+    cd "$1" && ls
+}
+
+cdc() {
+    if [ -z "$1" ]; then
+        cd && c;
+    else
+        cd "$1" && c;
+    fi
 }
 
 # Run at start
+ls
 # fet
 # echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"
+. "$HOME/.cargo/env"

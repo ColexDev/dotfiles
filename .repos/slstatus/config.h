@@ -66,10 +66,9 @@ static const char unknown_str[] = "NULL";
 static const struct arg args[] = {
 	/* function format          argument */
 //	{ datetime, "%s",           "%F %T" },
-    { run_command, "[TEST %s]  ", "$HOME/scripts/playing" },
-    // { run_command, "[EQ %s]  ", "$HOME/scripts/statusline_eq_status.sh" },
-    // { run_command, "[VOL %s%]  ", "pulsemixer --get-volume | awk -F' ' '{ print $1 }'" },
-	{ ram_perc, "[RAM %s%%]  ", NULL     },
-	{ cpu_perc, "[CPU %s%%]  ", NULL     },
-	{ datetime, "%s",	"%a %F %R"  },
+    { run_command, "[ %s]  ", "$HOME/.scripts/statusline_eq_status.sh" },
+    { run_command, "[墳 %s%]  ", "pulsemixer --get-volume | awk -F' ' '{ print $1 }'" },
+	{ ram_perc, "[ %s%%]  ", NULL     },
+	{ cpu_perc, "[ %s%%]  ", NULL     },
+	{ datetime, " %s",	"%a %F %R"  },
 };
