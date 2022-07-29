@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/cole/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -209,10 +214,20 @@ _G.packer_plugins = {
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/vim-better-whitespace",
     url = "https://github.com/ntpeters/vim-better-whitespace"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/cole/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
   ["vim-lastplace"] = {
     loaded = true,
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/vim-lastplace",
     url = "https://github.com/farmergreg/vim-lastplace"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/home/cole/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 

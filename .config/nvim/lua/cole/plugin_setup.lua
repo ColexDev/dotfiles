@@ -316,3 +316,21 @@ bufferline.setup {
     },
   },
 }
+
+-- Rust tools
+local opts ={
+    tools = {
+        autoSetHints = true,
+        hover_with_actions = true,
+    }
+}
+require('rust-tools').setup(opts)
+-- -- FIXME NOT WORKING???
+-- require('rust-tools.inlay_hints').set_inlay_hints()
+
+-- Vim wiki
+vim.cmd "let g:vimwiki_list = [{'path': '~/.vimwiki/'}]"
+
+-- nvim-colorizer
+require'colorizer'.setup()
+

@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
@@ -21,7 +21,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+static const char *tags[] = { "", "爵", "", "", "ﱘ", ""};
 
 static const char ptagf[] = "[%s %s]";	/* format of a tag label */
 static const char etagf[] = "[%s]";	/* format of an empty tag */
@@ -39,6 +39,7 @@ static const Rule rules[] = {
 	{ "mpv",      "gl",      NULL,          1 << 4,    0, 0, 0,            0 },
 	{ "Chromium",     NULL,      NULL,          1 << 3,      0, 0, 0,            0 },
     { "Alacritty", NULL, NULL, 0, 0, 1, 0, -1},
+    { "slack", NULL, NULL, 3, 0, 1, 0, 0},
 };
 
 /* layout(s) */
@@ -105,8 +106,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_comma,       spawn,     SHCMD("pulsemixer --id sink-1 --change-volume -5") },
     { MODKEY|ShiftMask,             XK_period,       spawn,     SHCMD("pulsemixer --id sink-1 --change-volume +5") },
     { MODKEY|ShiftMask,             XK_slash, spawn,    SHCMD("exec pulseaudio-equalizer toggle") },
-    { MODKEY,                       XK_s,     spawn,    SHCMD("exec $HOME/scripts/dmenu_0x0.sh") },
-    { MODKEY,                       XK_x,     spawn,    SHCMD("exec k") },
+    { MODKEY,                       XK_s,     spawn,    SHCMD("exec $HOME/.scripts/dmenu_0x0.sh") },
+    { MODKEY,                       XK_x,     spawn,    SHCMD("exec $HOME/.scripts/k") },
     { MODKEY,                       XK_m,     spawn,    SHCMD("exec xmouseless") },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },

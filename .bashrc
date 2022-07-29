@@ -1,4 +1,3 @@
-# It is not death that a man should fear, but he should fear never beginning to live" -Marcus Aurelius
 #
 #    ██████╗  █████╗ ███████╗██╗  ██╗██████╗  ██████╗
 #    ██╔══██╗██╔══██╗██╔════╝██║  ██║██╔══██╗██╔════╝
@@ -11,14 +10,12 @@
 [[ $- != *i* ]] && return
 
 # Automatically runs startx when login to tty1
-# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 # Imports file that holds my ip for my server
 . $HOME/.ip
 
 ### Aliases ###
-
-alias resume='mv Downloads/Jake_s_Resume.pdf /home/cole/misc/cole_roberts_resume.pdf'
 
 # Package Managment with xbps
 alias install='doas xbps-install -S'
@@ -48,8 +45,6 @@ alias perms='doas chmod 664'
 # Auto creates parent directories
 alias mkdir='mkdir -pv'
 
-
-
 alias screenkey='screenkey -s small -p bottom -g 600x1625'
 
 # Search command history
@@ -63,8 +58,6 @@ alias rm='rm -ir'
 alias cp='cp -r'
 
 # easier clear commands
-# alias cdc='cd; c'
-# alias c='clear; fet; echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"'
 alias c='clear; ls'
 
 # Runs the last command with doas
@@ -77,18 +70,15 @@ alias ga='git add'
 alias gp='git push; git push codeberg'
 alias gl='git log --stat' # -# is another flag to show how many you want (-6 will give last 6 commits)
 
-# puts you in the last directory upon exit
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-
 # Htop alternative
 alias btm='btm -g'
-
-# Replaces find
-alias find='fd -i'
 
 alias yt='ytfzf --thumb-viewer=chafa -t'
 
 alias copypw='keepassxc-cli clip -b $HOME/misc/Passwords.kdbx 0'
+
+alias ts='tmux-sessionizer'
+alias ta='tmux a'
 
 # Set up VIM keybinds inside of bash
 set -o vi
@@ -101,24 +91,21 @@ bind -m vi-insert '\C-l':clear-screen
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-# PS1="\w > "
-# PS1="[\u@\h \w] > "
-# PS1='\w -> '
-# PS1="\w\$(parse_git_branch) ➜ '"
-# PS1="-> "
-# PS1='\w  '
-PS1='\w ➜ '
+
+PS1="\w\$(parse_git_branch) ➜ "
 
 # Exports
 export EDITOR='nvim'
 export VISUAL='nvim'
 export SUDO_EDITOR='nvim'
+export DOAS_EDITOR='nvim' #idek if this is a thing? just having it here incase
 export VIDEO='mpv'
 export IMAGE='sxiv'
 export TERM=xterm-256color
 export WM_NAME='LG3D'
 export GPG_TTY=$(tty)
 export PATH=$HOME/.scripts:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export HISTCONTROL=ignoreboth:erasedups
 
 # Unlimited history size
@@ -147,10 +134,7 @@ b () {
   ls
 }
 
-cdl() {
-    cd "$1" && ls
-}
-
+# normal cd, but also clears the screen
 cdc() {
     if [ -z "$1" ]; then
         cd && c;
@@ -161,6 +145,5 @@ cdc() {
 
 # Run at start
 ls
-# fet
-# echo -e "\"It is not death that a man should fear, but he should fear never beginning to live\"\n    -Marcus Aurelius\n"
-. "$HOME/.cargo/env"
+
+# . "$HOME/.cargo/env" # Is this needed?
