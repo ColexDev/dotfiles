@@ -1,11 +1,3 @@
-#
-#    ██████╗  █████╗ ███████╗██╗  ██╗██████╗  ██████╗
-#    ██╔══██╗██╔══██╗██╔════╝██║  ██║██╔══██╗██╔════╝
-#    ██████╔╝███████║███████╗███████║██████╔╝██║
-#    ██╔══██╗██╔══██║╚════██║██╔══██║██╔══██╗██║
-# ██╗██████╔╝██║  ██║███████║██║  ██║██║  ██║╚██████╗
-# ╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -29,10 +21,6 @@ alias umountssd='doas umount $HOME/ssd; sleep 1; doas rm -rf $HOME/ssd'
 
 # Saved my place in my videos :)
 alias mpv='mpv --save-position-on-quit'
-
-# root power commands
-alias po='doas poweroff'
-alias rb='doas reboot'
 
 # variants of ls with directories listed first
 alias ls='exa --group-directories-first'
@@ -70,14 +58,12 @@ alias ga='git add'
 alias gp='git push; git push codeberg'
 alias gl='git log --stat' # -# is another flag to show how many you want (-6 will give last 6 commits)
 
-# Htop alternative
-alias btm='btm -g'
-
 alias yt='ytfzf --thumb-viewer=chafa -t'
 
 alias copypw='keepassxc-cli clip -b $HOME/misc/Passwords.kdbx 0'
 
-alias ts='tmux-sessionizer'
+alias ts='tmux-open-session'
+alias tss='tmux-sessionizer'
 alias ta='tmux a'
 
 # Set up VIM keybinds inside of bash
@@ -110,6 +96,10 @@ export HISTCONTROL=ignoreboth:erasedups
 
 # Unlimited history size
 HISTSIZE= HISTFILESIZE= #
+HISTIGNORE="&:ls:[bf]g:exit"
+
+# Automatically cd without prepending cd
+shopt -s autocd
 
 ### Functions ###
 
@@ -146,4 +136,25 @@ cdc() {
 # Run at start
 ls
 
-# . "$HOME/.cargo/env" # Is this needed?
+. "$HOME/.cargo/env"
+
+alias cf='change_folder'
+
+change_folder() {
+    # if no argument is provided, search from ~ else use argument
+    [[ -z $1 ]] && DIR=~ || DIR=$1
+    # choose file using rg and fzf
+    CHOSEN=$(fd --strip-cwd-prefix --full-path $DIR -H -t d | fzf --preview="exa -s type --icons {}" --bind="ctrl-space:toggle-preview" --preview-window=,10:hidden)
+
+    # quit if no path is selected else cd into the path
+    if [[ -z $CHOSEN ]]; then
+        echo $CHOSEN
+        return 1
+    else
+        cd "$CHOSEN"
+    fi
+
+    # show ls output if dir has less than 61 files
+    [[ $(ls | wc -l) -le 60 ]] && (pwd; ls)
+    return 0
+}

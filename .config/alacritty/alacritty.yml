@@ -106,20 +106,20 @@ font:
   # Normal (roman) font face
   normal:
     family: "Sauce Code Pro Nerd Font"
-    style: Bold
+    # style: SemiBold
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Bold italic font face
   #bold_italic:

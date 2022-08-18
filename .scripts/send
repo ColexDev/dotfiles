@@ -1,6 +1,6 @@
 #!/bin/bash
 
-doas rsync -a --rsync-path="sudo rsync" ~/dev/colexdev ${IP}:/var/www/
+doas rsync -a --rsync-path="sudo rsync" $1 ${IP}:/root/
 
 # cd /usr/lib64/ruby/gems/3.1.0/gems/neocities-0.0.15/bin/
 # ./neocities push $HOME/dev/colexdev

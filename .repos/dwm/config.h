@@ -21,7 +21,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "爵", "", "", "ﱘ", ""};
+static const char *tags[] = { "", "爵", "", "ﱘ", "", "" };
 
 static const char ptagf[] = "[%s %s]";	/* format of a tag label */
 static const char etagf[] = "[%s]";	/* format of an empty tag */
@@ -35,11 +35,12 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating isterminal noswallow   monitor */
 //	{ "Alacritty",   NULL,     NULL,      1,           0,            1 },
 	{ "qutebrowser",  NULL,       NULL,         2,           0, 0, 0,             0 },
-	{ "KeePassXC", NULL,     NULL,          1 << 4,      0, 0, 0,            1 },
-	{ "mpv",      "gl",      NULL,          1 << 4,    0, 0, 0,            0 },
-	{ "Chromium",     NULL,      NULL,          1 << 3,      0, 0, 0,            0 },
+	{ "KeePassXC", NULL,     NULL,          9,      0, 0, 0,            1 },
+	{ "mpv",      "gl",      NULL,          5,    0, 0, 0,            0 },
+	{ "Chromium",     NULL,      NULL,         2,      0, 0, 0,            0 },
+	{ "Firefox",     NULL,      NULL,         2,      0, 0, 0,            0 },
     { "Alacritty", NULL, NULL, 0, 0, 1, 0, -1},
-    { "slack", NULL, NULL, 3, 0, 1, 0, 0},
+    { "discord", NULL, NULL, 4, 0, 1, 0, 1},
 };
 
 /* layout(s) */
@@ -102,7 +103,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
     { MODKEY|ShiftMask,             XK_0,      quit,          {0} },
 	{ 0,                            XK_Print,  spawn,     SHCMD("flameshot gui") },
-	{ MODKEY|ShiftMask,             XK_x,      spawn,     SHCMD("slock") },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,     SHCMD("exec $HOME/.scripts/lock") },
     { MODKEY|ShiftMask,             XK_comma,       spawn,     SHCMD("pulsemixer --id sink-1 --change-volume -5") },
     { MODKEY|ShiftMask,             XK_period,       spawn,     SHCMD("pulsemixer --id sink-1 --change-volume +5") },
     { MODKEY|ShiftMask,             XK_slash, spawn,    SHCMD("exec pulseaudio-equalizer toggle") },
