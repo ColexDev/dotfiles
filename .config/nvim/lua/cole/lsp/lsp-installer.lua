@@ -8,6 +8,7 @@ local servers = {
   "clangd",
   "zk",
   "sumneko_lua",
+  "pyright",
 }
 
 local settings = {

@@ -190,7 +190,7 @@ call <sid>hi('Boolean', s:cdBlue, {}, 'none', {})
 call <sid>hi('Float', s:cdLightGreen, {}, 'none', {})
 
 call <sid>hi('Identifier', s:cdFront, {}, 'none', {})
-call <sid>hi('Function', s:cdYellow, {}, 'none', {})
+call <sid>hi('Function', s:cdBlue, {}, 'none', {})
 
 call <sid>hi('Statement', s:cdBlue, {}, 'none', {})
 call <sid>hi('Conditional', s:cdViolet, {}, 'none', {})
