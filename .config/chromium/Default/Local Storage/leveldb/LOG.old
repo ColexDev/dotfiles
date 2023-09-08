@@ -1,0 +1,6 @@
+2023/08/22-18:31:46.862 3 Reusing MANIFEST /home/cole/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2023/08/22-18:31:46.863 3 Recovering log #162
+2023/08/22-18:31:46.863 3 Reusing old log /home/cole/.config/chromium/Default/Local Storage/leveldb/000162.log 
+2023/08/22-18:32:07.356 5 Level-0 table #167: started
+2023/08/22-18:32:07.361 5 Level-0 table #167: 45870 bytes OK
+2023/08/22-18:32:07.363 5 Delete type=0 #162

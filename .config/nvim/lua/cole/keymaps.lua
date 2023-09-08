@@ -21,8 +21,8 @@ keymap("n", "<C-s>", ":vsplit<CR>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
@@ -40,7 +40,8 @@ keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Paste without yanking
-keymap("n", "cp", '"_cw<C-R>"<ESC>', opts)
+-- keymap("n", "cp", '"_cw<C-R>"<ESC>', opts)
+keymap("n", "cw", '"_ddP', opts)
 
 -- Unsets last search pattern
 keymap("n", "<ESC>", ":noh <ESC><ESC>", opts)
@@ -55,10 +56,6 @@ keymap("n", "<leader>Q", ":q!<cr>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-
 -- Paste without yanking
 keymap("v", "p", '"_dP', opts)
 
@@ -66,10 +63,11 @@ keymap("v", "p", '"_dP', opts)
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope --
 keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
+
+-- Digraphs --
+keymap("i", "<C-d>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>", opts)

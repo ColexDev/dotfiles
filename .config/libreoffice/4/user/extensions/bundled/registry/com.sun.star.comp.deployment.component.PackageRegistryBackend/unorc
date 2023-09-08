@@ -1,0 +1,3 @@
+ORIGIN=$BUNDLED_EXTENSIONS_USER/registry/com.sun.star.comp.deployment.component.PackageRegistryBackend
+UNO_TYPES=?$BUNDLED_EXTENSIONS/numbertext/rdb/sample.rdb
+UNO_SERVICES=?$ORIGIN/common.rdb ${$ORIGIN/${_OS}_${_ARCH}rc:UNO_SERVICES} ?$BUNDLED_EXTENSIONS/dict-pt-BR/Lightproof.components ?$BUNDLED_EXTENSIONS/nlpsolver/components.rdb ?$BUNDLED_EXTENSIONS/dict-ru/Lightproof.components ?$BUNDLED_EXTENSIONS/dict-hu/Lightproof.components ?$BUNDLED_EXTENSIONS/dict-en/Lightproof.components

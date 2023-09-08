@@ -1,0 +1,26 @@
+{
+    "py/object": "pros.config.cli_config.CliConfig",
+    "py/state": {
+        "ga": {
+            "enabled": "True",
+            "ga_id": "UA-84548828-8",
+            "u_id": "9e78e26a-fa89-48b9-9287-34420001391b"
+        },
+        "offer_sentry": null,
+        "override_use_build_compile_commands": null,
+        "update_frequency": {
+            "py/reduce": [
+                {
+                    "py/type": "datetime.timedelta"
+                },
+                {
+                    "py/tuple": [
+                        0,
+                        3600,
+                        0
+                    ]
+                }
+            ]
+        }
+    }
+}

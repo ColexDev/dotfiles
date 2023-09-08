@@ -1,0 +1,25 @@
+2023-04-18 18:23:19.951 [info] Extension host with pid 8064 started
+2023-04-18 18:23:19.988 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-04-18 18:23:19.988 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-04-18 18:23:19.989 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-04-18 18:23:19.989 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-04-18 18:23:20.253 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2023-04-18 18:23:20.253 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: true, activationEvent: '*'
+2023-04-18 18:23:20.448 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-04-18 18:23:20.462 [info] Eager extensions activated
+2023-04-18 18:23:20.464 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-04-18 18:23:20.464 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-04-18 18:24:57.768 [info] Extension host terminating: received terminate message from renderer
+2023-04-18 18:24:58.011 [error] TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 't'
+    |     property '_readableState' -> object with constructor 'M'
+    |     property 'pipes' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 't.ConsoleForElectron'
+    --- property 'parent' closes the circle
+    at JSON.stringify (<anonymous>)
+    at /home/cole/.vscode-oss/extensions/vscodevim.vim-1.24.3/src/register/register.ts:333:16
+    at process.async (node:internal/process/task_queues:96:5)
+    at Object.e.deactivate (/home/cole/.vscode-oss/extensions/vscodevim.vim-1.24.3/extension.ts:64:8)
+    at async Promise.all (index 8)
+    at E.R (/usr/lib/code-oss/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:110:9145)
+2023-04-18 18:24:58.012 [info] Extension host with pid 8064 exiting with code 0

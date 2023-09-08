@@ -1,0 +1,16 @@
+macro w set browser "mpv" ; open-in-browser ; set browser "qutebrowser"
+
+color background black black
+color listnormal default default
+color listnormal_unread default default bold
+color listfocus black white
+color listfocus_unread black white
+color info default black
+
+bind-key ; macro-prefix
+bind-key h quit
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key H prev-feed
+bind-key L next-feed

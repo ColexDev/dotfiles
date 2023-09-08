@@ -1,0 +1,22 @@
+00:00:00.287419 VirtualBox GUI VM Selector Window 6.1.30 r148432 linux.amd64 (Nov 22 2021 16:46:06) release log
+00:00:00.287421 Log opened 2022-01-31T21:20:26.770066000Z
+00:00:00.287421 Build Type: release
+00:00:00.287424 OS Product: Linux
+00:00:00.287424 OS Release: 5.15.17_1
+00:00:00.287424 OS Version: #1 SMP Thu Jan 27 12:55:26 UTC 2022
+00:00:00.287442 DMI Product Name: System Product Name
+00:00:00.287445 DMI Product Version: System Version
+00:00:00.287450 Firmware type: UEFI
+00:00:00.287455 Secure Boot: Disabled
+00:00:00.287478 Host RAM: 15976MB (15.6GB) total, 8193MB (8.0GB) available
+00:00:00.287481 Executable: /opt/VirtualBox/VirtualBox
+00:00:00.287481 Process ID: 19906
+00:00:00.287481 Package type: LINUX_64BITS_GENERIC
+00:00:00.287495 Qt version: 5.6.1
+00:00:00.348894 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.715837 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:00.720570 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 4x395 x 953x1046
+00:00:00.720622 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 1 work area is actually resized to: 964x395 x 948x519
+00:00:00.724539 rtldrNativeLoad: dlopen('libproxy.so.1', RTLD_NOW | RTLD_LOCAL) failed: libproxy.so.1: cannot open shared object file: No such file or directory
+00:00:49.650676 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:05.076885 ERROR [COM]: aRC=NS_ERROR_UNEXPECTED (0x8000ffff) aIID={c0447716-ff5a-4795-b57a-ecd5fffa18a4} aComponent={SessionWrap} aText={The session is not locked (session state: Unlocked)}, preserve=false aResultDetail=0

@@ -1,0 +1,9 @@
+2022-12-28 12:32:08.950 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/cole/opti-pay-api-testing.pem","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2022-12-28 12:32:09.298 [info] Started initializing default profile extensions in extensions installation folder. file:///home/cole/.vscode-oss/extensions
+2022-12-28 12:32:09.335 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/cole/.vscode-oss/extensions
+2022-12-28 12:32:09.488 [error] Extension 'ms-python.python CANNOT USE these API proposals 'quickPickSortByLabel, testObserver'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2022-12-28 12:32:09.492 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalProcess.
+2022-12-28 12:32:09.492 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalWebWorker.
+2022-12-28 12:32:09.604 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalProcess.
+2022-12-28 12:32:09.604 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalWebWorker.
+2022-12-28 12:32:12.307 [info] [perf] Render performance baseline is 29ms

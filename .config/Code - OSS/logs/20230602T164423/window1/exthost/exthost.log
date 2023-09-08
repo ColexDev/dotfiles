@@ -1,0 +1,10 @@
+2023-06-02 16:44:25.340 [info] Extension host with pid 25599 started
+2023-06-02 16:44:25.340 [info] Skipping acquiring lock for /home/cole/.config/Code - OSS/User/workspaceStorage/417ab921344a61e330afdbcc7a6738fb.
+2023-06-02 16:44:25.386 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2023-06-02 16:44:25.387 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: true, activationEvent: '*'
+2023-06-02 16:44:25.497 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-06-02 16:44:25.507 [info] Eager extensions activated
+2023-06-02 16:44:25.510 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-06-02 16:44:25.510 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-06-02 16:44:27.549 [info] Extension host terminating: received terminate message from renderer
+2023-06-02 16:44:27.552 [info] Extension host with pid 25599 exiting with code 0

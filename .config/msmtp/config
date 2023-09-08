@@ -1,0 +1,12 @@
+account cole@colex.dev
+host mail.colex.dev
+port 465
+from cole@colex.dev
+user cole@colex.dev
+passwordeval "pass cole@colex.dev"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/cole/.config/msmtp/msmtp.log
+tls_starttls off
+

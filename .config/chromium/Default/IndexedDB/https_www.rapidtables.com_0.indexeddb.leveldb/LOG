@@ -1,0 +1,26 @@
+2022/09/23-22:45:42.328 27d5 Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_www.rapidtables.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/23-22:45:42.328 27d5 Recovering log #4
+2022/09/23-22:45:42.328 27d5 Reusing old log /home/cole/.config/chromium/Default/IndexedDB/https_www.rapidtables.com_0.indexeddb.leveldb/000004.log 
+2022/09/23-22:45:42.881 49cc Level-0 table #8: started
+2022/09/23-22:45:42.882 49cc Level-0 table #8: 575 bytes OK
+2022/09/23-22:45:42.884 49cc Delete type=0 #4
+2022/09/23-22:45:42.884 49cc Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2022/09/23-22:45:44.887 49cc Level-0 table #10: started
+2022/09/23-22:45:44.888 49cc Level-0 table #10: 237 bytes OK
+2022/09/23-22:45:44.890 49cc Delete type=0 #7
+2022/09/23-22:45:44.890 49cc Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 41 : 0
+2022/09/23-22:45:44.890 49cc Compacting 1@0 + 1@1 files
+2022/09/23-22:45:44.891 49cc Generated table #11@0: 9 keys, 553 bytes
+2022/09/23-22:45:44.891 49cc Compacted 1@0 + 1@1 files => 553 bytes
+2022/09/23-22:45:44.893 49cc compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/09/23-22:45:44.893 49cc Delete type=2 #10
+2022/09/23-22:45:44.893 49cc Delete type=2 #8
+2022/09/23-22:45:44.893 49cc Manual compaction at level-0 from '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 41 : 0 .. (end); will stop at (end)
+2022/09/23-22:45:44.893 49cc Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\xc9\x1d\x00h\x00t\x00t\x00p\x00s\x00_\x00w\x00w\x00w\x00.\x00r\x00a\x00p\x00i\x00d\x00t\x00a\x00b\x00l\x00e\x00s\x00.\x00c\x00o\x00m\x00_\x000\x00@\x001\x1c\x00m\x00o\x00d\x00e\x00r\x00n\x00i\x00z\x00r\x00-\x000\x00.\x008\x007\x005\x003\x008\x005\x006\x004\x008\x007\x002\x005\x006\x008\x008\x006' @ 31 : 0
+2022/09/23-22:45:44.893 49cc Compacting 1@1 + 1@2 files
+2022/09/23-22:45:44.894 49cc Generated table #12@1: 6 keys, 253 bytes
+2022/09/23-22:45:44.894 49cc Compacted 1@1 + 1@2 files => 253 bytes
+2022/09/23-22:45:44.896 49cc compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/09/23-22:45:44.896 49cc Delete type=2 #11
+2022/09/23-22:45:44.896 49cc Delete type=2 #5
+2022/09/23-22:45:44.896 49cc Manual compaction at level-1 from '\x00\x00\x00\x00\xc9\x1d\x00h\x00t\x00t\x00p\x00s\x00_\x00w\x00w\x00w\x00.\x00r\x00a\x00p\x00i\x00d\x00t\x00a\x00b\x00l\x00e\x00s\x00.\x00c\x00o\x00m\x00_\x000\x00@\x001\x1c\x00m\x00o\x00d\x00e\x00r\x00n\x00i\x00z\x00r\x00-\x000\x00.\x008\x007\x005\x003\x008\x005\x006\x004\x008\x007\x002\x005\x006\x008\x008\x006' @ 31 : 0 .. (end); will stop at (end)

@@ -1,0 +1,72 @@
+[2023-08-16 23:17:41.996] [info] (main) 
+
+STARTING v0.70.5
+
+[2023-08-16 23:17:41.998] [info] (main)  Log level: silly
+[2023-08-16 23:17:41.998] [info] (main) Local date: 2023-08-16
+[2023-08-16 23:17:42.002] [info] (main) Local time: 2023-08-16 23:17:41-04:00
+[2023-08-16 23:17:42.002] [info] (main)   UTC time: 2023-08-17T03:17:42Z
+[2023-08-16 23:17:42.002] [info] (main)   NODE_ENV: undefined
+[2023-08-16 23:17:42.002] [info] (main)         OS: linux 6.3.13_1 x64
+[2023-08-16 23:17:42.002] [info] (main)        pid: 13318
+[2023-08-16 23:17:42.819] [info] (buckets-node) ProcessBackend starting...
+[2023-08-16 23:17:42.819] [info] (buckets-node) ProcessBackend executable: /tmp/.mount_Bucket8f8cbN/resources/app.asar.unpacked/node_modules/buckets-node/dist/bin/x64/Buckets args: --app-data-dir,/home/cole/.config/Buckets,backend
+[2023-08-16 23:17:42.840] [info] locale set to: en
+[2023-08-16 23:17:42.840] [info] number format set: {"thousands":",","decimal":".","decimal_places":2}
+[2023-08-16 23:17:42.844] [info] (i18n) date format set
+[2023-08-16 23:17:42.939] [info] (main) Checking for updates...
+[2023-08-16 23:17:42.960] [info] (core) INFO (bucketsproc) started
+[2023-08-16 23:17:42.961] [info] (core) WARN (appwide) *** KEYCHAIN UNAVAILABLE ***
+[2023-08-16 23:17:42.961] [info] (core) INFO (bucketsproc) preset AppData dir: /home/cole/.config/Buckets
+[2023-08-16 23:17:42.961] [info] (core) INFO (dbpatch) start
+[2023-08-16 23:17:42.961] [info] (core) INFO (dbpatch) applying patch: 0001-initial
+[2023-08-16 23:17:42.961] [info] (core) INFO (dbpatch) applying patch: 0002-convert-to-app-relative-paths
+[2023-08-16 23:17:42.961] [info] (core) INFO (dbpatch) applying patch: 0003-rollback convert-to-app-relative-paths
+[2023-08-16 23:17:42.962] [info] (drm) Will nag starting 2024-02-16T23:17:42-05:00
+[2023-08-16 23:17:42.980] [info] (core) INFO (dbpatch) applying patch: 0004-update-sharing-service-urls
+[2023-08-16 23:17:43.012] [info] (core) INFO (dbpatch) applying patch: 0005-ServiceURI extract credentials
+[2023-08-16 23:17:43.035] [info] (core) INFO (dbpatch) end
+[2023-08-16 23:17:43.039] [info] (core) INFO (sharing) generating new keypair
+[2023-08-16 23:17:43.059] [info] (core) INFO (sharing) starting ...
+[2023-08-16 23:17:43.060] [info] (core) INFO (sharing) started
+[2023-08-16 23:17:43.060] [info] (core) INFO (backups) Starting automatic backups...
+[2023-08-16 23:17:43.060] [info] (core) INFO (backups) automated backup started
+[2023-08-16 23:17:43.060] [info] (core) INFO (stringrpc) Piping appwide notifications to RPC
+[2023-08-16 23:17:43.060] [info] (core) INFO (bucketsproc) ready for input
+[2023-08-16 23:17:43.142] [info] (main) window opened to file:///tmp/.mount_Bucket8f8cbN/resources/app.asar/src/wwwroot/misc/wizard.html
+[2023-08-16 23:17:48.492] [info] (main) 
+
+STARTING v0.70.5
+
+[2023-08-16 23:17:48.494] [info] (main)  Log level: silly
+[2023-08-16 23:17:48.494] [info] (main) Local date: 2023-08-16
+[2023-08-16 23:17:48.498] [info] (main) Local time: 2023-08-16 23:17:48-04:00
+[2023-08-16 23:17:48.499] [info] (main)   UTC time: 2023-08-17T03:17:48Z
+[2023-08-16 23:17:48.499] [info] (main)   NODE_ENV: undefined
+[2023-08-16 23:17:48.499] [info] (main)         OS: linux 6.3.13_1 x64
+[2023-08-16 23:17:48.499] [info] (main)        pid: 13749
+[2023-08-16 23:17:48.582] [info] (buckets-node) ProcessBackend starting...
+[2023-08-16 23:17:48.583] [info] (buckets-node) ProcessBackend executable: /tmp/.mount_BucketbPyxss/resources/app.asar.unpacked/node_modules/buckets-node/dist/bin/x64/Buckets args: --app-data-dir,/home/cole/.config/Buckets,backend
+[2023-08-16 23:17:48.604] [info] locale set to: en
+[2023-08-16 23:17:48.604] [info] number format set: {"thousands":",","decimal":".","decimal_places":2}
+[2023-08-16 23:17:48.608] [info] (i18n) date format set
+[2023-08-16 23:17:48.715] [info] (drm) Will nag starting 2024-02-16T23:17:42-05:00
+[2023-08-16 23:17:48.715] [info] (main) Checking for updates...
+[2023-08-16 23:17:48.733] [info] (core) INFO (bucketsproc) started
+[2023-08-16 23:17:48.733] [info] (core) WARN (appwide) *** KEYCHAIN UNAVAILABLE ***
+[2023-08-16 23:17:48.733] [info] (core) INFO (bucketsproc) preset AppData dir: /home/cole/.config/Buckets
+[2023-08-16 23:17:48.733] [info] (core) INFO (dbpatch) start
+[2023-08-16 23:17:48.734] [info] (core) DEBUG (dbpatch) existing patches: @["0001-initial", "0002-convert-to-app-relative-paths", "0003-rollback convert-to-app-relative-paths", "0004-update-sharing-service-urls", "0005-ServiceURI extract credentials"]
+[2023-08-16 23:17:48.734] [info] (core) DEBUG (dbpatch) patch 0001-initial already applied
+[2023-08-16 23:17:48.734] [info] (core) DEBUG (dbpatch) patch 0002-convert-to-app-relative-paths already applied
+[2023-08-16 23:17:48.734] [info] (core) DEBUG (dbpatch) patch 0003-rollback convert-to-app-relative-paths already applied
+[2023-08-16 23:17:48.734] [info] (core) DEBUG (dbpatch) patch 0004-update-sharing-service-urls already applied
+[2023-08-16 23:17:48.734] [info] (core) DEBUG (dbpatch) patch 0005-ServiceURI extract credentials already applied
+[2023-08-16 23:17:48.734] [info] (core) INFO (dbpatch) end
+[2023-08-16 23:17:48.734] [info] (core) INFO (sharing) starting ...
+[2023-08-16 23:17:48.734] [info] (core) INFO (sharing) started
+[2023-08-16 23:17:48.734] [info] (core) INFO (backups) Starting automatic backups...
+[2023-08-16 23:17:48.734] [info] (core) INFO (backups) automated backup started
+[2023-08-16 23:17:48.735] [info] (core) INFO (stringrpc) Piping appwide notifications to RPC
+[2023-08-16 23:17:48.735] [info] (core) INFO (bucketsproc) ready for input
+[2023-08-16 23:17:48.906] [info] (main) window opened to file:///tmp/.mount_BucketbPyxss/resources/app.asar/src/wwwroot/misc/wizard.html

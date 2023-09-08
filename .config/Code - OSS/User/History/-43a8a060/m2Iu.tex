@@ -1,0 +1,245 @@
+\nofiles
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\begin{center}
+    \textbf{\Huge \scshape Cole Roberts} \\ \vspace{1pt}
+    \small (440)-657-9382 $|$ \href{mailto:cole@colex.dev}{\underline{cole@colex.dev}} $|$
+    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/coledroberts/}} $|$
+    \href{https://github.com/...}{\underline{github.com/colexdev}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+        {Purdue University}{West Lafayette, IN}
+        {Computer Engineering, GPA: 3.63}{August 2021 -- December 2025}
+        \\
+        \resumeSubHeadingListEnd
+         \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Relevant Coursework{: Electrical Engineering Fundamentals I \& II, Multivariate Calculus, Advanced C Programming, Introduction To Digital System Design, Data Structures, Differential Equations}}}
+ \end{itemize}
+ %\resumeSubHeadingListStart
+  %  \resumeSubheading
+   %     {Avon High School}{Avon, OH}
+   %     {High School Diploma, GPA: 3.89}{Aug. 2017 -- June 2021}
+  %\resumeSubHeadingListEnd
+
+
+  %-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Rockwell Automation}{January 2023 -- Present}
+      {Embedded Software Engineering Intern}{Mayfield Heights, OH}
+      \resumeItemListStart
+        \resumeItem{Implementing and debugging firmware for a new line of redundant and fault-tolerant I/O devices using C++}
+        \resumeItem{Designing and executing fault injection tests to improve the reliability and robustness of the firmware}
+        \resumeItem{Contributing to the development of build scripts to conditionally compile different product variants}
+        \resumeItem{Working closely with the team to troubleshoot and resolve exceptions to ensure the high quality and stability of the firmware}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Opti Pay}{July 2022 -- January 2023}
+      {Software Engineer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Spearheaded the development of a fintech application for optimizing credit card usage}
+        \resumeItem{Led the development of an algorithm that optimizes credit card cashback}
+        \resumeItem{Managed a team of backend developers to build the infrastructure of a mobile application}
+        \resumeItem{Developed a RESTful service to optimize credit card spending on a per-transation basis}
+      \resumeItemListEnd
+
+
+    % \resumeSubheading
+      % {Team Member}{March 2019 -- June 2021}
+      % {Panera Bread}{Avon, OH}
+      % \resumeItemListStart
+        % \resumeItem{Maintained high standards of customer service during high-volume, fast-paced operations}
+        % \resumeItem{Assisted management with inventory control and stock ordering}
+        % \resumeItem{Followed procedures for safe food preparation, assembly, and presentation}
+        % \resumeItem{Responsible for training new employees on the line}
+      % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{ParOS} $|$ \emph{C, x86 Assembly}}{}
+      \resumeItemListStart
+        \resumeItem{Independently developing a Ring 0 32-bit x86 hobby operating system from scratch}
+        \resumeItem{Implemented device drivers for VGA and keyboard functionality}
+        \resumeItem{Utilizing x86 paging techniques to implement efficient memory management in the operating system}
+        \resumeItem{Engaging in self-directed learning and experimentation to solve complex technical challenges and achieve project goals}
+      \resumeItemListEnd
+
+  \resumeProjectHeading
+      {\textbf{VEX Robotics AI Competition} $|$ \emph{C, Python, Bash}}{}
+      \resumeItemListStart
+        \resumeItem{Contributed to the development of a fully autonomous artificial intelligence for a VEX Robotics competition}
+        \resumeItem{Collaborated with a team to design and implement a novel protocol for communication between VEX Micro-controllers and external computers}
+        \resumeItem{Automated the data pipeline to start on boot using cron, bash, and TMUX}
+        \resumeItem{Published our findings and best practices, in collaboration with VEX, for the VEX Robotics community}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{PROS Robotics Operating System} $|$ \emph{C, C++}}{}
+    \resumeItemListStart
+        \resumeItem{Contributed to the development of a widely used robotics operating system for VEX Micro-controllers}
+        \resumeItem{Assisted in the design and implementation of an API for programming interactions with PROS and official VEX hardware}
+        \resumeItem{Maintained a community wiki with comprehensive API documentation and troubleshooting guides for VEX Robotics community members}
+        \resumeItem{Played a role in the success of the project, which has been downloaded over 50,000 times and is used by most VEX Robotics competitive teams}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+  {\textbf{EPICS SCANIN | Design Lead} $|$ \emph{Python, HTML, CSS, PHP}}{}
+  \resumeItemListStart
+    \resumeItem{Led the software development for a campus-wide system to analyze bicycle traffic}
+    \resumeItem{Implemented software refactoring and bug fixing to improve the existing codebase}
+    \resumeItem{Contributed to hardware design by condensing the footprint of RFID readers}
+    \resumeItem{Received EPICS Initiative Award Spring 2022}
+  \resumeItemListEnd
+
+    % \resumeProjectHeading
+    %     % {\textbf{Chat Application and Server} $|$ \emph{Rust}}{July 2022}
+    %     {\textbf{Chat Application and Server} $|$ \emph{Rust}}{}
+    %     \resumeItemListStart
+    %       \resumeItem{Developed a client and server model that allows numerous clients to communicate simultaneously}
+    %       \resumeItem{Implemented a message sharing protocol using TCP to exchange messages between clients}
+    %       \resumeItem{Constructed intuitive UI that allows messages to be read and sent with ease}
+    %     \resumeItemListEnd
+
+
+      % \resumeProjectHeading
+      %     {\textbf{Personal Finance Tracker} $|$ \emph{C++}}{}
+      %     \resumeItemListStart
+      %       \resumeItem{CLI application for managing finances and budgeting}
+      %       \resumeItem{Developed a modular table system for displaying data}
+      %       % \resumeItem{Designed to be fully customizable and modular for the end user}
+      %     \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Proficient Languages}{: C, x86 Assembly, C++, Python} \\
+     \textbf{Developer Tools}{: Linux, Git, GitHub, Make, VIM} \\
+ }}
+     % \textbf{Libraries}{: ncurses, MatPlotLib, numpy, cURL} \\
+     % \textbf{Other}{: LaTeX, nginx, VirtualBox}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
+

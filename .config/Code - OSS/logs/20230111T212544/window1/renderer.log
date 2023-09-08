@@ -1,0 +1,61 @@
+2023-01-11 21:25:45.092 [error] Error: File not found
+    at p.Yb (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87765)
+    at async p.setInput (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87103)
+    at async n.H (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:5097)
+    at async n.y (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3926)
+    at async n.openEditor (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3041)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2676:13468
+2023-01-11 21:25:45.366 [error] Extension 'ms-python.python CANNOT USE these API proposals 'quickPickSortByLabel, testObserver'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2023-01-11 21:25:45.370 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalProcess.
+2023-01-11 21:25:45.371 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalWebWorker.
+2023-01-11 21:25:45.482 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalProcess.
+2023-01-11 21:25:45.482 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalWebWorker.
+2023-01-11 21:25:48.197 [info] [perf] Render performance baseline is 29ms
+2023-01-11 21:26:11.910 [error] Error: File not found
+    at p.Yb (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87765)
+    at async p.setInput (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87103)
+    at async n.H (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:5097)
+    at async n.y (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3926)
+    at async n.openEditor (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3041)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2676:13468
+    at async Ee.run (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:57508)
+    at async Object.c (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1708:80193)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1708:79980
+2023-01-11 21:26:12.799 [error] Error: File not found
+    at p.Yb (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87765)
+    at async p.setInput (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87103)
+    at async n.H (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:5097)
+    at async n.y (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3926)
+    at async n.openEditor (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3041)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2676:13468
+    at async Ee.run (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:57508)
+    at async Object.c (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1708:80193)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1708:79980
+2023-01-11 21:26:13.527 [error] Error: File not found
+    at p.Yb (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87765)
+    at async p.setInput (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87103)
+    at async n.H (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:5097)
+    at async n.y (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3926)
+    at async n.openEditor (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3041)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2676:13468
+    at async Ee.run (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:57508)
+    at async Object.c (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1708:80193)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1708:79980
+2023-01-11 21:26:14.230 [error] Error: File not found
+    at p.Yb (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87765)
+    at async p.setInput (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:87103)
+    at async n.H (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:5097)
+    at async n.y (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3926)
+    at async n.openEditor (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2465:3041)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2676:13468
+    at async Ee.run (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2467:57508)
+    at async Object.c (vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1708:80193)
+    at async vscode-file://vscode-app/usr/lib/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1708:79980
+2023-01-11 21:41:58.795 [info] UNRESPONSIVE extension host: starting to profile NOW
+2023-01-11 21:42:20.760 [info] UNRESPONSIVE extension host: starting to profile NOW
+2023-01-11 21:43:20.749 [info] UNRESPONSIVE extension host: starting to profile NOW
+2023-01-11 21:45:20.750 [info] UNRESPONSIVE extension host: starting to profile NOW
+2023-01-11 21:46:20.754 [info] UNRESPONSIVE extension host: starting to profile NOW
+2023-01-11 21:47:20.753 [info] UNRESPONSIVE extension host: starting to profile NOW
+2023-01-11 21:49:20.276 [info] UNRESPONSIVE extension host: received responsive event and cancelling profiling session
+2023-01-11 21:49:20.399 [info] UNRESPONSIVE extension host: starting to profile NOW

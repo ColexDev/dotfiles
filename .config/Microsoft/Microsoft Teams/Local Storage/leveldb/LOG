@@ -1,0 +1,5 @@
+2022/10/17-13:53:18.549 22a2 Reusing MANIFEST /home/cole/.config/Microsoft/Microsoft Teams/Local Storage/leveldb/MANIFEST-000001
+2022/10/17-13:53:18.549 22a2 Recovering log #6
+2022/10/17-13:53:18.549 22a2 Reusing old log /home/cole/.config/Microsoft/Microsoft Teams/Local Storage/leveldb/000006.log 
+2022/10/17-13:54:11.321 2f06 Level-0 table #10: started
+2022/10/17-13:54:11.326 2f06 Level-0 table #10: 252031 bytes OK

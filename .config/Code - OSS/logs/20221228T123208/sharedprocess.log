@@ -1,0 +1,14 @@
+2022-12-28 12:32:09.704 [info] Starting worker process with pid 699 (type: fileWatcher, window: 1).
+2022-12-28 12:32:11.521 [info] Getting Manifest... asvetliakov.vscode-neovim
+2022-12-28 12:32:11.522 [info] Getting Manifest... ms-python.python
+2022-12-28 12:32:11.522 [info] Getting Manifest... ms-python.vscode-pylance
+2022-12-28 12:32:11.820 [info] Installing extension: asvetliakov.vscode-neovim
+2022-12-28 12:32:11.826 [info] Installing extension: ms-python.vscode-pylance
+2022-12-28 12:32:11.828 [info] Installing extension: ms-python.python
+2022-12-28 12:32:12.150 [info] Getting Manifest... ms-python.python
+2022-12-28 12:32:12.189 [info] Waiting for already requested installing extension ms-python.python ms-python.vscode-pylance
+2022-12-28 12:32:13.507 [info] Extracted extension to /home/cole/.vscode-oss/extensions/.88cc56ac-ad49-4278-89d2-e8a22e8ddd8b: asvetliakov.vscode-neovim
+2022-12-28 12:32:13.513 [info] Renamed to /home/cole/.vscode-oss/extensions/asvetliakov.vscode-neovim-0.0.95
+2022-12-28 12:32:13.514 [info] Extracting completed. asvetliakov.vscode-neovim
+2022-12-28 12:32:13.519 [info] Extension installed successfully: asvetliakov.vscode-neovim
+2022-12-28 12:32:13.525 [info] Marked extension as uninstalled asvetliakov.vscode-neovim-0.0.94

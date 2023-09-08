@@ -1,0 +1,3 @@
+set folder = "imaps://cole@colex.dev@imap.purelymail.com:993"
+
+set spoolfile = "+INBOX"

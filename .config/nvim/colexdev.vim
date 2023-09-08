@@ -182,7 +182,7 @@ hi! link diffRemoved DiffDelete
 
 call <sid>hi('Comment', s:cdGray, {}, 'none', {})
 
-call <sid>hi('Constant', s:cdBlue, {}, 'none', {})
+call <sid>hi('Constant', s:cdOrange, {}, 'none', {})
 call <sid>hi('String', s:cdGreen, {}, 'none', {})
 call <sid>hi('Character', s:cdOrange, {}, 'none', {})
 call <sid>hi('Number', s:cdOrange, {}, 'none', {})
@@ -197,18 +197,18 @@ call <sid>hi('Conditional', s:cdViolet, {}, 'none', {})
 call <sid>hi('Repeat', s:cdBlue, {}, 'none', {})
 call <sid>hi('Label', s:cdViolet, {}, 'none', {})
 call <sid>hi('Operator', s:cdFront, {}, 'none', {})
-call <sid>hi('Keyword', s:cdPink, {}, 'none', {})
+call <sid>hi('Keyword', s:cdBlue, {}, 'none', {})
 call <sid>hi('Exception', s:cdPink, {}, 'none', {})
 
-call <sid>hi('PreProc', s:cdBlue, {}, 'none', {})
+call <sid>hi('PreProc', s:cdOrange, {}, 'none', {})
 call <sid>hi('Include', s:cdBlue, {}, 'none', {})
-call <sid>hi('Define', s:cdLightGreen, {}, 'none', {})
-call <sid>hi('Macro', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('Define', s:cdBlue, {}, 'none', {})
+call <sid>hi('Macro', s:cdOrange, {}, 'none', {})
 call <sid>hi('PreCondit', s:cdFront, {}, 'none', {})
 
 call <sid>hi('Type', s:cdGreen, {}, 'none', {})
 call <sid>hi('StorageClass', s:cdBlue, {}, 'none', {})
-call <sid>hi('Structure', s:cdBlue, {}, 'none', {})
+call <sid>hi('Structure', s:cdGreen, {}, 'none', {})
 call <sid>hi('Typedef', s:cdBlue, {}, 'none', {})
 
 call <sid>hi('Special', s:cdYellowOrange, {}, 'none', {})
@@ -276,7 +276,7 @@ call <sid>hi('TSException', s:cdPink, {}, 'none', {})
 " NOTE: Type used to be yellow, may change back to that
 call <sid>hi('TSType', s:cdGreen, {}, 'none', {})
 call <sid>hi('TSTypeBuiltin', s:cdBlue, {}, 'none', {})
-call <sid>hi('TSStructure', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('TSStructure', s:cdGreen, {}, 'none', {})
 call <sid>hi('TSInclude', s:cdBlue, {}, 'none', {})
 " Variable
 call <sid>hi('TSVariable', s:cdFront, {}, 'none', {})

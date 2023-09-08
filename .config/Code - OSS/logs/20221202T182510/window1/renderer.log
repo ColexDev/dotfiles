@@ -1,0 +1,7 @@
+2022-12-02 18:25:11.966 [critical] Extension 'ms-python.python CANNOT USE these API proposals 'quickPickSortByLabel, testObserver'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2022-12-02 18:25:11.970 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalProcess.
+2022-12-02 18:25:11.970 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalWebWorker.
+2022-12-02 18:25:12.185 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalProcess.
+2022-12-02 18:25:12.185 [info] Ignoring configured affinity for 'asvetliakov.vscode-neovim' because the extension is unknown or cannot execute for extension host kind: LocalWebWorker.
+2022-12-02 18:25:14.910 [info] [perf] Render performance baseline is 30ms
+2022-12-02 18:25:21.951 [error] Error while registering log channel file:///home/cole/.config/Code%20-%20OSS/logs/20221202T182510/userDataSync.log Timed out while waiting for file to be created

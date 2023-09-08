@@ -1,0 +1,37 @@
+add -p music/coal/
+pl-create coal
+add -p music/metal/
+pl-create metal
+add -p music/darkie/
+add music/darkie/
+pl-create darkie
+delete-playlist
+remove
+delete
+add -p music/80s_rock/
+pl-create 80's
+set output_plugin=pulse
+set output_plugin=alsa
+set output_plugin=pulseaudio
+shuffle
+bind common <key> shuffle
+help
+pl-
+pl-delete
+add -p music/throwbacks/
+clear
+add
+pl-create throwbacks
+pl-create
+bind common <key> pl-create
+playlist
+add music/throwbacks/
+set color_win_cur_sel_fg=black
+set color_win_cur_sel_bg=blue
+set color_win_sel_bg=white
+set color_win_sel_fg=black
+set color_win_cur=blue
+set color_win_inactive_cur_sel_fg=blue
+set color_win_cur_sel_fg=blue
+set color_cmdline_attr=default
+add music/80s_rock/

@@ -1,0 +1,69 @@
+{
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "telemetry.telemetryLevel": "off",
+  "editor.fontFamily": "'Source Code Pro', 'monospace', 'monospace'",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false, // removes minimap
+  "editor.renderWhitespace": "none", // removes indent guides
+  // "editor.renderLineHighlight": "none", // removes line highlight
+  // "editor.overviewRulerBorder": false, // removes border from overview ruler (located on the right, same position as the scrollbar)
+  "editor.hideCursorInOverviewRuler": true, // hides cursor mark in the overview ruler
+  "editor.folding": false, // removes the folding feature
+  // "editor.occurrencesHighlight": false, // removes highlights occurrences (still works when you select a word)
+  "editor.matchBrackets": "never", // removes the highlight of matching brackets (I use Subtle Match Brackets extension for this)
+  // "editor.glyphMargin": false, // removes the space used mainly for debugging indicators
+  "explorer.openEditors.visible": 0, // removes the activity bar (the 4 icons at the left of the screen), so now you will have to open the explorer, git, debugger and extension with shortcuts or through the Command Palette
+  // "workbench.editor.showIcons": false, // removes icon from opened files in tabs
+  "workbench.editor.tabCloseButton": "off", // removes cross icon from tabs
+  // "workbench.statusBar.visible": false, // removes the status bar
+  "indenticator.color.dark": "rgba(255,255,255,.1)", // adds a subtle indent guide (needs Indenticator extension)
+  "workbench.colorCustomizations": { // object that allows you to customize your color theme: https://code.visualstudio.com/docs/getstarted/theme-color-reference 
+   "tab.activeBorder": "#ffffff",
+   "tab.activeBackground": "#000000",
+   "tab.inactiveBackground": "#000000",
+   "editorGroupHeader.tabsBackground": "#000000"
+  //  "editor.selectionBackground": "#555555",
+  //  "editor.selectionHighlightBackground": "#555555"
+
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "window.menuBarVisibility": "toggle",
+  "vscode-neovim.highlightGroups.highlights": {
+    "Directory": "vim",
+    "IncSearch": {
+      "backgroundColor": "theme.editor.findMatchBackground",
+      "borderColor": "theme.editor.findMatchBorder"
+    },
+    "Search": {
+      "backgroundColor": "theme.editor.findMatchHighlightBackground",
+      "borderColor": "theme.editor.findMatchHighlightBorder"
+    },
+    "Visual": {
+      "backgroundColor": "theme.editor.selectionBackground"
+    },
+    "Conceal": "vim",
+    "Substitute": "vim"
+  },
+  "editor.guides.indentation": false,
+  "workbench.colorTheme": "ColexDev",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "punctuation",
+        "settings": {
+          "foreground": "#ffffff"
+        }
+      }
+    ]
+  },
+  "editor.bracketPairColorization.enabled": false,
+  "window.zoomLevel": 2,
+  "update.mode": "none",
+  "editor.lineNumbers": "relative",
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/cole/init.vim",
+  "editor.cursorSurroundingLines": 999,
+  "workbench.activityBar.visible": false
+}

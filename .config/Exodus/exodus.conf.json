@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "configVersion": "1.0.0",
+    "exodusVersionCreated": "22.9.8",
+    "exodusVersionUpdated": "22.9.8",
+    "createdAt": "Wed Sep 21 2022 12:00:32 GMT-0400 (Eastern Daylight Time)",
+    "updatedAt": "Wed Sep 21 2022 12:00:39 GMT-0400 (Eastern Daylight Time)"
+  },
+  "data": {
+    "fiat": {
+      "unit": "USD"
+    },
+    "theme": {
+      "name": "origin"
+    },
+    "notifications": {
+      "tx": {
+        "received": {
+          "enabled": true
+        }
+      }
+    },
+    "portfolio": {
+      "sort": {
+        "order": "balance",
+        "direction": "normal"
+      },
+      "filter": {
+        "with-balance": false,
+        "only-favorite": false
+      }
+    },
+    "lockDuration": null,
+    "hardware": {
+      "listenForNewDevices": true,
+      "rememberDevices": true,
+      "hiddenWalletAccounts": {}
+    },
+    "moneroCustomNodeUrl": null,
+    "moneroInitialHeight": null,
+    "moneroCursor": null,
+    "moneroSubaddressesEnabled": false,
+    "adaLegacyAddressEnabled": false,
+    "bitcoinLegacyAddressEnabled": false,
+    "bitcoinTaprootAddressEnabled": false,
+    "sounds": {
+      "all": {
+        "enabled": true,
+        "volume": 1
+      }
+    },
+    "dapps": {
+      "installedDapps": {
+        "sportx": false
+      }
+    },
+    "favorite-assets": {},
+    "earnRewards": {
+      "dashboardView": "grid"
+    },
+    "settings": {
+      "assets": {
+        "sort": {
+          "order": "name",
+          "direction": "normal"
+        }
+      }
+    },
+    "wallet": {
+      "navigation-settings": {
+        "sort": "default",
+        "filters": []
+      },
+      "layout": "v1",
+      "showAdvanced": true,
+      "showNav": true
+    },
+    "marketHistory": {
+      "bumpVersion": "v1"
+    },
+    "advanced": {
+      "advancedMode": {
+        "assets": {}
+      }
+    },
+    "ftx": {
+      "slippageTolerance_v2": 0.02
+    },
+    "zoomFactor": 1,
+    "nfts": {
+      "hasStored": false
+    }
+  }
+}

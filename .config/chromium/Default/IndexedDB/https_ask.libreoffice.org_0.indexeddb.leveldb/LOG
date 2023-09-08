@@ -1,0 +1,6 @@
+2022/09/28-19:18:10.480 7a5 Creating DB /home/cole/.config/chromium/Default/IndexedDB/https_ask.libreoffice.org_0.indexeddb.leveldb since it was missing.
+2022/09/28-19:18:10.488 7a5 Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_ask.libreoffice.org_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/28-19:19:12.027 4e29 Level-0 table #5: started
+2022/09/28-19:19:12.029 4e29 Level-0 table #5: 47217 bytes OK
+2022/09/28-19:19:12.031 4e29 Delete type=0 #3
+2022/09/28-19:19:12.031 4e29 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

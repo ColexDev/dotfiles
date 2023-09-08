@@ -1,0 +1,7 @@
+2023/07/09-22:01:54.696 7c22 Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_weather.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/09-22:01:54.696 7c22 Recovering log #3
+2023/07/09-22:01:54.696 7c22 Reusing old log /home/cole/.config/chromium/Default/IndexedDB/https_weather.com_0.indexeddb.leveldb/000003.log 
+2023/07/09-22:02:32.949 7c23 Level-0 table #5: started
+2023/07/09-22:02:32.957 7c23 Level-0 table #5: 1911 bytes OK
+2023/07/09-22:02:32.966 7c23 Delete type=0 #3
+2023/07/09-22:02:32.966 7c23 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

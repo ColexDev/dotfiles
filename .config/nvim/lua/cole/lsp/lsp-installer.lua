@@ -7,7 +7,6 @@ local servers = {
   "rust_analyzer",
   "clangd",
   "zk",
-  "sumneko_lua",
   "pyright",
 }
 
@@ -45,18 +44,6 @@ for _, server in pairs(servers) do
   }
 
   server = vim.split(server, "@")[1]
-
-  if server == "rust_analyzer" then
-    local rust_opts = require "cole.lsp.settings.rust"
-
-    local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
-    if not rust_tools_status_ok then
-      return
-    end
-
-    rust_tools.setup(rust_opts)
-    goto continue
-  end
 
   lspconfig[server].setup(opts)
   ::continue::

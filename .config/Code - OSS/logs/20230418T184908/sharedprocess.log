@@ -1,0 +1,5 @@
+2023-04-18 18:49:10.372 [info] Starting worker process with pid 23407 (type: fileWatcher, window: 1).
+2023-04-18 18:49:10.526 [info] Deleted from disk vscodevim.vim /home/cole/.vscode-oss/extensions/vscodevim.vim-1.24.3
+2023-04-18 18:49:10.620 [info] Deleted from disk asvetliakov.vscode-neovim /home/cole/.vscode-oss/extensions/asvetliakov.vscode-neovim-0.0.95
+2023-04-18 18:49:10.747 [info] Deleted from disk ms-python.vscode-pylance /home/cole/.vscode-oss/extensions/ms-python.vscode-pylance-2023.1.10
+2023-04-18 18:49:10.751 [info] Deleted from disk ms-python.python /home/cole/.vscode-oss/extensions/ms-python.python-2022.20.2

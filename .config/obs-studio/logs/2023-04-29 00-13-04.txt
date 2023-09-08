@@ -1,0 +1,181 @@
+00:13:04.401: Using EGL/X11
+00:13:04.401: CPU Name: AMD Ryzen 9 3950X 16-Core Processor
+00:13:04.401: CPU Speed: 4200.246MHz
+00:13:04.402: Physical Cores: 16, Logical Cores: 32
+00:13:04.402: Physical Memory: 15907MB Total, 7855MB Free
+00:13:04.402: Kernel Version: Linux 6.1.21_1
+00:13:04.402: Distribution: "Void" Unknown
+00:13:04.402: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.21.1
+00:13:04.403: Qt Version: 6.4.2 (runtime), 6.4.0 (compiled)
+00:13:04.403: Portable mode: false
+00:13:04.455: OBS 29.0.2 (linux)
+00:13:04.455: ---------------------------------
+00:13:04.455: ---------------------------------
+00:13:04.455: audio settings reset:
+00:13:04.455: 	samples per sec: 48000
+00:13:04.455: 	speakers:        2
+00:13:04.455: 	max buffering:   960 milliseconds
+00:13:04.455: 	buffering type:  dynamically increasing
+00:13:04.461: ---------------------------------
+00:13:04.461: Initializing OpenGL...
+00:13:04.492: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1070 Ti/PCIe/SSE2
+00:13:04.492: OpenGL loaded successfully, version 3.3.0 NVIDIA 525.105.17, shading language 3.30 NVIDIA via Cg compiler
+00:13:04.517: ---------------------------------
+00:13:04.517: video settings reset:
+00:13:04.517: 	base resolution:   1920x1080
+00:13:04.517: 	output resolution: 1920x1080
+00:13:04.517: 	downscale filter:  Bicubic
+00:13:04.517: 	fps:               60/1
+00:13:04.517: 	format:            NV12
+00:13:04.517: 	YUV mode:          Rec. 709/Partial
+00:13:04.517: NV12 texture support not available
+00:13:04.517: P010 texture support not available
+00:13:04.525: Audio monitoring device:
+00:13:04.525: 	name: Default
+00:13:04.525: 	id: default
+00:13:04.525: ---------------------------------
+00:13:04.530: Failed to load 'en-US' text for module: 'decklink-captions.so'
+00:13:04.536: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+00:13:04.540: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+00:13:04.540: Failed to initialize module 'decklink.so'
+00:13:04.655: [pipewire] No captures available
+00:13:04.668: v4l2loopback not installed, virtual camera disabled
+00:13:04.694: NVENC supported
+00:13:04.694: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+00:13:04.694: FFmpeg VAAPI H264 encoding not supported
+00:13:04.736: os_dlopen(libvlc.so.5->libvlc.so.5): libvlc.so.5: cannot open shared object file: No such file or directory
+00:13:04.736: 
+00:13:04.736: [vlc-video]: Couldn't find VLC installation, VLC video source disabled
+00:13:04.736: ---------------------------------
+00:13:04.736:   Loaded Modules:
+00:13:04.736:     vlc-video.so
+00:13:04.736:     text-freetype2.so
+00:13:04.736:     rtmp-services.so
+00:13:04.736:     obs-x264.so
+00:13:04.736:     obs-transitions.so
+00:13:04.736:     obs-outputs.so
+00:13:04.736:     obs-filters.so
+00:13:04.736:     obs-ffmpeg.so
+00:13:04.736:     linux-v4l2.so
+00:13:04.736:     linux-pulseaudio.so
+00:13:04.736:     linux-pipewire.so
+00:13:04.736:     linux-jack.so
+00:13:04.736:     linux-capture.so
+00:13:04.736:     linux-alsa.so
+00:13:04.736:     image-source.so
+00:13:04.736:     frontend-tools.so
+00:13:04.736:     decklink-output-ui.so
+00:13:04.736:     decklink-captions.so
+00:13:04.736: ---------------------------------
+00:13:04.736: ==== Startup complete ===============================================
+00:13:04.754: All scene data cleared
+00:13:04.754: ------------------------------------------------
+00:13:04.756: pulse-input: Server name: 'pulseaudio 15.0'
+00:13:04.756: pulse-input: Audio format: float32le, 44100 Hz, 2 channels
+00:13:04.756: pulse-input: Started recording from 'ladspa_output.mbeq_1197.mbeq.monitor' (default)
+00:13:04.756: [Loaded global audio device]: 'Desktop Audio'
+00:13:04.756: pulse-input: Server name: 'pulseaudio 15.0'
+00:13:04.756: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+00:13:04.756: pulse-input: Started recording from 'alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo-input' (default)
+00:13:04.756: [Loaded global audio device]: 'Mic/Aux'
+00:13:04.756: [window-capture: 'alacritty'] update settings:
+00:13:04.756: 	title: Alacritty
+00:13:04.756: 	class: Alacritty
+00:13:04.756: 
+00:13:04.757: xshm-input: Geometry 1920x1080 @ 0,369
+00:13:04.757: [window-capture: 'Window Capture (Xcomposite)'] update settings:
+00:13:04.757: 	title: Alacritty
+00:13:04.757: 	class: Alacritty
+00:13:04.757: 
+00:13:04.758: Switched to scene 'Scene'
+00:13:04.758: ------------------------------------------------
+00:13:04.758: Loaded scenes:
+00:13:04.758: - scene 'Scene':
+00:13:04.758:     - source: 'alacritty' (xcomposite_input)
+00:13:04.758:     - source: 'Screen Capture (XSHM)' (xshm_input)
+00:13:04.758:     - source: 'Window Capture (Xcomposite)' (xcomposite_input)
+00:13:04.758: ------------------------------------------------
+00:13:43.697: ---------------------------------
+00:13:43.700: [FFmpeg NVENC encoder: 'simple_video_recording'] settings:
+00:13:43.700: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+00:13:43.700: 	rate_control: CQP
+00:13:43.700: 	bitrate:      0
+00:13:43.700: 	cqp:          23
+00:13:43.700: 	keyint:       250
+00:13:43.700: 	preset:       p5
+00:13:43.700: 	tuning:       hq
+00:13:43.700: 	multipass:    qres
+00:13:43.700: 	profile:      high
+00:13:43.700: 	width:        1920
+00:13:43.700: 	height:       1080
+00:13:43.700: 	b-frames:     2
+00:13:43.700: 	psycho-aq:    1
+00:13:43.700: 	GPU:          0
+00:13:43.700: 
+00:13:43.913: ---------------------------------
+00:13:43.913: [FFmpeg aac encoder: 'simple_aac_recording'] bitrate: 192, channels: 2, channel_layout: 3
+00:13:43.913: 
+00:13:43.915: ==== Recording Start ===============================================
+00:13:43.915: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/cole/2023-04-29 00-13-43.mp4'...
+00:13:43.919: Failed to inhibit: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Inhibit” on object at path /org/freedesktop/portal/desktop
+00:14:05.306: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/cole/2023-04-29 00-13-43.mp4' stopped
+00:14:05.306: Output 'simple_file_output': stopping
+00:14:05.306: Output 'simple_file_output': Total frames output: 1272
+00:14:05.306: Output 'simple_file_output': Total drawn frames: 1284
+00:14:05.306: ==== Recording Stop ================================================
+01:01:45.817: ---------------------------------
+01:01:45.817: [FFmpeg NVENC encoder: 'simple_video_recording'] settings:
+01:01:45.817: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+01:01:45.817: 	rate_control: CQP
+01:01:45.817: 	bitrate:      0
+01:01:45.817: 	cqp:          23
+01:01:45.817: 	keyint:       250
+01:01:45.817: 	preset:       p5
+01:01:45.817: 	tuning:       hq
+01:01:45.817: 	multipass:    qres
+01:01:45.817: 	profile:      high
+01:01:45.817: 	width:        1920
+01:01:45.817: 	height:       1080
+01:01:45.817: 	b-frames:     2
+01:01:45.817: 	psycho-aq:    1
+01:01:45.817: 	GPU:          0
+01:01:45.817: 
+01:01:45.917: ---------------------------------
+01:01:45.918: [FFmpeg aac encoder: 'simple_aac_recording'] bitrate: 192, channels: 2, channel_layout: 3
+01:01:45.918: 
+01:01:45.919: ==== Recording Start ===============================================
+01:01:45.919: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/cole/2023-04-29 01-01-45.mp4'...
+01:01:45.922: Failed to inhibit: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Inhibit” on object at path /org/freedesktop/portal/desktop
+01:01:59.283: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/cole/2023-04-29 01-01-45.mp4' stopped
+01:01:59.283: Output 'simple_file_output': stopping
+01:01:59.283: Output 'simple_file_output': Total frames output: 790
+01:01:59.283: Output 'simple_file_output': Total drawn frames: 801
+01:01:59.284: ==== Recording Stop ================================================
+01:20:24.861: ---------------------------------
+01:20:24.861: [FFmpeg NVENC encoder: 'simple_video_recording'] settings:
+01:20:24.861: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+01:20:24.861: 	rate_control: CQP
+01:20:24.861: 	bitrate:      0
+01:20:24.861: 	cqp:          23
+01:20:24.861: 	keyint:       250
+01:20:24.861: 	preset:       p5
+01:20:24.861: 	tuning:       hq
+01:20:24.861: 	multipass:    qres
+01:20:24.861: 	profile:      high
+01:20:24.861: 	width:        1920
+01:20:24.861: 	height:       1080
+01:20:24.861: 	b-frames:     2
+01:20:24.861: 	psycho-aq:    1
+01:20:24.861: 	GPU:          0
+01:20:24.861: 
+01:20:24.959: ---------------------------------
+01:20:24.959: [FFmpeg aac encoder: 'simple_aac_recording'] bitrate: 192, channels: 2, channel_layout: 3
+01:20:24.959: 
+01:20:24.960: ==== Recording Start ===============================================
+01:20:24.960: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/cole/2023-04-29 01-20-24.mp4'...
+01:20:24.962: Failed to inhibit: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Inhibit” on object at path /org/freedesktop/portal/desktop
+01:20:42.323: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/cole/2023-04-29 01-20-24.mp4' stopped
+01:20:42.323: Output 'simple_file_output': stopping
+01:20:42.323: Output 'simple_file_output': Total frames output: 1030
+01:20:42.323: Output 'simple_file_output': Total drawn frames: 1042
+01:20:42.323: ==== Recording Stop ================================================

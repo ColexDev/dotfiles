@@ -9,8 +9,7 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 ### Aliases ###
 
-# Don't delete this line... if I do, there is no going back. I am not happy, the only way to become happy is to remove this horrible website from my life. I CAN DO THIS AND I WILL DO IT. I WILL BECOME BETTER! GO DO 10 PUSHUPS AND TAKE 5 DEEP BREATHS IF I AM HERE
-alias chattr='echo DO NOT FUCKING DELETE HOSTS FILE. IMPROVE. YOUR. LIFE. YOU ARE NOT HAPPY'
+alias vc='vimclip'
 
 # Package Managment with xbps
 alias install='doas xbps-install -S'

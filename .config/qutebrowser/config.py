@@ -1,7 +1,7 @@
 
 ## Dark mode
 config.load_autoconfig()
-config.set("colors.webpage.darkmode.enabled", True)
+# config.set("colors.webpage.darkmode.enabled", True)
 
 ## I don't even think this works anymore, its supposed to help block youtube ads
 from qutebrowser.api import interceptor
@@ -44,7 +44,7 @@ c.downloads.position = 'bottom'
 
 ## Duration (in milliseconds) to wait before removing finished downloads.
 ## If set to -1, downloads are never removed.
-## Type: Int
+# Type: Int
 c.downloads.remove_finished = 5000
 
 ## Default font families to use. Whenever "default_family" is used in a
@@ -67,6 +67,9 @@ c.hints.radius = 0
 ## Make characters in hint strings uppercase.
 ## Type: Bool
 c.hints.uppercase = True
+
+
+c.editor.command = ["alacritty", "-e", "nvim", "{file}"]
 
 ## Time (in milliseconds) from pressing a key to seeing the keyhint
 ## dialog.

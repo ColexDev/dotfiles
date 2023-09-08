@@ -1,0 +1,10 @@
+[org/gnome/nautilus/preferences]
+search-filter-time-type='last_modified'
+default-folder-viewer='icon-view'
+
+[org/gtk/settings/file-chooser]
+show-hidden=true
+
+[org/gnome/nautilus/window-state]
+initial-size=(938, 1036)
+maximized=false

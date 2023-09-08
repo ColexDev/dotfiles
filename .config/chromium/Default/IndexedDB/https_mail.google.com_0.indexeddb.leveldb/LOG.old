@@ -1,0 +1,7 @@
+2023/02/11-12:28:30.735 3bb6 Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/02/11-12:28:30.735 3bb6 Recovering log #3
+2023/02/11-12:28:30.735 3bb6 Reusing old log /home/cole/.config/chromium/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000003.log 
+2023/02/11-12:29:07.156 3f86 Level-0 table #5: started
+2023/02/11-12:29:07.158 3f86 Level-0 table #5: 14974 bytes OK
+2023/02/11-12:29:07.160 3f86 Delete type=0 #3
+2023/02/11-12:29:07.160 3f86 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

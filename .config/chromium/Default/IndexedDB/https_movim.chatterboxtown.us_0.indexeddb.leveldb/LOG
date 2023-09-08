@@ -1,0 +1,6 @@
+2023/08/03-10:12:56.006 3bf Creating DB /home/cole/.config/chromium/Default/IndexedDB/https_movim.chatterboxtown.us_0.indexeddb.leveldb since it was missing.
+2023/08/03-10:12:56.011 3bf Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_movim.chatterboxtown.us_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/03-10:43:25.588 3bf Level-0 table #5: started
+2023/08/03-10:43:25.590 3bf Level-0 table #5: 852 bytes OK
+2023/08/03-10:43:25.595 3bf Delete type=0 #3
+2023/08/03-10:43:25.595 3bf Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,14 @@
+audio.allow_downgrade=false
+audio.sync_bitrate_enumeration=4
+gaia.attached_device_id="9968417e97af0b36d5125f3228ebb3b110c135b7"
+audio.play_bitrate_non_metered_migrated=true
+audio.episode.speed=120
+audio.automix=false
+audio.play_bitrate_enumeration=4
+ui.hide_hpto=true
+ui.track_notifications_enabled=false
+audio.play_bitrate_non_metered_enumeration=4
+audio.normalize_v2=false
+ui.show_friend_feed=false
+app.player.volume=37347
+audio.loudness.environment=2

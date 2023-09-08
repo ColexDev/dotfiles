@@ -1,0 +1,6 @@
+ 
+On {!yellow!}Sat, 01 Jan 2022{!input!} EST:
+{!event!}* [13:31:36] {!green!}Torrent Added: {!info!}archlinux-2021.12.01-x86_64.iso ({!cyan!}287ce5be250c6613ab6021c4a483cbfc672683f8{!info!})
+{!event!}* [13:31:36] {!green,black!}Checking: {!info!}archlinux-2021.12.01-x86_64.iso ({!cyan!}287ce5be250c6613ab6021c4a483cbfc672683f8{!info!})
+{!event!}* [13:31:37] {!yellow,black!}Queued: {!info!}archlinux-2021.12.01-x86_64.iso ({!cyan!}287ce5be250c6613ab6021c4a483cbfc672683f8{!info!})
+{!event!}* [13:31:38] {!blue,black,bold!}Seeding: {!info!}archlinux-2021.12.01-x86_64.iso ({!cyan!}287ce5be250c6613ab6021c4a483cbfc672683f8{!info!})

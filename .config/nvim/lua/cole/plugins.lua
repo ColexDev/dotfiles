@@ -46,11 +46,12 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
     use "windwp/nvim-autopairs"
+    use "protex/better-digraphs.nvim"
 
     -- LSP
     use "neovim/nvim-lspconfig"
     use "williamboman/nvim-lsp-installer"
-    use "Chiel92/vim-autoformat"
+    -- use "Chiel92/vim-autoformat"
     use { "nvim-treesitter/nvim-treesitter", run = "TSUpdate" }
 
     -- Cmp
@@ -62,12 +63,12 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-nvim-lsp" -- LSP completions
 
     -- Snippets
-    use "L3MON4D3/LuaSnip" -- Snippet engine
-    use "rafamadriz/friendly-snippets" -- Imports a lot of snippets
+    -- use "L3MON4D3/LuaSnip" -- Snippet engine
+    -- use "rafamadriz/friendly-snippets" -- Imports a lot of snippets
 
     use "norcalli/nvim-colorizer.lua" -- Shows color for hex values
 
-    use "ntpeters/vim-better-whitespace"
+    -- use "ntpeters/vim-better-whitespace"
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
@@ -96,9 +97,13 @@ return packer.startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-    use "simrat39/rust-tools.nvim"
+    -- use "simrat39/rust-tools.nvim"
     use "vimwiki/vimwiki"
-    use "tpope/vim-fugitive"
+    -- use "tpope/vim-fugitive"
+    use {
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end 
+}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

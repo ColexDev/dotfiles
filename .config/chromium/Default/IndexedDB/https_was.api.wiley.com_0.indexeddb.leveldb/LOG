@@ -1,0 +1,25 @@
+2022/09/23-22:28:52.410 6e67 Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_was.api.wiley.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/23-22:28:52.410 6e67 Recovering log #193
+2022/09/23-22:28:52.410 6e67 Reusing old log /home/cole/.config/chromium/Default/IndexedDB/https_was.api.wiley.com_0.indexeddb.leveldb/000193.log 
+2022/09/23-22:28:52.410 6e67 Delete type=2 #191
+2022/09/23-22:28:52.494 639f Level-0 table #198: started
+2022/09/23-22:28:52.498 639f Level-0 table #198: 533 bytes OK
+2022/09/23-22:28:52.506 639f Delete type=0 #193
+2022/09/23-22:28:52.506 639f Manual compaction at level-0 from '\x00:\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00;\x00\x00\x00' @ 0 : 0; will stop at '\x00:\x00\x00\x05' @ 1459 : 1
+2022/09/23-22:28:52.506 639f Compacting 1@0 + 1@1 files
+2022/09/23-22:28:52.507 639f Generated table #199@0: 53 keys, 1280 bytes
+2022/09/23-22:28:52.507 639f Compacted 1@0 + 1@1 files => 1280 bytes
+2022/09/23-22:28:52.512 639f compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/09/23-22:28:52.512 639f Delete type=2 #198
+2022/09/23-22:28:52.512 639f Manual compaction at level-0 from '\x00:\x00\x00\x05' @ 1459 : 1 .. '\x00;\x00\x00\x00' @ 0 : 0; will stop at (end)
+2022/09/23-22:28:54.415 3507 Level-0 table #201: started
+2022/09/23-22:28:54.418 3507 Level-0 table #201: 533 bytes OK
+2022/09/23-22:28:54.419 3507 Delete type=2 #195
+2022/09/23-22:28:54.419 3507 Delete type=0 #197
+2022/09/23-22:28:54.420 3507 Manual compaction at level-0 from '\x00;\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00<\x00\x00\x00' @ 0 : 0; will stop at '\x00;\x00\x00\x05' @ 1480 : 1
+2022/09/23-22:28:54.420 3507 Compacting 1@0 + 1@1 files
+2022/09/23-22:28:54.421 3507 Generated table #202@0: 54 keys, 1288 bytes
+2022/09/23-22:28:54.421 3507 Compacted 1@0 + 1@1 files => 1288 bytes
+2022/09/23-22:28:54.423 3507 compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/09/23-22:28:54.423 3507 Delete type=2 #201
+2022/09/23-22:28:54.423 3507 Manual compaction at level-0 from '\x00;\x00\x00\x05' @ 1480 : 1 .. '\x00<\x00\x00\x00' @ 0 : 0; will stop at (end)

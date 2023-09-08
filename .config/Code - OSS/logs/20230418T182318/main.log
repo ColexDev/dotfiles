@@ -1,0 +1,4 @@
+2023-04-18 18:23:18.401 [info] update#ctor - updates are disabled as there is no update URL
+2023-04-18 18:23:19.543 [info] Starting extension host with pid 8064 (fork() took 5 ms).
+2023-04-18 18:24:57.783 [info] Waiting for extension host with pid 8064 to exit.
+2023-04-18 18:24:58.022 [info] Extension host with pid 8064 exited with code: 0, signal: null.

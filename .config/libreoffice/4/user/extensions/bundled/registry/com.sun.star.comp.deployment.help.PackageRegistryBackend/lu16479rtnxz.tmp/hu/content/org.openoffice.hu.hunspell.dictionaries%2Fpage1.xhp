@@ -1,0 +1,25 @@
+szinonimaszótár
+szinonimaszótár;magyar
+szókincstár
+szókincstár;magyar
+
+Magyar szinonimaszótár
+
+
+A %PRODUCTNAME magyar szinonimaszótára mintegy 20 ezer szót tartalmaz. A rokon értelmű szavakon kívül benne vannak a szótárban a névnapok, a görög betűk és több száz fontos Unicode-karakter is. A névnaptár a Magyar Webkorpusz szerinti leggyakoribb 1500 magyar utónevet tartalmazza. Az utónevek és a többi szinonima is egy országos napilap utolsó 6 évfolyamának szókincse alapján lett gyakorisági sorrendbe állítva.
+
+Példák a használatra
+
+
+Az „András”, „04-17”, „pi”, „jel” vagy „telefon” beírását és a Ctrl-F7 lenyomását követően az András névnapjait, az április 17-re eső névnapokat, a π jelet és nagybetűs változatát, a Π-t, a gyakrabban használt magyar írásjeleket és a telefonszámot bevezető telefonszimbólumokat (☏, ☎) lehet a dokumentumba beilleszteni.
+
+
+A magyar szinonimaszótár kihasználja a %PRODUCTNAME tövezési és toldalékolási képességeit is. A képen látható példában a „nyiluktól” szóra kattintás és a szinonimaszótár előhívása után megjelenik a nyíl tőszó, és a nyílvesszőjüktől szinonima, ami a keresett szóalaknak megfelelően van toldalékolva. Láthatóak még az Unicode nyíl karakterek is, amelyek így nemcsak a speciális karakterek beillesztése párbeszédablak, hanem a szinonimaszótáron keresztül is elérhetővé váltak. Képernyőkép a magyar szinonimaszótár használatáról
+
+Támogató
+
+
+A %PRODUCTNAME magyar szinonimaszótárának elkészítését az FSF.hu Alapítvány támogatta.
+
+FSF.hu logó
+

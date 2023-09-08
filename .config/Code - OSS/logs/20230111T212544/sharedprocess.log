@@ -1,0 +1,19 @@
+2023-01-11 21:25:45.652 [info] Starting worker process with pid 31075 (type: fileWatcher, window: 1).
+2023-01-11 21:25:45.744 [info] Deleted from disk asvetliakov.vscode-neovim /home/cole/.vscode-oss/extensions/asvetliakov.vscode-neovim-0.0.94
+2023-01-11 21:25:47.369 [info] Getting Manifest... ms-python.python
+2023-01-11 21:25:47.369 [info] Getting Manifest... ms-python.vscode-pylance
+2023-01-11 21:25:47.605 [info] Installing extension: ms-python.vscode-pylance
+2023-01-11 21:25:47.705 [info] Installing extension: ms-python.python
+2023-01-11 21:25:47.893 [info] Getting Manifest... ms-python.python
+2023-01-11 21:25:47.937 [info] Waiting for already requested installing extension ms-python.python ms-python.vscode-pylance
+2023-01-11 21:25:52.094 [info] Extracted extension to /home/cole/.vscode-oss/extensions/.d40f56fc-fe34-44ac-a03b-4a0c2d3d937c: ms-python.python
+2023-01-11 21:25:52.106 [info] Renamed to /home/cole/.vscode-oss/extensions/ms-python.python-2022.20.2
+2023-01-11 21:25:52.108 [info] Extracting completed. ms-python.python
+2023-01-11 21:25:52.114 [info] Extension installed successfully: ms-python.python
+2023-01-11 21:25:52.114 [info] Finished waiting for already requested installing extension ms-python.python ms-python.vscode-pylance
+2023-01-11 21:25:52.124 [info] Marked extension as uninstalled ms-python.python-2022.18.2
+2023-01-11 21:25:54.606 [info] Extracted extension to /home/cole/.vscode-oss/extensions/.d18f53a7-497d-4a81-80e9-7ad791148470: ms-python.vscode-pylance
+2023-01-11 21:25:54.616 [info] Renamed to /home/cole/.vscode-oss/extensions/ms-python.vscode-pylance-2023.1.10
+2023-01-11 21:25:54.617 [info] Extracting completed. ms-python.vscode-pylance
+2023-01-11 21:25:54.622 [info] Extension installed successfully: ms-python.vscode-pylance
+2023-01-11 21:25:54.633 [info] Marked extension as uninstalled ms-python.vscode-pylance-2022.11.40

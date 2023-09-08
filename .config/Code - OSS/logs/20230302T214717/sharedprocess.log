@@ -1,0 +1,3 @@
+2023-03-02 21:47:19.110 [info] Starting worker process with pid 29865 (type: fileWatcher, window: 1).
+2023-03-02 21:47:19.430 [info] Deleted from disk ms-python.vscode-pylance /home/cole/.vscode-oss/extensions/ms-python.vscode-pylance-2022.11.40
+2023-03-02 21:47:19.433 [info] Deleted from disk ms-python.python /home/cole/.vscode-oss/extensions/ms-python.python-2022.18.2

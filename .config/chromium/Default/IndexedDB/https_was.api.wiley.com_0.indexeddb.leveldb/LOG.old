@@ -1,0 +1,14 @@
+2022/09/23-22:28:34.351 3507 Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_was.api.wiley.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/23-22:28:34.352 3507 Recovering log #189
+2022/09/23-22:28:34.352 3507 Reusing old log /home/cole/.config/chromium/Default/IndexedDB/https_was.api.wiley.com_0.indexeddb.leveldb/000189.log 
+2022/09/23-22:28:34.352 3507 Delete type=2 #188
+2022/09/23-22:28:34.708 639f Level-0 table #194: started
+2022/09/23-22:28:34.710 639f Level-0 table #194: 1105 bytes OK
+2022/09/23-22:28:34.713 639f Delete type=0 #189
+2022/09/23-22:28:34.713 639f Manual compaction at level-0 from '\x009\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00:\x00\x00\x00' @ 0 : 0; will stop at '\x009\x00\x00\x05' @ 1428 : 1
+2022/09/23-22:28:34.713 639f Compacting 1@0 + 1@1 files
+2022/09/23-22:28:34.714 639f Generated table #195@0: 53 keys, 1280 bytes
+2022/09/23-22:28:34.714 639f Compacted 1@0 + 1@1 files => 1280 bytes
+2022/09/23-22:28:34.716 639f compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/09/23-22:28:34.716 639f Delete type=2 #194
+2022/09/23-22:28:34.716 639f Manual compaction at level-0 from '\x009\x00\x00\x05' @ 1428 : 1 .. '\x00:\x00\x00\x00' @ 0 : 0; will stop at (end)

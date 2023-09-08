@@ -44,7 +44,7 @@ configs.setup {
     highlight = {
         enable = true, -- false will disable the whole extension
         disable = { "" }, -- list of language that will be disabled
-        additional_vim_regex_highlighting = true,
+        additional_vim_regex_highlighting = false,
     },
     autopairs = {
         enable = true;
@@ -329,7 +329,6 @@ bufferline.setup {
 -- require('rust-tools.inlay_hints').set_inlay_hints()
 
 -- Vim wiki
-vim.cmd "let g:vimwiki_list = [{'path': '~/.vimwiki/'}]"
 
 -- nvim-colorizer
 require'colorizer'.setup()

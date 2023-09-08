@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Linguistic" oor:package="org.openoffice.Office">
+ <node oor:name="ServiceManager">
+    <node oor:name="Dictionaries">
+        <node oor:name="HunSpellDic_gl" oor:op="fuse">
+            <prop oor:name="Locations" oor:type="oor:string-list">
+                <value>vnd.sun.star.expand:$BUNDLED_EXTENSIONS/dict-gl/gl_ES.aff vnd.sun.star.expand:$BUNDLED_EXTENSIONS/dict-gl/gl_ES.dic</value>
+            </prop>
+            <prop oor:name="Format" oor:type="xs:string">
+                <value>DICT_SPELL</value>
+            </prop>
+            <prop oor:name="Locales" oor:type="oor:string-list">
+                <value>gl gl-ES</value>
+            </prop>
+        </node>
+        <node oor:name="HyphDic_gl" oor:op="fuse">
+            <prop oor:name="Locations" oor:type="oor:string-list">
+                <value>vnd.sun.star.expand:$BUNDLED_EXTENSIONS/dict-gl/hyph_gl.dic</value>
+            </prop>
+            <prop oor:name="Format" oor:type="xs:string">
+                <value>DICT_HYPH</value>
+            </prop>
+            <prop oor:name="Locales" oor:type="oor:string-list">
+                <value>gl gl-ES</value>
+            </prop>
+        </node>
+        <node oor:name="ThesDic_gl" oor:op="fuse">
+            <prop oor:name="Locations" oor:type="oor:string-list">
+                <value>vnd.sun.star.expand:$BUNDLED_EXTENSIONS/dict-gl/thesaurus_gl.dat vnd.sun.star.expand:$BUNDLED_EXTENSIONS/dict-gl/thesaurus_gl.idx</value>
+            </prop>
+            <prop oor:name="Format" oor:type="xs:string">
+                <value>DICT_THES</value>
+            </prop>
+            <prop oor:name="Locales" oor:type="oor:string-list">
+                <value>gl gl-ES</value>
+            </prop>
+        </node>
+    </node>
+ </node>
+</oor:component-data>
+
+

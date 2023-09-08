@@ -1,0 +1,10 @@
+2023/02/09-21:02:03.719 290 Creating DB /home/cole/.config/chromium/Default/IndexedDB/https_www.athletic.net_0.indexeddb.leveldb since it was missing.
+2023/02/09-21:02:03.726 290 Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_www.athletic.net_0.indexeddb.leveldb/MANIFEST-000001
+2023/02/09-21:02:03.761 2ca Level-0 table #5: started
+2023/02/09-21:02:03.763 2ca Level-0 table #5: 608 bytes OK
+2023/02/09-21:02:03.767 2ca Delete type=0 #3
+2023/02/09-21:02:03.767 2ca Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/02/09-21:02:03.980 2cb Level-0 table #7: started
+2023/02/09-21:02:03.982 2cb Level-0 table #7: 1189 bytes OK
+2023/02/09-21:02:03.984 2cb Delete type=0 #4
+2023/02/09-21:02:03.985 290 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

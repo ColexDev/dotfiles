@@ -1,0 +1,36 @@
+2023-04-18 18:23:19.892 [info] Starting worker process with pid 8151 (type: fileWatcher, window: 1).
+2023-04-18 18:23:23.581 [info] Getting Manifest... asvetliakov.vscode-neovim
+2023-04-18 18:23:23.584 [info] Getting Manifest... ms-python.python
+2023-04-18 18:23:23.584 [info] Getting Manifest... ms-python.vscode-pylance
+2023-04-18 18:23:23.585 [info] Getting Manifest... vscodevim.vim
+2023-04-18 18:23:23.757 [info] Installing extension: ms-python.python
+2023-04-18 18:23:23.758 [info] Installing extension: ms-python.vscode-pylance
+2023-04-18 18:23:23.772 [info] Installing extension: vscodevim.vim
+2023-04-18 18:23:23.911 [info] Installing extension: asvetliakov.vscode-neovim
+2023-04-18 18:23:24.238 [info] Getting Manifest... ms-python.python
+2023-04-18 18:23:24.276 [info] Waiting for already requested installing extension ms-python.python ms-python.vscode-pylance
+2023-04-18 18:23:24.641 [info] Extension signature verification is not done: vscodevim.vim
+2023-04-18 18:23:24.685 [info] Extracted extension to /home/cole/.vscode-oss/extensions/.cc73f000-e657-48ac-bebb-a6f3747d6333: vscodevim.vim
+2023-04-18 18:23:24.688 [info] Renamed to /home/cole/.vscode-oss/extensions/vscodevim.vim-1.25.2
+2023-04-18 18:23:24.689 [info] Extracting extension completed. vscodevim.vim
+2023-04-18 18:23:24.695 [info] Extension installed successfully: vscodevim.vim
+2023-04-18 18:23:24.696 [info] Marked extension as uninstalled vscodevim.vim-1.24.3
+2023-04-18 18:23:25.020 [info] Extension signature verification is not done: asvetliakov.vscode-neovim
+2023-04-18 18:23:25.050 [info] Extracted extension to /home/cole/.vscode-oss/extensions/.c370ad8a-9527-43e0-a122-d269a6bcb849: asvetliakov.vscode-neovim
+2023-04-18 18:23:25.053 [info] Renamed to /home/cole/.vscode-oss/extensions/asvetliakov.vscode-neovim-0.0.97
+2023-04-18 18:23:25.054 [info] Extracting extension completed. asvetliakov.vscode-neovim
+2023-04-18 18:23:25.062 [info] Extension installed successfully: asvetliakov.vscode-neovim
+2023-04-18 18:23:25.063 [info] Marked extension as uninstalled asvetliakov.vscode-neovim-0.0.95
+2023-04-18 18:23:27.662 [info] Extension signature verification is not done: ms-python.python
+2023-04-18 18:23:27.727 [info] Extension signature verification is not done: ms-python.vscode-pylance
+2023-04-18 18:23:29.104 [info] Extracted extension to /home/cole/.vscode-oss/extensions/.f69ecd7f-ea1a-412e-b028-29e2d3094f01: ms-python.python
+2023-04-18 18:23:29.116 [info] Renamed to /home/cole/.vscode-oss/extensions/ms-python.python-2023.6.1
+2023-04-18 18:23:29.119 [info] Extracting extension completed. ms-python.python
+2023-04-18 18:23:29.126 [info] Extension installed successfully: ms-python.python
+2023-04-18 18:23:29.126 [info] Finished waiting for already requested installing extension ms-python.python ms-python.vscode-pylance
+2023-04-18 18:23:29.129 [info] Marked extension as uninstalled ms-python.python-2022.20.2
+2023-04-18 18:23:29.844 [info] Extracted extension to /home/cole/.vscode-oss/extensions/.0695dfaa-0669-4861-b9a6-032c4b803463: ms-python.vscode-pylance
+2023-04-18 18:23:29.856 [info] Renamed to /home/cole/.vscode-oss/extensions/ms-python.vscode-pylance-2023.4.20
+2023-04-18 18:23:29.857 [info] Extracting extension completed. ms-python.vscode-pylance
+2023-04-18 18:23:29.862 [info] Extension installed successfully: ms-python.vscode-pylance
+2023-04-18 18:23:29.866 [info] Marked extension as uninstalled ms-python.vscode-pylance-2023.1.10

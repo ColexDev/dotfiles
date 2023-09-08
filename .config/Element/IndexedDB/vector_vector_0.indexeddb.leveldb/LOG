@@ -1,0 +1,14 @@
+2023/04/26-20:00:46.210 5a02 Reusing MANIFEST /home/cole/.config/Element/IndexedDB/vector_vector_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/26-20:00:46.210 5a02 Recovering log #67
+2023/04/26-20:00:46.237 5a02 Reusing old log /home/cole/.config/Element/IndexedDB/vector_vector_0.indexeddb.leveldb/000067.log 
+2023/04/26-20:00:48.712 5a02 Level-0 table #73: started
+2023/04/26-20:00:48.727 5a02 Level-0 table #73: 1234967 bytes OK
+2023/04/26-20:00:48.729 5a02 Delete type=0 #67
+2023/04/26-20:00:48.991 5a02 Compacting 1@1 + 2@2 files
+2023/04/26-20:00:49.023 5a02 Generated table #74@1: 11208 keys, 2160486 bytes
+2023/04/26-20:00:49.054 5a02 Generated table #75@1: 29482 keys, 1678296 bytes
+2023/04/26-20:00:49.054 5a02 Compacted 1@1 + 2@2 files => 3838782 bytes
+2023/04/26-20:00:49.056 5a02 compacted to: files[ 0 0 2 0 0 0 0 ]
+2023/04/26-20:00:49.056 5a02 Delete type=2 #73
+2023/04/26-20:00:49.056 5a02 Delete type=2 #69
+2023/04/26-20:00:49.056 5a02 Delete type=2 #70

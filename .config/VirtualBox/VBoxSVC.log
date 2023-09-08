@@ -1,0 +1,46 @@
+00:00:00.007760 main     VirtualBox XPCOM Server 6.1.36 r152435 linux.amd64 (Aug 28 2022 22:16:54) release log
+00:00:00.007762 main     Log opened 2022-11-12T00:19:58.039967000Z
+00:00:00.007762 main     Build Type: release
+00:00:00.007764 main     OS Product: Linux
+00:00:00.007764 main     OS Release: 5.19.16_1
+00:00:00.007765 main     OS Version: #1 SMP PREEMPT_DYNAMIC Mon Oct 17 00:37:29 UTC 2022
+00:00:00.007775 main     DMI Product Name: System Product Name
+00:00:00.007778 main     DMI Product Version: System Version
+00:00:00.007781 main     Firmware type: UEFI
+00:00:00.007856 main     Secure Boot: Disabled
+00:00:00.007874 main     Host RAM: 15907MB (15.5GB) total, 13000MB (12.6GB) available
+00:00:00.007877 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.007877 main     Process ID: 18916
+00:00:00.007878 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.008676 main     IPC socket path: /tmp/.vbox-cole-ipc/ipcd
+00:00:00.110488 nspr-2   VirtualBox: object creation starts
+00:00:00.110526 nspr-2   Home directory: '/home/cole/.config/VirtualBox'
+00:00:00.111897 nspr-2   Loading settings file "/home/cole/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.116159 nspr-2   HostDnsMonitor: initializing
+00:00:00.116240 nspr-2   NAT: resolv.conf: nameserver 172.21.223.17
+00:00:00.116248 nspr-2   HostDnsMonitor: updating information
+00:00:00.116253 nspr-2   HostDnsMonitor: old information
+00:00:00.116255 nspr-2     no server entries
+00:00:00.116256 nspr-2     no domain set
+00:00:00.116257 nspr-2     no search string entries
+00:00:00.116259 nspr-2   HostDnsMonitor: new information
+00:00:00.116260 nspr-2     server 1: 172.21.223.17
+00:00:00.116262 nspr-2     domain: resnet.purdue.edu
+00:00:00.116263 nspr-2     no search string entries
+00:00:00.116474 nspr-2   HostPowerServiceLinux: DBus connection Error (Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory)
+00:00:00.116487 nspr-2   Failed to open "/dev/vboxdrvu", errno=2, rc=VERR_VM_DRIVER_NOT_INSTALLED
+00:00:00.116580 nspr-2   VD: VDInit finished with VINF_SUCCESS
+00:00:00.116622 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={027bc463-929c-40e8-bf16-fea557cd8e7e} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
+00:00:00.119389 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/home/cole/VirtualBox VMs/Caitlin/Caitlin.vbox' for reading: -102 (File not found.).
+00:00:00.119392 nspr-2   /builddir/VirtualBox-6.1.36/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:00.119489 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/home/cole/ssd/VirtualBox VMs/Windows 10/Windows 10.vbox' for reading: -102 (File not found.).
+00:00:00.119491 nspr-2   /builddir/VirtualBox-6.1.36/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:00.119556 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={MachineWrap} aText={Runtime error opening '/home/cole/VirtualBox VMs/Void Linux/Void Linux.vbox' for reading: -102 (File not found.).
+00:00:00.119558 nspr-2   /builddir/VirtualBox-6.1.36/src/VBox/Main/src-server/MachineImpl.cpp[754] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:00.119687 nspr-2   VirtualBox: object created
+16:13:17.934624 main     VirtualBox: object deletion starts
+16:13:17.934783 main     HostDnsMonitor: shutting down ...
+16:13:17.934832 main     HostDnsMonitor: shut down
+16:13:17.934835 main     {00007f45d0018030} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_INVALID_HANDLE
+16:13:17.934912 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={d0a0163f-e254-4e5b-a1f2-011cf991c38d} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+16:13:17.934959 main     VirtualBox: object deleted

@@ -1,0 +1,6 @@
+2022/09/23-12:39:21.026 885 Creating DB /home/cole/.config/chromium/Default/IndexedDB/https_aax-us-east.amazon-adsystem.com_0.indexeddb.leveldb since it was missing.
+2022/09/23-12:39:21.030 885 Reusing MANIFEST /home/cole/.config/chromium/Default/IndexedDB/https_aax-us-east.amazon-adsystem.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/23-12:39:30.367 885 Level-0 table #5: started
+2022/09/23-12:39:30.368 885 Level-0 table #5: 413 bytes OK
+2022/09/23-12:39:30.370 885 Delete type=0 #3
+2022/09/23-12:39:30.370 885 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
