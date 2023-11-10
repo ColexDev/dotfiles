@@ -30,6 +30,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-b>", ":bdelete<CR>", opts)
+-- keymap("n", "<leader>l", ":ls<CR>:b<Space>", opts)
 
 -- Easier indenting
 keymap("n", "<", "<<", opts)
@@ -41,7 +42,7 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Paste without yanking
 -- keymap("n", "cp", '"_cw<C-R>"<ESC>', opts)
-keymap("n", "cw", '"_ddP', opts)
+-- keymap("n", "cw", '"_ddP', opts)
 
 -- Unsets last search pattern
 keymap("n", "<ESC>", ":noh <ESC><ESC>", opts)
@@ -67,7 +68,9 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 -- Telescope --
 keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope git_files<cr>", opts)
+keymap("n", "<leader>flg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
+keymap('n', '<Leader>b', '<Cmd>Telescope buffers<CR>', { noremap = true, silent = true })
 
 -- Digraphs --
 keymap("i", "<C-d>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>", opts)

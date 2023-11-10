@@ -79,15 +79,15 @@ _G.packer_plugins = {
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/home/cole/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["better-digraphs.nvim"] = {
     loaded = true,
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/better-digraphs.nvim",
     url = "https://github.com/protex/better-digraphs.nvim"
-  },
-  ["bufferline.nvim"] = {
-    loaded = true,
-    path = "/home/cole/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -114,10 +114,10 @@ _G.packer_plugins = {
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  firenvim = {
+  ["friendly-snippets"] = {
     loaded = true,
-    path = "/home/cole/.local/share/nvim/site/pack/packer/start/firenvim",
-    url = "https://github.com/glacambre/firenvim"
+    path = "/home/cole/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -128,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/home/cole/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -203,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
+  },
+  ["vim-bufferline"] = {
+    loaded = true,
+    path = "/home/cole/.local/share/nvim/site/pack/packer/start/vim-bufferline",
+    url = "https://github.com/bling/vim-bufferline"
   },
   ["vim-lastplace"] = {
     loaded = true,

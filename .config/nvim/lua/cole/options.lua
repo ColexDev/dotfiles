@@ -28,3 +28,8 @@ vim.opt.scrolloff = 999
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.termguicolors = true
+
+
+
+-- removes status bar
+vim.opt.laststatus = 0

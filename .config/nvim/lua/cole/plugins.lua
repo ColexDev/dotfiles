@@ -63,8 +63,8 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-nvim-lsp" -- LSP completions
 
     -- Snippets
-    -- use "L3MON4D3/LuaSnip" -- Snippet engine
-    -- use "rafamadriz/friendly-snippets" -- Imports a lot of snippets
+    use "L3MON4D3/LuaSnip" -- Snippet engine
+    use "rafamadriz/friendly-snippets" -- Imports a lot of snippets
 
     use "norcalli/nvim-colorizer.lua" -- Shows color for hex values
 
@@ -84,12 +84,14 @@ return packer.startup(function(use)
 
     use "farmergreg/vim-lastplace"
 
-    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+    use "bling/vim-bufferline"
+    -- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+    -- use {'akinsho/bufferline.nvim', tag = "v2.*"}
 
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
+    -- use {
+    --     'nvim-lualine/lualine.nvim',
+    --     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    -- }
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
@@ -100,10 +102,6 @@ return packer.startup(function(use)
     -- use "simrat39/rust-tools.nvim"
     use "vimwiki/vimwiki"
     -- use "tpope/vim-fugitive"
-    use {
-    'glacambre/firenvim',
-    run = function() vim.fn['firenvim#install'](0) end 
-}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
