@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# curl -s wttr.in/44011?format=j1 | jq -r ".current_condition[0] .FeelsLikeF"
+#weather --imperial --no-cache 44011 | rg Temperature | tr " " "\n" | sed -n 5p
+weather --imperial 44011 | rg Temperature | tr " " "\n" | sed -n 5p | awk '{print int($1 + 0.5)}'

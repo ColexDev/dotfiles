@@ -1,0 +1,39 @@
+#!/bin/bash
+
+function mountssd() {
+    mkdir $HOME/ssd
+    doas mount -t ntfs-3g -o rw UUID=3583DD0C22E7BC7A $HOME/ssd
+    # return 1
+}
+
+function umountssd() {
+    doas umount $HOME/ssd
+    doas rm -rf $HOME/ssd
+}
+
+if [ $# -eq 0 ]; then
+    echo "no arguments"
+    exit 1
+fi
+
+echo "Mounting ssd..."
+mountssd
+echo "Done Mounting!"
+
+if [ $1 == "push" ];  then
+    echo "Pushing files..."
+    doas cp -r $HOME/.local/share/calcurse/ ssd/
+    # doas cp -r $HOME/.mozilla/              ssd/
+    doas cp -r $HOME/.tmux/                 ssd/
+    doas cp -r $HOME/dev                    ssd/
+elif [ $1 == "get" ]; then
+    echo "Grabbing files..."
+    doas cp -r ssd/calcurse $HOME/.local/share/
+    # doas cp -r ssd/.mozilla $HOME
+    doas cp -r ssd/.tmux/   $HOME
+    doas cp -r ssd/dev      $HOME
+fi
+
+echo "Unmounting ssd..."
+umountssd
+echo "Done! All synced!"

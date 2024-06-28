@@ -1,0 +1,11 @@
+LOC=$(whereis discord | tr ' ' $'\n' | sed '2q;d')
+LOC+="/resources"
+FILENAME=build_info.json
+cd $LOC
+
+NUM=$(sed '3q;d' $FILENAME | tr ':."' $'\n' | sed '7q;d')
+NEW=$(expr $NUM + 1)
+
+doas sed -i "s/$NUM/$NEW/g" $FILENAME
+
+cd

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Create a temporary file
+temp_file=$(mktemp)
+
+# Open floating terminal with vim using Alacritty
+alacritty --title "floating_term" -e nvim "$temp_file"
+
+# Retrieve the contents of the temporary file and remove trailing newline
+clip_contents=$(cat "$temp_file" | sed -e '$ { /^$/ { N; s/\n$//; } }')
+
+# Copy the contents to the clipboard using 'xclip' or 'xsel'
+# echo -n "$clip_contents" | xclip -selection clipboard
+xdotool type "$clip_contents"
+
+# Clean up by removing the temporary file
+rm "$temp_file"

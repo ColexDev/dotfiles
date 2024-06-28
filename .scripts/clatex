@@ -1,0 +1,8 @@
+#!/bin/bash
+TMPDIR=$(mktemp -d)
+# trap "rm -fr $TMPDIR; exit 255;" SIGINT SIGTERM SIGKILL
+
+# /usr/bin/latex -interaction=batchmode -output-directory=$TMPDIR $1
+pdflatex -interaction=batchmode -output-directory=$TMPDIR $1
+# cp $TMPDIR/$1.dvi .
+rm -fr $TMPDIR

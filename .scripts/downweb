@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Check if domain argument is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <domain>"
+    exit 1
+fi
+
+domain="$1"
+
+# Define wget options
+wget_options="--mirror --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains $domain --no-parent --timestamping --show-progress"
+
+# Set custom user agent
+user_agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0"
+
+# Run wget with the provided options and custom user agent
+wget --user-agent="$user_agent" $wget_options "https://$domain"

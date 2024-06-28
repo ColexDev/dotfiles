@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo ifconfig enp5s0  up

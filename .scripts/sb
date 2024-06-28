@@ -1,0 +1,2 @@
+doas rm -rf config.h
+doas make clean install

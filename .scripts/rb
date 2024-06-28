@@ -1,0 +1,2 @@
+pdflatex *.tex
+rm -f *.log

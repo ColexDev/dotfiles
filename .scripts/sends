@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rsync --progress -a --rsync-path="sudo rsync" ~/dev/personal_projects/colexdev ubuntu@${IP}:/var/www/
+
+# cd /usr/lib64/ruby/gems/3.3.0/gems/neocities-0.0.18/bin
+# ./neocities push $HOME/dev/personal_projects/colexdev
+neocities push $HOME/dev/personal_projects/colexdev
+# cd

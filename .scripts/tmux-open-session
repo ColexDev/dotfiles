@@ -1,0 +1,2 @@
+OUTPUT=$(tmux ls | awk '{split($0,s,":"); print s[1];}' | fzf)
+tmux a -t $OUTPUT

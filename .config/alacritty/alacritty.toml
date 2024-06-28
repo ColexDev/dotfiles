@@ -1,0 +1,36 @@
+[colors.bright]
+black = "#000000"
+blue = "#0080ff"
+cyan = "#1799AD"
+green = "#00c918"
+magenta = "#A43CC9"
+red = "#cc0000"
+white = "#ffffff"
+yellow = "#ffff00"
+
+[colors.normal]
+black = "#000000"
+blue = "#0080ff"
+cyan = "#1799AD"
+green = "#00AF15"
+magenta = "#A43CC9"
+red = "#cc0000"
+white = "#ffffff"
+yellow = "#ffff00"
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[cursor]
+unfocused_hollow = false
+
+[font]
+size = 18
+
+[font.bold]
+style = "Bold"
+
+[font.normal]
+# family = "Sauce Code Pro Nerd Font"
+family = "AcPlus ToshibaSat 8x14"

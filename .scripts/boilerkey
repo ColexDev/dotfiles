@@ -1,0 +1,1 @@
+python3 $HOME/.scripts/local-boilerkey/boilerkey.py | xclip -selection clipboard
