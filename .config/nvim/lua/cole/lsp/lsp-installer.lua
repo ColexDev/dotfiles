@@ -6,7 +6,6 @@ end
 local servers = {
   "rust_analyzer",
   "clangd",
-  "zk",
   "pyright",
 }
 

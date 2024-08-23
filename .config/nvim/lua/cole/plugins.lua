@@ -86,7 +86,7 @@ return packer.startup(function(use)
 
     -- use "bling/vim-bufferline"
     -- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
-    use {'akinsho/bufferline.nvim', tag = "v2.*"}
+    use {'akinsho/bufferline.nvim', tag = "*"}
 
     -- use {
     --     'nvim-lualine/lualine.nvim',
@@ -100,7 +100,7 @@ return packer.startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
     -- use "simrat39/rust-tools.nvim"
-    use "vimwiki/vimwiki"
+    -- use "vimwiki/vimwiki"
     -- use "tpope/vim-fugitive"
 
     -- Automatically set up your configuration after cloning packer.nvim

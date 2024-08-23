@@ -254,7 +254,7 @@ for i in $info; do
 	case $i in
 		n) echo;;
 		os) print os "$ID";;
-#		sh) print sh "${SHELL##*/}";;
+	sh) print sh "${SHELL##*/}";;
 		wm) print wm "${wm##*/}";;
 		up) print up "$up";;
 	#	cpu) print cpu "$vendor$cpu";;
@@ -267,6 +267,6 @@ for i in $info; do
         # term) print term "alacritty";;
 
 		user) printf '%7s@%s\n' "$USER" "$host";;
-		col) col;;
+		# col) col;;
 	esac
 done

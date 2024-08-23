@@ -14,6 +14,8 @@ exec xdg-settings set default-web-browser firefox.desktop &
 # NOTE: This mouse has weird behavior for some stuff, use g502 for kicad and others
 exec xinput --set-prop "pointer:Logitech MX Master 2S" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1 &
 
+xbanish -t 2 &
+
 # Sets up my dual monitor setup (only using one monitor now)
 # xrandr --output DP-2 --mode 1920x1080 --pos 1920x0 --rotate right --output DP-4 --primary --mode 1920x1080 --pos 0x369 --rotate normal &
 

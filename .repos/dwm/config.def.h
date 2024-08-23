@@ -9,8 +9,10 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 // static const char *fonts[]          = {"Sauce Code Pro Nerd Font:size=12"};
 // static const char dmenufont[]       = "Sauce Code Pro Nerd Font:size=12";
-static const char *fonts[]          = {"AcPlus ToshibaSat 8x14:size=16"};
-static const char dmenufont[]       = "AcPlus ToshibaSat 8x14:size=16";
+// static const char *fonts[]          = {"AcPlus ToshibaSat 8x14:size=16"};
+// static const char dmenufont[]       = "AcPlus ToshibaSat 8x14:size=16";
+static const char *fonts[]          = {"CozetteVector:size=16"};
+static const char dmenufont[]       = "CozetteVector:size=16";
 
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#ffffff";
@@ -25,7 +27,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 // static const char *tags[] = { "", "爵", "", "ﱘ", "", "" };
-static const char *tags[] = { "DEV", "FOX", "QTB", "MUS", "MSC", "KEY" };
+static const char *tags[] = { "DEV", "QTB", "FOX", "MUS", "MSC", "KEY" };
 
 static const char ptagf[] = "[%s %s]";	/* format of a tag label */
 static const char etagf[] = "[%s]";	/* format of an empty tag */
@@ -38,11 +40,11 @@ static const Rule rules[] = {
 	 */
 	/* class         instance    title       tags mask     isfloating isterminal noswallow   monitor */
 //	{ "Alacritty",   NULL,     NULL,      1,           0,            1 },
-	{ "qutebrowser", NULL,       NULL,         1 << 1,           0, 0, 0,             0 },
-	{ "KeePassXC",   NULL,     NULL,          1 << 5,      0, 0, 0,            1 },
-	{ "Spotify",     NULL,     NULL,          1 << 3,      0, 0, 0,            1 },
-	{ "mpv",         "gl",      NULL,          1 << 4,    0, 0, 0,            0 },
-	{ "Firefox",     NULL,      NULL,         1 << 1,      0, 0, 0,            0 },
+	{ "qutebrowser", NULL,       NULL,         1 << 1,           0, 0, 0,             -1 },
+	{ "KeePassXC",   NULL,     NULL,          1 << 5,      0, 0, 0,            -1 },
+	{ "Spotify",     NULL,     NULL,          1 << 3,      0, 0, 0,            -1 },
+	{ "mpv",         "gl",      NULL,          1 << 4,    0, 0, 0,            -1 },
+	{ "Firefox",     NULL,      NULL,         1 << 2,      0, 0, 0,            -1 },
     { "Alacritty",   NULL, NULL, 0, 0, 1, 0, -1},
     { "Alacritty",   NULL, "floating_term", 0, 1, 1, 0, -1},
 };
@@ -89,6 +91,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_comma,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_period,      setmfact,       {.f = +0.05} },
+    { MODKEY,                       XK_b,     togglebar,    {0}},
 	{ MODKEY|ShiftMask,           XK_m, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },

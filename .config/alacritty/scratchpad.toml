@@ -29,7 +29,7 @@ unfocused_hollow = false
 size = 18
 
 [font.normal]
-family = "AcPlus ToshibaSat 8x14"
+family = "CozetteVector"
 
 [window.dimensions]
 columns = 85

@@ -203,11 +203,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cole/.local/share/nvim/site/pack/packer/start/vim-lastplace",
     url = "https://github.com/farmergreg/vim-lastplace"
-  },
-  vimwiki = {
-    loaded = true,
-    path = "/home/cole/.local/share/nvim/site/pack/packer/start/vimwiki",
-    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 

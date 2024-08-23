@@ -48,7 +48,8 @@ alias rm='rm -ir'
 alias cp='cp -r'
 
 # easier clear commands
-alias c='clear; ls'
+# alias c='clear; ls'
+alias c='clear; fet'
 
 # Runs the last command with doas
 alias pls='doas $(fc -ln -1)'
@@ -141,7 +142,8 @@ cdc() {
 }
 
 # Run at start
-ls
+# ls
+fet
 
 . "$HOME/.cargo/env"
 
