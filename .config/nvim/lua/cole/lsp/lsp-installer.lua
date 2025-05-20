@@ -7,6 +7,8 @@ local servers = {
   "rust_analyzer",
   "clangd",
   "pyright",
+  "jsonls",
+  "jdtls",
 }
 
 local settings = {
@@ -43,6 +45,7 @@ for _, server in pairs(servers) do
   }
 
   server = vim.split(server, "@")[1]
+
 
   lspconfig[server].setup(opts)
   ::continue::

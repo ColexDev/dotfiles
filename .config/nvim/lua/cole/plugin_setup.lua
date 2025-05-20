@@ -137,6 +137,7 @@ require("bufferline").setup {
         show_buffer_icons = false,
         show_close_icon = false,
         buffer_close_icon = "",
+        separator_style = "none",
     },
     highlights = {
         modified = {

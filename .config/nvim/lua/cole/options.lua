@@ -23,6 +23,9 @@ vim.opt.showmatch = true
 vim.opt.updatetime = 100
 -- need to set vertical line
 
+vim.opt.undofile = true
+vim.opt.signcolumn = "yes"
+
 vim.opt.scrolloff = 999
 
 vim.opt.clipboard = "unnamedplus"
@@ -56,3 +59,5 @@ end
 -- Commands to switch modes
 vim.api.nvim_create_user_command('WritingMode', writing_mode, {})
 vim.api.nvim_create_user_command('CodingMode', coding_mode, {})
+
+vim.opt.eof = true

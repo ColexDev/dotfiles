@@ -73,3 +73,6 @@ keymap('n', '<Leader>b', '<Cmd>Telescope buffers<CR>', { noremap = true, silent 
 
 -- Digraphs --
 keymap("i", "<C-d>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>", opts)
+
+-- using the command
+vim.api.nvim_set_keymap('n', '<leader>z', '<cmd>Centerpad<cr>', { silent = true, noremap = true })
